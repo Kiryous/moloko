@@ -1,44 +1,23 @@
 .grid-wrap
 	width 1000px
-	margin 20px auto 0 auto
+	margin 20px auto 40px auto
+	padding 0px 0px 0px 20px
 
 .one
 	width 300px
-	padding 20px 20px 20px 20px
-	margin 10px 10px 10px 10px
+	margin 15px 0px 15px 0px
 	display inline-block
 	box-shadow 0px 1px 18px 0px rgba(0, 0, 0, 0.06)
-		
-	&.plain
-		height 150px
-		
-	&.photo a h1, &.photo a span
-		color white
-
-	&.photo
-		height 150px
-		background-size cover
-		position relative
-		
-		&.big
-			height 320px
-			
-			& a:after
-				content ' '
-				width 100%
-				height 100%
-				position absolute
-				top 0
-				left 0
-				background linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 100%)
 
 .one a, .one a:visited
+	width 100%
+	height 100%
+	padding 20px 20px 20px 20px
 	display block
-	padding 0
 	border-bottom 0
 	transition 0
 	color rgba(0, 0, 0, 1)
-	z-index 5
+	z-index 1
 
 .one a h1
 	display inline
@@ -47,6 +26,7 @@
 	font-size 24px
 	line-height 32px
 	color rgba(0, 0, 0, 1)
+	z-index 1
 
 .one a span
 	margin 10px 0px 0px 0px
@@ -54,6 +34,7 @@
 	font-family f_Default
 	font-size 16px
 	color rgba(0, 0, 0, 1)
+	z-index 1
 
 .one:hover
 	box-shadow 0px 1px 18px 0px rgba(0, 150, 209, 0.12)
@@ -64,3 +45,48 @@
 	
 	& a span
 		color rgba(0, 0, 0, 1)
+
+.plain
+	@extend .one
+	height 150px
+		
+.photo
+	height 150px
+	background-size cover
+	position relative
+	
+	& a h1, & a span
+		position relative
+		z-index 1
+		color white
+	
+	& a h1
+		border-color rgba(256,256,256,0.5)
+
+.big
+	height 330px
+	filter: grayscale(80%)	
+		
+	&:after
+		content ' '
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
+
+.big:hover
+	filter: grayscale(0%)
+	//&:after
+		//background linear-gradient(rgba(256, 256, 0, 0.6) 0%, rgba(256, 256, 0, 0.4) 20%, rgba(256, 256, 0, 0) 100%)
+		
+	& a h1, & a span
+		color white
+		
+	& a h1
+		border-color rgba(256,256,256,0.3)
+		text-shadow: 0px 0px 10px rgba(191, 226, 255, 0.6);
+		
+
+

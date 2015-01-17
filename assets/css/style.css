@@ -90,7 +90,7 @@ header {
 .twitter:hover,
 .twitter:visited:hover {
   background-color: #25aef3;
-  border-color: #25aef3;
+  border-color: rgba(255,255,255,0.3);
 }
 .vkontakte,
 .vkontakte:visited {
@@ -99,7 +99,7 @@ header {
 .vkontakte:hover,
 .vkontakte:visited:hover {
   background-color: #4f74a7;
-  border-color: #4f74a7;
+  border-color: rgba(255,255,255,0.3);
 }
 .facebook,
 .facebook:visited {
@@ -108,7 +108,7 @@ header {
 .facebook:hover,
 .facebook:visited:hover {
   background-color: #3b589d;
-  border-color: #3b589d;
+  border-color: rgba(255,255,255,0.3);
 }
 .instagram,
 .instagram:visited {
@@ -117,7 +117,8 @@ header {
 .instagram:hover,
 .instagram:visited:hover {
   background-color: #a0674f;
-  border-color: #a0674f;
+  bordedr-color: #a0674f;
+  border-color: rgba(255,255,255,0.3);
 }
 .search {
   width: 200px;
@@ -146,13 +147,23 @@ header {
 .poster {
   width: 100%;
   height: 300px;
-  padding: 120px 0px 0px 0px;
   font-size: 24px;
   color: #fff;
 }
 .poster .poster-info {
   width: 840px;
+  padding: 120px 0px 0px 0px;
   margin: 0 auto 0 auto;
+  display: block;
+}
+.poster span {
+  margin: 20px 0px 0px 0px;
+  display: block;
+  color: #fff;
+}
+.poster:hover h1 {
+  color: rgba(255,255,255,0.7);
+  border-color: rgba(255,255,255,0.3);
 }
 .poster .image {
   width: 200px;
@@ -171,64 +182,35 @@ header {
 }
 .caption h1 {
   margin: 0px 0px 25px 0px;
+  display: inline;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
   font-family: 'PT Sans Caption';
   font-size: 36px;
   color: #fff;
 }
-.caption h1 a,
-.caption h1 a:visited {
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-}
-.caption h1 a:hover {
-  color: rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-}
 .grid-wrap {
   width: 1000px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 40px auto;
+  padding: 0px 0px 0px 20px;
 }
-.one {
+.one,
+.plain {
   width: 300px;
-  padding: 20px 20px 20px 20px;
-  margin: 10px 10px 10px 10px;
+  margin: 15px 0px 15px 0px;
   display: inline-block;
   box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
 }
-.one.plain {
-  height: 150px;
-}
-.one.photo a h1,
-.one.photo a span {
-  color: #fff;
-}
-.one.photo {
-  height: 150px;
-  background-size: cover;
-  position: relative;
-}
-.one.photo.big {
-  height: 320px;
-}
-.one.photo.big a:after {
-  content: ' ';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: -webkit-linear-gradient(#000 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(#000 0%, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
-}
 .one a,
 .one a:visited {
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px 20px 20px;
   display: block;
-  padding: 0;
   border-bottom: 0;
   -webkit-transition: 0;
           transition: 0;
   color: #000;
-  z-index: 5;
+  z-index: 1;
 }
 .one a h1 {
   display: inline;
@@ -237,6 +219,7 @@ header {
   font-size: 24px;
   line-height: 32px;
   color: #000;
+  z-index: 1;
 }
 .one a span {
   margin: 10px 0px 0px 0px;
@@ -244,6 +227,7 @@ header {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   color: #000;
+  z-index: 1;
 }
 .one:hover {
   box-shadow: 0px 1px 18px 0px rgba(0,150,209,0.12);
@@ -254,6 +238,50 @@ header {
 }
 .one:hover a span {
   color: #000;
+}
+.plain {
+  height: 150px;
+}
+.photo {
+  height: 150px;
+  background-size: cover;
+  position: relative;
+}
+.photo a h1,
+.photo a span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.photo a h1 {
+  border-color: rgba(255,255,255,0.5);
+}
+.big {
+  height: 330px;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+.big:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+}
+.big:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+a h1,
+a span {
+  color: #fff;
+}
+a h1 {
+  border-color: rgba(255,255,255,0.3);
+  text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
 }
 a,
 a:visited {

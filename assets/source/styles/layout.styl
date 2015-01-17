@@ -45,8 +45,9 @@ header
 	color white
 	opacity 0.5
 
-.search:focus
-	opacity 0.9
+.search
+  &:focus
+	  opacity 0.9
 
 //Узнать, справится ли Автоприфексер, переписать
 .search::-webkit-input-placeholder,
@@ -62,9 +63,11 @@ header
 	font-size 24px
 	color white
 
-.poster .image
-	width 200px
-	display inline-block
+.poster
+  .image
+	  width 200px
+	  display inline-block
+    // Вложенность в Стилусе выглядит так
 
 .caption
 	width 500px
@@ -77,12 +80,17 @@ header
 	font-size 36px
 	color white
 
-.caption h1 a
-	color white
-	border-bottom 1px solid rgba(256,256,256,0.5)
+.caption
+  h1
+    a
+	    color white
+	    border-bottom 1px solid rgba(256,256,256,0.5)
 
-.caption h1 a:hover
-	color rgba(256,256,256,0.7)
-	border-bottom 1px solid rgba(256,256,256,0.3)
-	
+.caption
+  h1
+    a
+      &:hover // Используй пердь для соединения
+	      color rgba(256, 256, 256, 0.7)
+	      border-bottom 1px solid rgba(256, 256, 256, 0.3)
+
 @import 'typo'

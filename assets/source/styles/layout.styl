@@ -1,10 +1,88 @@
-@import 'starty'
 @import 'variables'
+@import 'starty'
 
 body
+  width 100%
   font-family f_Helvetica
-  background rgba(255, 255, 255, 1)
-  font-size 14px
+  background rgba(256, 256, 256, 1)
+  font-size 18px
   line-height 20px
 
+.header-container
+	width 100%
+	position absolute
+	top 0
+	left 0
+	z-index 1
+
+header
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 40px 0px 40px
+
+.logo
+	width 171px
+	height 44px
+	display inline-block
+	background-image url(../source/images/logo-all-white.png)
+	border 0
+	z-index 1
+
+@import 'social-links'
+
+.search
+	width 200px
+	height 44px
+	position relative
+	float right
+	padding 8px 12px 8px 12px
+	background transparent
+	background-image url(../source/images/search.png)
+	background-repeat no-repeat
+	background-size 20px
+	background-position 170px center
+	border 1px solid rgba(256,256,256,1)
+	color white
+	opacity 0.5
+
+.search:focus
+	opacity 0.9
+
+//Узнать, справится ли Автоприфексер, переписать
+.search::-webkit-input-placeholder,
+.search::-moz-placeholder,
+.search:-moz-placeholder,
+.search:-ms-input-placeholder
+ color:rgba(255, 255, 255, 0.6)
+
+.poster
+	width 100%
+	height 300px
+	padding 150px 0px 0px 0px
+	font-size 24px
+	color white
+
+.poster .image
+	width 200px
+	display inline-block
+
+.caption
+	width 500px
+	margin 0 auto 0 auto
+	display inline-block
+
+.caption h1
+	margin 0px 0px 25px 0px
+	font-family f_headline
+	font-size 36px
+	color white
+
+.caption h1 a
+	color white
+	border-bottom 1px solid rgba(256,256,256,0.5)
+
+.caption h1 a:hover
+	color rgba(256,256,256,0.7)
+	border-bottom 1px solid rgba(256,256,256,0.3)
+	
 @import 'typo'

@@ -1,0 +1,51 @@
+.social
+	width 44px
+	height 44px
+	display inline-block
+	background-image url(../source/images/social-links.png)
+	border 1px solid rgba(256,256,256,0.6)
+	border-left 0
+	padding 0
+	margin 0
+	opacity 0.7
+	
+.social:hover 
+	border-left 0
+	opacity 1
+	transition .1s
+
+.twitter
+	@extend .social
+	background-position: -45px 0px
+  
+.twitter:hover
+	@extend .social:hover
+	background-color rgba(37,174,243,1)
+	border-color rgba(37,174,243,1)
+  
+.vkontakte
+	@extend .social
+	background-position: 0px 0px
+  
+.vkontakte:hover
+	@extend .social:hover
+	background-color rgba(79,116,167,1)
+	border-color rgba(79,116,167,1)
+  
+.facebook
+	@extend .social
+	background-position: -89px 0px
+  
+.facebook:hover
+	@extend .social:hover
+	background-color rgba(59,88,157,1)
+	border-color rgba(59,88,157,1)
+  
+.instagram 
+	@extend .social
+	background-position: -132px 0px
+
+.instagram:hover
+	@extend .social:hover
+	background-color rgba(160,103,79,1)
+	border-color rgba(160,103,79,1)

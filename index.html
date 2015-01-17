@@ -3,14 +3,28 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8">
-  <title>NC Start</title>
+  <title>Молоко</title>
+  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-
-  <p>Трогни <a href="">терминал</a>, чтобы начать</p>
-
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="header-container">
+  <header>
+  	<a class="logo"></a><a class="twitter"></a><a class="vkontakte"></a><a class="facebook"></a><a class="instagram"></a>
+  	<input class="search" type="text"/>
+  </header>
+  </div>
+  <div class="fotorama" data-width="100%" data-height="300px" data-nav="false">
+    <div class="poster" style="background-color:rgba(0,0,256,0.7)">
+    <div class="image"><img src="http://moloko.kirys.ru/img/huiznaet.png" width="200" /></div>
+      <div class="caption">
+     	<h1><a href="">First cool article</a></h1>
+    	<span>Awesome caption of the great article</span>
+      </div>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
   <script src="assets/js/all.js"></script>
 </body>
 </html>

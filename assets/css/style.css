@@ -51,9 +51,13 @@ header {
 }
 .social,
 .twitter,
+.twitter:visited,
 .vkontakte,
+.vkontakte:visited,
 .facebook,
-.instagram {
+.facebook:visited,
+.instagram,
+.instagram:visited {
   width: 44px;
   height: 44px;
   display: inline-block;
@@ -66,38 +70,51 @@ header {
 }
 .social:hover,
 .twitter:hover,
+.twitter:visited:hover,
 .vkontakte:hover,
+.vkontakte:visited:hover,
 .facebook:hover,
-.instagram:hover {
+.facebook:visited:hover,
+.instagram:hover,
+.instagram:visited:hover {
   border-left: 0;
   opacity: 1;
-  transition: 0.1s;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
 }
-.twitter {
+.twitter,
+.twitter:visited {
   background-position: -45px 0px;
 }
-.twitter:hover {
+.twitter:hover,
+.twitter:visited:hover {
   background-color: #25aef3;
   border-color: #25aef3;
 }
-.vkontakte {
+.vkontakte,
+.vkontakte:visited {
   background-position: 0px 0px;
 }
-.vkontakte:hover {
+.vkontakte:hover,
+.vkontakte:visited:hover {
   background-color: #4f74a7;
   border-color: #4f74a7;
 }
-.facebook {
+.facebook,
+.facebook:visited {
   background-position: -89px 0px;
 }
-.facebook:hover {
+.facebook:hover,
+.facebook:visited:hover {
   background-color: #3b589d;
   border-color: #3b589d;
 }
-.instagram {
+.instagram,
+.instagram:visited {
   background-position: -132px 0px;
 }
-.instagram:hover {
+.instagram:hover,
+.instagram:visited:hover {
   background-color: #a0674f;
   border-color: #a0674f;
 }
@@ -128,16 +145,27 @@ header {
 .poster {
   width: 100%;
   height: 300px;
-  padding: 150px 0px 0px 0px;
+  padding: 120px 0px 0px 0px;
   font-size: 24px;
   color: #fff;
 }
+.poster .poster-info {
+  width: 840px;
+  margin: 0 auto 0 auto;
+}
 .poster .image {
   width: 200px;
+  height: 180px;
+  margin: 0px 0px 0px 40px;
+  display: inline-block;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .caption {
   width: 500px;
-  margin: 0 auto 0 auto;
+  margin: 40px 40px 0px 20px;
+  vertical-align: top;
   display: inline-block;
 }
 .caption h1 {
@@ -146,7 +174,8 @@ header {
   font-size: 36px;
   color: #fff;
 }
-.caption h1 a {
+.caption h1 a,
+.caption h1 a:visited {
   color: #fff;
   border-bottom: 1px solid rgba(255,255,255,0.5);
 }
@@ -159,13 +188,15 @@ a:visited {
   color: #0072ba;
   text-decoration: none;
   border-bottom: 1px solid rgba(0,114,186,0.5);
-  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+          transition: 0.5s ease;
 }
 a:hover,
 a:visited:hover {
   color: #d04000;
   border-color: rgba(208,64,0,0.5);
-  transition: 0s ease;
+  -webkit-transition: 0s ease;
+          transition: 0s ease;
 }
 a.dark,
 a:visited.dark {
@@ -176,7 +207,8 @@ a.dark:hover,
 a:visited.dark:hover {
   color: #d04000;
   border-color: rgba(208,64,0,0.5);
-  transition: 0s ease;
+  -webkit-transition: 0s ease;
+          transition: 0s ease;
 }
 a.lite,
 a:visited.lite {
@@ -187,5 +219,6 @@ a.lite:hover,
 a:visited.lite:hover {
   color: #f2f201;
   border-color: rgba(242,242,1,0.5);
-  transition: 0s ease;
+  -webkit-transition: 0s ease;
+          transition: 0s ease;
 }

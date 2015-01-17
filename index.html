@@ -11,10 +11,10 @@
   <div class="header-container">
   <header>
   	<a class="logo" href="#"></a><a class="twitter" href="#"></a><a class="vkontakte" href="#"></a><a class="facebook" href="#"></a><a class="instagram" href="#"></a>
-  	<input class="search" type="text"/>
+  	<div class="search"><input type="text"/><button></button></div>
   </header>
   </div>
-  <div class="fotorama" data-width="100%" data-height="300px" data-nav="false">
+  <div class="fotorama" data-width="100%" data-height="300px" data-nav="false" data-transition="crossfade">
     <div class="poster" style="background-color:rgba(0,0,256,0.7)">
     <div class="poster-info">
       <div class="image" style="background-image:url(http://moloko.kirys.ru/img/huiznaet.png)">
@@ -25,6 +25,17 @@
       </div>
     </div>
   </div>
+  <div class="poster" style="background-color:rgba(256,0,0,0.7)">
+    <div class="poster-info">
+      <div class="image" style="background-image:url(http://moloko.kirys.ru/img/huiznaet.png);transform: rotate(180deg)">
+      </div>
+      <div class="caption">
+      <h1><a href="">Second cool article</a></h1>
+      <span>Another awesome caption of the great article</span>
+      </div>
+    </div>
+  </div>
+
   </div>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>

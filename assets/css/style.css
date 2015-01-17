@@ -46,6 +46,7 @@ header {
   height: 44px;
   display: inline-block;
   background-image: url("../source/images/logo-all-white.png");
+  background-size: 171px 44px;
   border: 0;
   z-index: 1;
 }
@@ -125,16 +126,26 @@ header {
   float: right;
   padding: 8px 12px 8px 12px;
   background: transparent;
-  background-image: url("../source/images/search.png");
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-position: 170px center;
   border: 1px solid #fff;
-  color: #fff;
   opacity: 0.5;
 }
-.search:focus {
-  opacity: 0.9;
+.search input[type=text] {
+  width: 150px;
+  margin: 2px 0px 0px 0px;
+  vertical-align: top;
+  background: transparent;
+  border: 0;
+  color: #fff;
+}
+.search button {
+  width: 22px;
+  height: 22px;
+  margin: 2px 0px 0px 0px;
+  border: 0;
+  background: transparent;
+  background-image: url("../source/images/search.png");
+  background-size: 22px;
+  background-repeat: no-repeat;
 }
 .search::-webkit-input-placeholder,
 .search::-moz-placeholder,

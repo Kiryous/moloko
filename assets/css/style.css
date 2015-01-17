@@ -29,7 +29,7 @@ body {
   font-size: 18px;
   line-height: 20px;
 }
-.header-container {
+.header-wrap {
   width: 100%;
   position: absolute;
   top: 0;
@@ -122,30 +122,20 @@ header {
 .search {
   width: 200px;
   height: 44px;
+  padding: 8px 12px 8px 42px;
   position: relative;
   float: right;
-  padding: 8px 12px 8px 12px;
-  background: transparent;
-  border: 1px solid #fff;
-  opacity: 0.5;
-}
-.search input[type=text] {
-  width: 150px;
-  margin: 2px 0px 0px 0px;
-  vertical-align: top;
-  background: transparent;
-  border: 0;
-  color: #fff;
-}
-.search button {
-  width: 22px;
-  height: 22px;
-  margin: 2px 0px 0px 0px;
-  border: 0;
   background: transparent;
   background-image: url("../source/images/search.png");
   background-size: 22px;
+  background-position: 10px center;
   background-repeat: no-repeat;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  color: #fff;
+}
+.search:focus {
+  opacity: 0.9;
 }
 .search::-webkit-input-placeholder,
 .search::-moz-placeholder,
@@ -193,6 +183,55 @@ header {
 .caption h1 a:hover {
   color: rgba(255,255,255,0.7);
   border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.grid-wrap {
+  width: 1000px;
+  margin: 20px auto 0 auto;
+}
+.one,
+.one:visited {
+  width: 300px;
+  padding: 20px 20px 20px 20px;
+  margin: 10px 10px 10px 10px;
+  border-bottom: 0;
+  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
+  display: inline-block;
+  -webkit-transition: 0;
+          transition: 0;
+  color: #000;
+}
+.one.plain,
+.one:visited.plain {
+  height: 150px;
+}
+.one.photo,
+.one:visited.photo {
+  height: 150px;
+  background-size: cover;
+  color: #fff;
+}
+.one h1 {
+  display: inline;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  font-family: 'PT Sans Caption';
+  font-size: 24px;
+  line-height: 32px;
+}
+.one span {
+  margin: 10px 0px 0px 0px;
+  display: block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+}
+.one:hover {
+  box-shadow: 0px 1px 18px 0px rgba(0,150,209,0.12);
+}
+.one:hover h1 {
+  color: #2992e4;
+  border-color: rgba(41,146,228,0.5);
+}
+.one:hover span {
+  color: #000;
 }
 a,
 a:visited {

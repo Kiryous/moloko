@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="header-container">
+  <div class="header-wrap">
   <header>
   	<a class="logo" href="#"></a><a class="twitter" href="#"></a><a class="vkontakte" href="#"></a><a class="facebook" href="#"></a><a class="instagram" href="#"></a>
-  	<div class="search"><input type="text"/><button></button></div>
+  	<input class="search" type="text"/>
   </header>
   </div>
   <div class="fotorama" data-width="100%" data-height="300px" data-nav="false" data-transition="crossfade">
@@ -27,7 +27,7 @@
   </div>
   <div class="poster" style="background-color:rgba(256,0,0,0.7)">
     <div class="poster-info">
-      <div class="image" style="background-image:url(http://moloko.kirys.ru/img/huiznaet.png);transform: rotate(180deg)">
+      <div class="image" style="background-image:url(http://moloko.kirys.ru/img/huiznaet.png);background-position:bottom;transform: rotate(180deg)">
       </div>
       <div class="caption">
       <h1><a href="">Second cool article</a></h1>
@@ -35,7 +35,24 @@
       </div>
     </div>
   </div>
+  </div>
 
+  <div class="grid-wrap">
+    <div class="js-masonry" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 300 }'>
+      <a class="one plain" href="#">
+        <h1>Bobrovie hatki does not allowed</h1><br/>
+        <span>This demo will be without this image</span>
+      </a>
+      <a class="one plain" href="#">
+        <h1>Bobrovie hatki does not allowed</h1><br/>
+        <span>This demo will be without this image</span>
+      </a>
+      <a class="one plain" href="#">
+        <h1>Bobrovie hatki does not allowed</h1><br/>
+        <span>This demo will be without this image</span>
+      </a>
+
+    </div>
   </div>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>

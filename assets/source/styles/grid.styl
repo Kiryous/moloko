@@ -17,7 +17,7 @@
 
 .one h1
 	display inline
-	border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 	font-family f_headline
 	font-size 24px
 	line-height 32px
@@ -25,13 +25,13 @@
 
 .one span
 	margin 10px 0px 0px 0px
-	display block
+	display inline-block
 	font-family f_Default
 	font-size 16px
 	color rgba(0, 0, 0, 1)
 
 .one:hover
-	box-shadow 0px 1px 18px 0px rgba(0, 150, 209, 0.12)
+	box-shadow 0px 1px 18px 0px rgba(0, 150, 209, 0.1)
 
 	& h1
 		color c_Moloko
@@ -39,12 +39,21 @@
 	
 	& span
 		color rgba(0, 0, 0, 1)
+		
+	&:after
+		content ' '
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		background linear-gradient(to bottom,rgba(41, 146, 228, 0.1) , rgba(256, 256, 0, 0))
+		
 
 .illustration
 	background-position right bottom
 	background-size 100px
 	background-repeat no-repeat
-	filter grayscale(100%)
 	
 	& span
 		width 200px
@@ -53,27 +62,34 @@
 	background-image url(http://i.picasion.com/sp/79/SHS/1.gif)
 
 .basketball:hover
-	filter grayscale(0%)
 	background-image:url(https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1791962/chris-paul-dribbble.gif)
 	
 .science
 	background-image url(http://i.picasion.com/sp/79/SI6/2.gif)
 
 .science:hover
-	filter grayscale(0%)
 	background-image:url(http://cdn.makeagif.com/media/1-17-2015/mL7RYq.gif)
 
 .cashflow
 	background-image url(http://i.picasion.com/sp/79/SHZ/0.gif)
 
 .cashflow:hover
-	filter grayscale(0%)
 	background-image:url(https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1433198/mark-and-john.gif)
 
+.full
+	height 330px
+	padding 200px 20px 20px 20px
+	background-size 290px
+	background-position center top
+
+	&:hover h1
+		z-index 1
+		//color rgba(23, 109, 178, 1)
+		//border-color rgba(41, 146, 228, 0.3)
 
 .plain
 	@extend .one
-		
+
 .photo
 	background-size cover
 	position relative

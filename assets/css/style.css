@@ -147,7 +147,6 @@ header {
 .poster {
   width: 100%;
   height: 300px;
-  font-size: 24px;
   color: #fff;
 }
 .poster .poster-info {
@@ -188,6 +187,10 @@ header {
   font-size: 36px;
   color: #fff;
 }
+.caption span {
+  font-size: 18px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 .grid-wrap {
   width: 1000px;
   margin: 20px auto 40px auto;
@@ -196,8 +199,10 @@ header {
 .one,
 .plain {
   width: 300px;
+  height: 150px;
   margin: 15px 0px 15px 0px;
   display: inline-block;
+  overflow: hidden;
   box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
 }
 .one a,
@@ -219,7 +224,6 @@ header {
   font-size: 24px;
   line-height: 32px;
   color: #000;
-  z-index: 1;
 }
 .one a span {
   margin: 10px 0px 0px 0px;
@@ -227,7 +231,6 @@ header {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   color: #000;
-  z-index: 1;
 }
 .one:hover {
   box-shadow: 0px 1px 18px 0px rgba(0,150,209,0.12);
@@ -239,11 +242,33 @@ header {
 .one:hover a span {
   color: #000;
 }
-.plain {
-  height: 150px;
+.illustration {
+  background-position: right bottom;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.illustration span {
+  width: 200px;
+}
+.basketball {
+  background-image: url("http://i.picasion.com/sp/79/SHS/1.gif");
+}
+.basketball:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  background-image: url("https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1791962/chris-paul-dribbble.gif");
+}
+.cashflow {
+  background-image: url("http://i.picasion.com/sp/79/SHZ/0.gif");
+}
+.cashflow:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  background-image: url("https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1433198/mark-and-john.gif");
 }
 .photo {
-  height: 150px;
   background-size: cover;
   position: relative;
 }
@@ -256,32 +281,37 @@ header {
 .photo a h1 {
   border-color: rgba(255,255,255,0.5);
 }
-.big {
-  height: 330px;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%);
-}
-.big:after {
+.photo:after {
   content: ' ';
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  background: rgba(0,0,0,0.5);
+}
+.photo:hover a h1,
+.photo:hover a span {
+  color: #fff;
+}
+.photo:hover a h1 {
+  border-color: rgba(255,255,255,0.3);
+  text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
+}
+.photo:hover:after {
+  background: -webkit-linear-gradient(top, rgba(27,123,196,0.8), rgba(255,255,0,0));
+  background: linear-gradient(to bottom, rgba(27,123,196,0.8), rgba(255,255,0,0));
+}
+.big {
+  height: 330px;
+}
+.big:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
 }
-.big:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-a h1,
-a span {
-  color: #fff;
-}
-a h1 {
-  border-color: rgba(255,255,255,0.3);
-  text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
+.big:hover:after {
+  background: -webkit-linear-gradient(rgba(41,146,228,0.6) 0%, rgba(41,146,228,0.4) 20%, rgba(255,255,0,0) 100%);
+  background: linear-gradient(rgba(41,146,228,0.6) 0%, rgba(41,146,228,0.4) 20%, rgba(255,255,0,0) 100%);
 }
 a,
 a:visited {

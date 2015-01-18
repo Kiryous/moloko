@@ -5,8 +5,10 @@
 
 .one
 	width 300px
+	height 150px
 	margin 15px 0px 15px 0px
 	display inline-block
+	overflow hidden
 	box-shadow 0px 1px 18px 0px rgba(0, 0, 0, 0.06)
 
 .one a, .one a:visited
@@ -26,7 +28,6 @@
 	font-size 24px
 	line-height 32px
 	color rgba(0, 0, 0, 1)
-	z-index 1
 
 .one a span
 	margin 10px 0px 0px 0px
@@ -34,7 +35,6 @@
 	font-family f_Default
 	font-size 16px
 	color rgba(0, 0, 0, 1)
-	z-index 1
 
 .one:hover
 	box-shadow 0px 1px 18px 0px rgba(0, 150, 209, 0.12)
@@ -46,12 +46,34 @@
 	& a span
 		color rgba(0, 0, 0, 1)
 
+.illustration
+	background-position right bottom
+	background-size 100px
+	background-repeat no-repeat
+	filter grayscale(100%)
+	
+	& span
+		width 200px
+
+.basketball
+	background-image url(http://i.picasion.com/sp/79/SHS/1.gif)
+
+.basketball:hover
+	filter grayscale(0%)
+	background-image:url(https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1791962/chris-paul-dribbble.gif)
+
+.cashflow
+	background-image url(http://i.picasion.com/sp/79/SHZ/0.gif)
+
+.cashflow:hover
+	filter grayscale(0%)
+	background-image:url(https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1433198/mark-and-john.gif)
+
+
 .plain
 	@extend .one
-	height 150px
 		
 .photo
-	height 150px
 	background-size cover
 	position relative
 	
@@ -62,11 +84,7 @@
 	
 	& a h1
 		border-color rgba(256,256,256,0.5)
-
-.big
-	height 330px
-	filter: grayscale(80%)	
-		
+	
 	&:after
 		content ' '
 		width 100%
@@ -74,13 +92,9 @@
 		position absolute
 		top 0
 		left 0
-		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
+		background rgba(0,0,0,0.5)
 
-.big:hover
-	filter: grayscale(0%)
-	//&:after
-		//background linear-gradient(rgba(256, 256, 0, 0.6) 0%, rgba(256, 256, 0, 0.4) 20%, rgba(256, 256, 0, 0) 100%)
-		
+.photo:hover
 	& a h1, & a span
 		color white
 		
@@ -88,5 +102,17 @@
 		border-color rgba(256,256,256,0.3)
 		text-shadow: 0px 0px 10px rgba(191, 226, 255, 0.6);
 		
+	&:after
+		background linear-gradient(to bottom, rgba(27, 123, 196, 0.8), rgba(256, 256, 0, 0))		
+
+.big
+	height 330px
+		
+	&:after
+		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
+
+.big:hover
+	&:after
+		background linear-gradient(rgba(41, 146, 228, 0.6) 0%, rgba(41, 146, 228, 0.4) 20%, rgba(256, 256, 0, 0) 100%)		
 
 

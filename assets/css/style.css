@@ -225,9 +225,6 @@ header {
   font-size: 16px;
   color: #000;
 }
-.one:hover {
-  box-shadow: 0px 1px 18px 0px rgba(0,150,209,0.1);
-}
 .one:hover h1 {
   color: #2992e4;
   border-color: rgba(41,146,228,0.5);

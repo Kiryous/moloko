@@ -39,7 +39,7 @@ header
 	float right
 	background transparent
 	background-image url(../source/images/search.png)
-	background-size 22px
+	background-size 18px
 	background-position 10px center
 	background-repeat no-repeat
 	border 1px solid rgba(256,256,256,1)
@@ -64,10 +64,10 @@ header
 .poster 
 	.poster-info
 		width 840px
-		padding 120px 0px 0px 0px
+		padding 100px 0px 0px 0px
 		margin 0 auto 0 auto	
 		display block
-	
+		
 	& span
 		margin 20px 0px 0px 0px 
 		display block
@@ -80,7 +80,7 @@ header
 .poster
   .image
 	  width 200px
-	  height 180px
+	  height 200px
 	  margin 0px 0px 0px 40px
 	  display inline-block
 	  background-size cover
@@ -89,7 +89,7 @@ header
 
 .caption
 	width 500px
-	margin 40px 40px 0px 20px
+	margin 30px 40px 0px 20px
 	vertical-align top
 	display inline-block
 
@@ -100,11 +100,41 @@ header
 		border-bottom 1px solid rgba(256, 256, 256, 0.5)
 		font-family f_headline
 		font-size 36px
+		line-height 44px 
 		color white
 	
 	span
 		font-size 18px
 		font-family f_Default
+
+.news
+	width 100%
+	min-height 100px
+	padding 10px 0px 10px 0px
+	background rgba(41, 146, 228, 0.1)
+
+.scrollyeah
+	width 960px
+	margin auto auto auto auto
+
+.entry
+	max-width 320px
+	min-height 80px
+	margin 0px 20px 0px 0px
+	padding 5px 0px 10px 3px
+	vertical-align top
+	display inline-block
+	font-size 16px
+	
+	& span
+		font-size 12px
+		color rgba(0, 0, 0, 0.5)
+
+.smallcapitals {
+  font-size: .88em;
+  letter-spacing: .15em;
+  margin-right: -.15em;
+}
 
 @import 'grid'
 

@@ -259,14 +259,8 @@ header {
   font-size: 16px;
   color: #000;
 }
-.one:hover:after {
-  content: ' ';
-  width: 290px;
-  height: 140px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 5px solid rgba(208,64,0,0.08);
+.one:hover {
+  box-shadow: 0px 1px 18px 0px rgba(208,64,0,0.1);
 }
 .one:hover h1 {
   color: #d04000;
@@ -310,9 +304,6 @@ header {
 .full:hover h1 {
   z-index: 1;
 }
-.full:hover:after {
-  height: 320px;
-}
 .photo {
   background-size: cover;
   position: relative;
@@ -344,11 +335,8 @@ header {
   text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
 }
 .photo:hover:after {
-  width: 100%;
-  height: 100%;
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.4), rgba(255,255,0,0));
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(255,255,0,0));
-  border: 0;
 }
 .big {
   height: 330px;

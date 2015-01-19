@@ -195,12 +195,15 @@ header {
 .news {
   width: 100%;
   min-height: 100px;
-  padding: 10px 0px 10px 0px;
-  background: rgba(41,146,228,0.1);
+  padding: 10px 0px 10px 10px;
 }
 .scrollyeah {
-  width: 960px;
+  width: 940px;
   margin: auto auto auto auto;
+}
+.scrollyeah__shadow_prev,
+.scrollyeah__shadow_next {
+  opacity: 0.2;
 }
 .entry {
   max-width: 320px;
@@ -212,10 +215,11 @@ header {
   font-size: 16px;
 }
 .entry span {
-  font-size: 12px;
+  font-size: 10px;
   color: rgba(0,0,0,0.5);
 }
 .smallcapitals {
+  text-transform: uppercase;
   font-size: 0.88em;
   letter-spacing: 0.15em;
   margin-right: -0.15em;

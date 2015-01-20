@@ -41,14 +41,23 @@ header {
   margin: 0 auto 0 auto;
   padding: 20px 20px 0px 20px;
 }
-.logo {
+.logo,
+.logo:visited {
   width: 171px;
   height: 44px;
+  padding: 10px 10px 10px 11px;
   display: inline-block;
-  background-image: url("../source/images/logo-all-white.png");
-  background-size: 171px 44px;
-  border: 0;
+  vertical-align: top;
+  border: 3px solid #fff;
+  font-family: 'Shadow';
+  font-size: 32px;
+  color: #fff;
   z-index: 1;
+}
+.logo:hover,
+.logo:visited:hover {
+  border-color: #fff;
+  color: #fff;
 }
 .social,
 .twitter,
@@ -195,7 +204,7 @@ header {
 .news {
   width: 100%;
   min-height: 100px;
-  padding: 30px 0px 30px 0px;
+  padding: 20px 0px 30px 0px;
 }
 .news .scrollyeah {
   width: 960px;
@@ -244,6 +253,12 @@ header {
   color: #000;
   z-index: 1;
 }
+.one *,
+.one:visited *,
+.plain * {
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
 .one h1 {
   display: inline;
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -261,8 +276,6 @@ header {
 }
 .one:hover {
   box-shadow: 0px 1px 18px 0px rgba(208,64,0,0.1);
-  -webkit-transition: 0.1s;
-          transition: 0.1s;
 }
 .one:hover h1 {
   color: #d04000;
@@ -310,6 +323,10 @@ header {
   background-size: cover;
   position: relative;
 }
+.photo * {
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
 .photo h1,
 .photo span {
   position: relative;
@@ -317,7 +334,7 @@ header {
   color: #fff;
 }
 .photo h1 {
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.3);
 }
 .photo:after {
   content: ' ';
@@ -327,6 +344,8 @@ header {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 .photo:hover h1,
 .photo:hover span {
@@ -342,14 +361,24 @@ header {
 }
 .big {
   height: 330px;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+.big * {
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
 }
 .big:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+  -webkit-transition: 1s;
+          transition: 1s;
 }
 .big:hover:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
+  -webkit-transition: 1s;
+          transition: 1s;
 }
 .shots {
   width: 100%;
@@ -388,11 +417,13 @@ header {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease;
 }
 #instapics a:hover:after {
   background: transparent;
-  -webkit-transition: 0.1s ease;
-          transition: 0.1s ease;
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease;
 }
 .footer-wrap {
   width: 100%;

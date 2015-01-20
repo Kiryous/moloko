@@ -195,9 +195,9 @@ header {
 .news {
   width: 100%;
   min-height: 100px;
-  padding: 20px 0px 0px 0px;
+  padding: 30px 0px 30px 0px;
 }
-.scrollyeah {
+.news .scrollyeah {
   width: 960px;
   margin: auto auto auto auto;
 }
@@ -216,7 +216,7 @@ header {
 }
 .entry span {
   font-size: 10px;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.7);
 }
 .smallcapitals {
   text-transform: uppercase;
@@ -261,6 +261,8 @@ header {
 }
 .one:hover {
   box-shadow: 0px 1px 18px 0px rgba(208,64,0,0.1);
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
 }
 .one:hover h1 {
   color: #d04000;
@@ -348,6 +350,49 @@ header {
 .big:hover:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
+}
+.shots {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.shots h3 {
+  width: 920px;
+  margin: 0 auto 10px auto;
+  font-size: 18px;
+}
+#instapics {
+  width: 110%;
+  height: 96px;
+}
+#instapics div {
+  width: 96px;
+  height: 96px;
+  display: inline-block;
+}
+#instapics a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  background-size: 96px;
+  background-position: center;
+  border: 0;
+}
+#instapics a z-index,
+#instapics a:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+}
+#instapics a:hover:after {
+  background: transparent;
+  -webkit-transition: 0.1s ease;
+          transition: 0.1s ease;
 }
 .footer-wrap {
   width: 100%;

@@ -45,23 +45,23 @@
     <div class="scrollyeah" data-disableIfFit="true" data-centerIfFit="true">
      <div class="entry">
        <span class="smallcapitals">час назад</span><br/>
-       <a class="dark" href="#">Навальный переселился <br/>в бобровую хатку</a>
+       <a href="#">Навальный переселился <br/>в бобровую хатку</a>
      </div>
      <div class="entry">
        <span class="smallcapitals">три часа назад</span><br/>
-       <a class="dark" href="#">Известный виоланчелист угнал<br/> автомобиль депутата</a>
+       <a href="#">Известный виоланчелист угнал<br/> автомобиль депутата</a>
      </div>
      <div class="entry">
        <span class="smallcapitals">четыре часа назад</span><br/>
-       <a class="dark" href="#">Путин одобрил идею бесплатной раздачи земли жителям Дальнего Востока</a>
+       <a href="#">Путин одобрил идею бесплатной раздачи земли жителям Дальнего Востока</a>
      </div>
      <div class="entry">
        <span class="smallcapitals">вчера</span><br/>
-       <a class="dark" href="#">МТС потратила 100 млн рублей на создание аналога Skype</a>
+       <a href="#">МТС потратила 100 млн рублей на создание аналога Skype</a>
      </div>
      <div class="entry">
        <span class="smallcapitals">вчера</span><br/>
-       <a class="dark" href="#">Власти Чечни насчитали миллион участников митинга в Грозном</a>
+       <a href="#">Власти Чечни насчитали миллион участников митинга в Грозном</a>
      </div>
     </div>
   </div> 
@@ -94,6 +94,12 @@
 
     </div>
   </div>
+  <div class="shots">
+    <h3>Инстаграм редакции</h3>
+    <div class="scrollyeah">
+      <div id="instapics"></div>
+    </div>
+  </div>
   <div class="footer-wrap">
     <div class="footer">
     <ul>
@@ -106,6 +112,20 @@
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
   <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+  <script src="http://kirillchernakov.ru/instafeed.min.js"></script>
+  <script type="text/javascript">
+        var feed = new Instafeed({
+        get: 'user',
+        userId: 1295282419,
+        accessToken: '31037067.467ede5.f394f2c9ef044e53b12816edc99f19a4',
+        target: 'instapics',
+        limit: 20,
+        clientId: '3343846802654ab6b9e7bfdbaf0e0071',
+        template: '<div><a href="{{link}}" style="background-image:url({{image}})"> </a></div>',
+        sortBy:'random',
+    });
+    feed.run();
+  </script>
   <script src="assets/js/scrollyeah.min.js"></script>
   <script src="assets/js/all.js"></script>
 </body>

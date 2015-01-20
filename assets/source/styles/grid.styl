@@ -15,6 +15,9 @@
 	border-bottom 0
 	color rgba(0, 0, 0, 1)
 	z-index 1
+	
+	& * 
+		transition .1s
 
 .one h1
 	display inline
@@ -33,7 +36,6 @@
 
 .one:hover
 	box-shadow 0px 1px 18px 0px rgba(208, 64, 0, 0.10)
-	transition .1s
 	
 	& h1
 		//color c_Moloko
@@ -88,13 +90,16 @@
 	background-size cover
 	position relative
 	
+	& *
+		transition .1s 
+
 	& h1, & span
 		position relative
 		z-index 1
 		color white
 	
 	& h1
-		border-color rgba(256,256,256,0.5)
+		border-color rgba(256,256,256,0.3)
 	
 	&:after
 		content ' '
@@ -104,6 +109,7 @@
 		top 0
 		left 0
 		background rgba(0,0,0,0.5)
+		transition .2s
 
 .photo:hover
 	& h1, & span
@@ -118,12 +124,18 @@
 
 .big
 	height 330px
+	transition 1s
+	
+	& *
+		transition .1s 
 		
 	&:after
 		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
-
+		transition 1s
+		
 .big:hover
 	
 	&:after
-		background linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 100%)		
+		background linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 100%)	
+		transition 1s	
 

@@ -21,7 +21,7 @@
 
 .one h1
 	display inline
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3)
 	font-family f_headline
 	font-size 24px
 	line-height 32px
@@ -41,7 +41,7 @@
 		//color c_Moloko
 		//border-color rgba(41, 146, 228, 0.5)
 		color rgba(208, 64, 0, 1)
-		border-color rgba(218, 64, 0, .5)
+		border-color rgba(218, 64, 0, .3)
 	
 	& span
 		color rgba(0, 0, 0, 1)
@@ -124,18 +124,17 @@
 
 .big
 	height 330px
-	transition 1s
 	
 	& *
 		transition .1s 
 		
 	&:after
 		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
-		transition 1s
+		transition .2s
 		
 .big:hover
 	
 	&:after
 		background linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 100%)	
-		transition 1s	
+		transition .2s	
 

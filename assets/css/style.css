@@ -261,7 +261,7 @@ header {
 }
 .one h1 {
   display: inline;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
   font-family: 'PT Sans Caption';
   font-size: 24px;
   line-height: 32px;
@@ -279,7 +279,7 @@ header {
 }
 .one:hover h1 {
   color: #d04000;
-  border-color: rgba(218,64,0,0.5);
+  border-color: rgba(218,64,0,0.3);
 }
 .one:hover span {
   color: #000;
@@ -361,8 +361,6 @@ header {
 }
 .big {
   height: 330px;
-  -webkit-transition: 1s;
-          transition: 1s;
 }
 .big * {
   -webkit-transition: 0.1s;
@@ -371,14 +369,14 @@ header {
 .big:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
-  -webkit-transition: 1s;
-          transition: 1s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 .big:hover:after {
   background: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 100%);
-  -webkit-transition: 1s;
-          transition: 1s;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 .shots {
   width: 100%;
@@ -445,38 +443,38 @@ a,
 a:visited {
   color: #0072ba;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,114,186,0.5);
+  border-bottom: 1px solid rgba(0,114,186,0.3);
   -webkit-transition: 0.5s ease;
           transition: 0.5s ease;
 }
 a:hover,
 a:visited:hover {
   color: #d04000;
-  border-color: rgba(208,64,0,0.5);
+  border-color: rgba(208,64,0,0.3);
   -webkit-transition: 0s ease;
           transition: 0s ease;
 }
 a.dark,
 a:visited.dark {
   color: #000;
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 a.dark:hover,
 a:visited.dark:hover {
   color: #d04000;
-  border-color: rgba(208,64,0,0.5);
+  border-color: rgba(208,64,0,0.3);
   -webkit-transition: 0s ease;
           transition: 0s ease;
 }
 a.lite,
 a:visited.lite {
   color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 a.lite:hover,
 a:visited.lite:hover {
   color: #f2f201;
-  border-color: rgba(242,242,1,0.5);
+  border-color: rgba(242,242,1,0.3);
   -webkit-transition: 0s ease;
           transition: 0s ease;
 }

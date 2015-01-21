@@ -73,6 +73,7 @@ header {
   display: inline-block;
   border: 1px solid rgba(255,255,255,0.6);
   background-repeat: no-repeat;
+  fill: #f00;
   border-left: 0;
   padding: 0;
   margin: 0;
@@ -220,7 +221,7 @@ header {
 .news {
   width: 100%;
   min-height: 100px;
-  padding: 20px 0px 30px 0px;
+  padding: 20px 0px 10px 0px;
 }
 .news .scrollyeah {
   width: 960px;
@@ -291,7 +292,7 @@ header {
   color: #000;
 }
 .one:hover {
-  box-shadow: 0px 1px 18px 0px rgba(208,64,0,0.1);
+  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 .one:hover h1 {
   color: #d04000;
@@ -328,9 +329,14 @@ header {
 }
 .full {
   height: 330px;
-  padding: 200px 20px 20px 20px;
-  background-size: 290px;
+  padding: 230px 20px 20px 20px;
+  background-size: auto 220px;
   background-position: center top;
+  text-align: center;
+}
+.full h1,
+.full span {
+  text-align: center;
 }
 .full:hover h1 {
   z-index: 1;
@@ -422,8 +428,8 @@ header {
   background-size: 96px;
   background-position: center;
   border: 0;
-  -webkit-filter: grayscale(0.5);
-          filter: grayscale(0.5);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-transition: 0.2s ease;
           transition: 0.2s ease;
 }
@@ -433,60 +439,75 @@ header {
   -webkit-transition: 0.2s ease;
           transition: 0.2s ease;
 }
+#instapics a:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease;
+}
+#instapics a:hover:after {
+  background: transparent;
+  -webkit-transition: 0.2s ease;
+          transition: 0.2s ease;
+}
 .footer-wrap {
   width: 100%;
-  height: 230px;
+  height: 180px;
   background: #2a3237;
-  color: rgba(255,255,255,0.9);
+  color: #fff;
 }
 .footer {
   width: 1000px;
-  height: 230px;
+  height: 180px;
   margin: 0px auto 0px auto;
   padding: 40px 40px 0px 40px;
   font-size: 16px;
 }
 .footer h3 {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 15px 0px;
 }
 .footer ul {
+  width: 460px;
   display: inline-block;
-  margin: 20px 0px 0px 0px;
+  vertical-align: top;
+  margin: 0px 0px 0px 0px;
 }
 .footer ul li {
   display: inline-block;
   margin: 0px 15px 0px 0px;
 }
 .ask {
-  width: 400px;
-  display: inline-block;
-}
-.ask p {
-  margin: 0px 0px 20px 0px;
-  text-align: left;
-}
-.money {
-  width: 380px;
-  padding: 10px 0px 0px 10px;
-  vertical-align: top;
+  width: 450px;
   display: inline-block;
   float: right;
+}
+.ask p {
+  width: 400px;
+  margin: 0px 0px 10px 0px;
+}
+.money {
+  min-width: 380px;
+  height: 55px;
+  padding: 10px 10px 0px 0px;
+  vertical-align: top;
+  display: inline-block;
   position: relative;
   background: #fff;
   border-radius: 3px;
 }
 .money input[type=submit] {
-  height: 55px;
+  height: 35px;
+  margin: 0px 0px 0px 10px;
   padding: 5px 15px 5px 15px;
   vertical-align: top;
-  position: absolute;
-  top: 0;
-  right: 0;
   background: -webkit-linear-gradient(top, rgba(36,175,242,0.7), #2992e4);
   background: linear-gradient(to bottom, rgba(36,175,242,0.7), #2992e4);
   border-radius: 3px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -497,7 +518,7 @@ header {
 .moloko {
   font-family: 'Shadow';
   font-size: 24px;
-  color: #2992e4;
+  color: #24aff2;
 }
 .sum {
   display: inline-block;
@@ -506,11 +527,12 @@ header {
 }
 .sum input {
   width: 90px;
-  padding: 5px 25px 5px 5px;
+  margin: 5px 0px 0px 0px;
+  padding: 0px 25px 0px 0px;
   vertical-align: top;
   text-align: right;
   background: transparent;
-  border: 1px solid #fff;
+  border: 0;
 }
 .sum ::-webkit-input-placeholder,
 .sum ::-moz-placeholder,
@@ -520,35 +542,56 @@ header {
 }
 .sum span {
   position: absolute;
-  top: 7px;
-  right: 10px;
+  top: 6px;
+  right: 8px;
   font-size: 18px;
   color: #000;
 }
 .switch-input {
   display: none;
 }
-.switch-input:checked + .cards {
-  background-position: -140px 0px;
-}
+.switch-input:checked + .cards,
 .switch-input:checked + .yamoney {
-  background-position: -210px 0px;
+  padding: 5px 1px 1px 1px;
+  background: -webkit-linear-gradient(bottom, rgba(41,146,228,0), rgba(41,146,228,0.6));
+  background: linear-gradient(to top, rgba(41,146,228,0), rgba(41,146,228,0.6));
+  box-shadow: inset 0 0 10px rgba(41,146,228,0.5);
+  border: 0;
+}
+.switch-input:checked + .cards svg path,
+.switch-input:checked + .yamoney svg path {
+  fill: #000;
+}
+.switch-input:checked +.yamoney {
+  padding: 5px 0px 1px 1px;
 }
 .cards,
 .yamoney {
-  width: 70px;
-  height: 36px;
-  margin: 5px 0px 0px 0px;
+  width: 80px;
+  height: 35px;
+  padding: 3px 0px 0px 0px;
+  border: 1px solid rgba(0,0,0,0.1);
   display: inline-block;
-  background-image: url("../source/images/pay-methods.png");
-  background-size: 280px;
-  background-repeat: no-repeat;
+  vertical-align: top;
+  text-align: center;
+}
+.cards svg,
+.yamoney svg {
+  width: 70px;
+  height: 25px;
+}
+.cards svg path,
+.yamoney svg path {
+  fill: rgba(0,0,0,0.5);
 }
 .cards {
-  background-position: 0px 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .yamoney {
-  background-position: -70px 0px;
+  border-left: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 a,
 a:visited {
@@ -581,11 +624,15 @@ a.lite,
 a:visited.lite {
   color: #fff;
   border-bottom: 1px solid rgba(255,255,255,0.3);
+/*&:hover
+      color rgba(242, 242, 1, 1)
+      border-color rgba(242, 242, 1, .3)
+      transition 0s ease*/
 }
 a.lite:hover,
 a:visited.lite:hover {
-  color: #f2f201;
-  border-color: rgba(242,242,1,0.3);
+  color: #d04000;
+  border-color: rgba(208,64,0,0.3);
   -webkit-transition: 0s ease;
           transition: 0s ease;
 }

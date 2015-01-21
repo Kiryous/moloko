@@ -71,8 +71,8 @@ header {
   width: 44px;
   height: 44px;
   display: inline-block;
-  background-image: url("../source/images/social-links.png");
   border: 1px solid rgba(255,255,255,0.6);
+  background-repeat: no-repeat;
   border-left: 0;
   padding: 0;
   margin: 0;
@@ -94,7 +94,8 @@ header {
 }
 .twitter,
 .twitter:visited {
-  background-position: -45px 0px;
+  background-image: url("../source/images/twi.svg");
+  background-position: center;
 }
 .twitter:hover,
 .twitter:visited:hover {
@@ -103,7 +104,8 @@ header {
 }
 .vkontakte,
 .vkontakte:visited {
-  background-position: 0px 0px;
+  background-image: url("../source/images/vk.svg");
+  background-position: center;
 }
 .vkontakte:hover,
 .vkontakte:visited:hover {
@@ -112,7 +114,8 @@ header {
 }
 .facebook,
 .facebook:visited {
-  background-position: -89px 0px;
+  background-image: url("../source/images/fb.svg");
+  background-position: center;
 }
 .facebook:hover,
 .facebook:visited:hover {
@@ -121,7 +124,8 @@ header {
 }
 .instagram,
 .instagram:visited {
-  background-position: -132px 0px;
+  background-image: url("../source/images/inst.svg");
+  background-position: center;
 }
 .instagram:hover,
 .instagram:visited:hover {
@@ -136,7 +140,7 @@ header {
   position: relative;
   float: right;
   background: transparent;
-  background-image: url("../source/images/search.png");
+  background-image: url("../source/images/search.svg");
   background-size: 18px;
   background-position: 10px center;
   background-repeat: no-repeat;
@@ -443,7 +447,7 @@ header {
   font-size: 16px;
 }
 .footer h3 {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 20px 0px;
 }
 .footer ul {
   display: inline-block;
@@ -458,7 +462,7 @@ header {
   display: inline-block;
 }
 .ask p {
-  margin: 8px 0px 15px 0px;
+  margin: 0px 0px 20px 0px;
   text-align: left;
 }
 .money {
@@ -492,7 +496,7 @@ header {
 }
 .moloko {
   font-family: 'Shadow';
-  font-size: 20px;
+  font-size: 24px;
   color: #2992e4;
 }
 .sum {

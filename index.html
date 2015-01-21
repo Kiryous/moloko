@@ -103,11 +103,30 @@
   </div>
   <div class="footer-wrap">
     <div class="footer">
-    <ul>
-      <li><a class="dark" href="#">О проекте</a></li>
-      <li><a class="dark" href="#">Авторам</a></li>
-      <li><a class="dark" href="#">Реклама</a></li>
-    </ul>
+       <h3>Поддержите  <span class="moloko">Молоко</span></h3>
+       <div class="ask">
+         <!--<p>Мы хотим, чтобы вы могли читать интересные статьи молодых авторов. </p>
+         <p>Для этого мы должны оплачивать хостинг сайта и поощрять талантливых авторов.</p>-->
+         <p>Собранное потратим на поддержание сайта и поощрения талантиливым авторам</p>
+       </div>
+       <div class="money">
+         <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+         <input type="hidden" name="receiver" value="410011470836932">
+         <input type="hidden" name="formcomment" value="Молоко"/>
+         <input type="hidden" name="short-dest" value="Пожертвование интернет-изданию Молоко"/>
+         <input type="hidden" name="quickpay-form" value="donate"/>
+         <input type="hidden" name="targets" value="На поддержание сайта и поощрения авторам"/>
+         <div class="sum"><input type="text" name="sum" placeholder="300"/><span>₽</span></div>
+         <input type="radio" name="paymentType" value="AC" id="on" class="switch-input" checked /><label for="on" class="cards"> </label>
+         <input type="radio" name="paymentType" value="PC" id="off" class="switch-input" /><label for="off" class="yamoney"> </label>
+         <input type="submit" name="submit-button" value="Перевести"/>
+         </form>
+      </div>
+      <ul>
+        <li><a class="dark" href="#">О проекте</a></li>
+        <li><a class="dark" href="#">Авторам</a></li>
+        <li><a class="dark" href="#">Реклама</a></li>
+      </ul>
     </div>
   </div>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

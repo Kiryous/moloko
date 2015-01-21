@@ -2,8 +2,8 @@
 	width 44px
 	height 44px
 	display inline-block
-	background-image url(../source/images/social-links.png)
 	border 1px solid rgba(255,255,255,0.6)
+	background-repeat no-repeat
 	border-left 0
 	padding 0
 	margin 0
@@ -16,7 +16,8 @@
 	
 .twitter, .twitter:visited
 	@extend .social
-	background-position -45px 0px
+	background-image url(../source/images/twi.svg)
+	background-position center
 	
 	&:hover
 		@extend .social:hover
@@ -26,7 +27,8 @@
 	  
 .vkontakte, .vkontakte:visited
 	@extend .social
-	background-position 0px 0px
+	background-image url(../source/images/vk.svg)
+	background-position center
 	
 	&:hover
 		@extend .social:hover
@@ -36,7 +38,8 @@
 		
 .facebook, .facebook:visited
 	@extend .social
-	background-position -89px 0px
+	background-image url(../source/images/fb.svg)
+	background-position center
 	
 	&:hover
 		@extend .social:hover
@@ -46,7 +49,8 @@
   
 .instagram, .instagram:visited
 	@extend .social
-	background-position -132px 0px
+	background-image url(../source/images/inst.svg)
+	background-position center
 		
 	&:hover
 		@extend .social:hover

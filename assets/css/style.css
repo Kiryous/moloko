@@ -160,15 +160,23 @@ header {
 }
 .fotorama__arr--prev {
   background: url("../source/images/prev.png");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 31px;
   height: 58px;
   margin-left: 30px;
 }
 .fotorama__arr--next {
   background: url("../source/images/next.png");
+  background-repeat: no-repeat;
+  background-position: center;
   width: 31px;
   height: 58px;
   margin-right: 30px;
+}
+.fotorama__arr--next:hover,
+.fotorama__arr--prev:hover {
+  background-size: 31px 40px;
 }
 .poster {
   width: 100%;
@@ -302,7 +310,7 @@ header {
   color: #000;
 }
 .illustration {
-  background-position: right bottom;
+  background-position: 95% bottom;
   background-size: 100px;
   background-repeat: no-repeat;
 }
@@ -320,12 +328,6 @@ header {
 }
 .science:hover {
   background-image: url("http://cdn.makeagif.com/media/1-17-2015/mL7RYq.gif");
-}
-.cashflow {
-  background-image: url("http://i.picasion.com/sp/79/SHZ/0.gif");
-}
-.cashflow:hover {
-  background-image: url("https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1433198/mark-and-john.gif");
 }
 .full {
   height: 330px;
@@ -428,14 +430,10 @@ header {
   background-size: 96px;
   background-position: center;
   border: 0;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
   -webkit-transition: 0.2s ease;
           transition: 0.2s ease;
 }
 #instapics a:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
   -webkit-transition: 0.2s ease;
           transition: 0.2s ease;
 }

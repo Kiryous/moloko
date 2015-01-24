@@ -64,25 +64,24 @@ header
 .search:-moz-placeholder,
 .search:-ms-input-placeholder
  color:rgba(255, 255, 255, 0.6)
-
-.fotorama__arr--prev
-	background url(../source/images/prev.png)
-	background-repeat no-repeat
-	background-position center
-	width 31px
-	height 58px
-	margin-left 30px
 	
+.fotorama__arr--prev
+	margin 0 0 0 30px
+	background url(../source/images/prev.svg)
+
 .fotorama__arr--next
-	background url(../source/images/next.png)
+	margin 0 30px 0 0
+	background url(../source/images/next.svg)
+	
+.fotorama__arr--prev,.fotorama__arr--next
 	background-repeat no-repeat
 	background-position center
 	width 31px
 	height 58px
-	margin-right 30px
-
-.fotorama__arr--next:hover, .fotorama__arr--prev:hover
-	background-size 31px 40px
+	
+.fotorama__arr--prev:hover, .fotorama__arr--next:hover
+	//background-size 31px 40px
+	transform scaleY(0.7)
 
 .poster
 	width 100%
@@ -175,7 +174,7 @@ header
 	
 	h3
 		width 920px
-		margin 0 auto 10px auto
+		margin 0 auto 15px auto
 		font-size 18px
 
 #instapics
@@ -227,19 +226,30 @@ header
 	margin 0px auto 0px auto
 	padding 40px 40px 0px 40px
 	font-size 16px
-	
-	h3
-		margin 0px 0px 15px 0px
 
-	ul
-		width 460px
-		display inline-block
-		vertical-align top
-		margin 0px 0px 0px 0px
+.infooter
+	width 460px
+	display inline-block
+	vertical-align top
+	margin 0px 0px 0px 0px
 
 	ul li
 		display inline-block
 		margin 0px 15px 0px 0px
+		
+	.likely
+		margin 15px 0px 0px 0px
+	
+	.likely__widget
+		height 26px
+		padding 2px 3px 2px 3px
+		opacity 0.6
+		
+		&:hover
+		  opacity 1
+	
+	.likely__button
+		padding 1px 4px 1px 2px 
 
 .ask
 	width 450px
@@ -248,7 +258,7 @@ header
 
 	p
 		width 400px
-		margin 0px 0px 10px 0px
+		margin 0px 0px 15px 0px
 
 .money
 	min-width 380px

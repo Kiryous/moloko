@@ -60,14 +60,14 @@ header {
   color: #fff;
 }
 .social,
-.twitter,
-.twitter:visited,
-.vkontakte,
-.vkontakte:visited,
-.facebook,
-.facebook:visited,
-.instagram,
-.instagram:visited {
+.twi,
+.twi:visited,
+.vk,
+.vk:visited,
+.fb,
+.fb:visited,
+.inst,
+.inst:visited {
   width: 44px;
   height: 44px;
   display: inline-block;
@@ -80,58 +80,57 @@ header {
   opacity: 0.7;
 }
 .social:hover,
-.twitter:hover,
-.twitter:visited:hover,
-.vkontakte:hover,
-.vkontakte:visited:hover,
-.facebook:hover,
-.facebook:visited:hover,
-.instagram:hover,
-.instagram:visited:hover {
+.twi:hover,
+.twi:visited:hover,
+.vk:hover,
+.vk:visited:hover,
+.fb:hover,
+.fb:visited:hover,
+.inst:hover,
+.inst:visited:hover {
   border-left: 0;
   opacity: 1;
   -webkit-transition: 0.1s;
           transition: 0.1s;
 }
-.twitter,
-.twitter:visited {
+.twi,
+.twi:visited {
   background-image: url("../source/images/twi.svg");
   background-position: center;
 }
-.twitter:hover,
-.twitter:visited:hover {
+.twi:hover,
+.twi:visited:hover {
   background-color: #25aef3;
   border-color: rgba(255,255,255,0.3);
 }
-.vkontakte,
-.vkontakte:visited {
+.vk,
+.vk:visited {
   background-image: url("../source/images/vk.svg");
   background-position: center;
 }
-.vkontakte:hover,
-.vkontakte:visited:hover {
+.vk:hover,
+.vk:visited:hover {
   background-color: #4f74a7;
   border-color: rgba(255,255,255,0.3);
 }
-.facebook,
-.facebook:visited {
+.fb,
+.fb:visited {
   background-image: url("../source/images/fb.svg");
   background-position: center;
 }
-.facebook:hover,
-.facebook:visited:hover {
+.fb:hover,
+.fb:visited:hover {
   background-color: #3b589d;
   border-color: rgba(255,255,255,0.3);
 }
-.instagram,
-.instagram:visited {
+.inst,
+.inst:visited {
   background-image: url("../source/images/inst.svg");
   background-position: center;
 }
-.instagram:hover,
-.instagram:visited:hover {
+.inst:hover,
+.inst:visited:hover {
   background-color: #a0674f;
-  bordedr-color: #a0674f;
   border-color: rgba(255,255,255,0.3);
 }
 .search {
@@ -159,24 +158,25 @@ header {
   color: rgba(255,255,255,0.6);
 }
 .fotorama__arr--prev {
-  background: url("../source/images/prev.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 31px;
-  height: 58px;
-  margin-left: 30px;
+  margin: 0 0 0 30px;
+  background: url("../source/images/prev.svg");
 }
 .fotorama__arr--next {
-  background: url("../source/images/next.png");
+  margin: 0 30px 0 0;
+  background: url("../source/images/next.svg");
+}
+.fotorama__arr--prev,
+.fotorama__arr--next {
   background-repeat: no-repeat;
   background-position: center;
   width: 31px;
   height: 58px;
-  margin-right: 30px;
 }
-.fotorama__arr--next:hover,
-.fotorama__arr--prev:hover {
-  background-size: 31px 40px;
+.fotorama__arr--prev:hover,
+.fotorama__arr--next:hover {
+  -webkit-transform: scaleY(0.7);
+      -ms-transform: scaleY(0.7);
+          transform: scaleY(0.7);
 }
 .poster {
   width: 100%;
@@ -300,7 +300,7 @@ header {
   color: #000;
 }
 .one:hover {
-  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.12);
+  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.08);
 }
 .one:hover h1 {
   color: #d04000;
@@ -409,7 +409,7 @@ header {
 }
 .shots h3 {
   width: 920px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 15px auto;
   font-size: 18px;
 }
 #instapics {
@@ -466,18 +466,29 @@ header {
   padding: 40px 40px 0px 40px;
   font-size: 16px;
 }
-.footer h3 {
-  margin: 0px 0px 15px 0px;
-}
-.footer ul {
+.infooter {
   width: 460px;
   display: inline-block;
   vertical-align: top;
   margin: 0px 0px 0px 0px;
 }
-.footer ul li {
+.infooter ul li {
   display: inline-block;
   margin: 0px 15px 0px 0px;
+}
+.infooter .likely {
+  margin: 15px 0px 0px 0px;
+}
+.infooter .likely__widget {
+  height: 26px;
+  padding: 2px 3px 2px 3px;
+  opacity: 0.6;
+}
+.infooter .likely__widget:hover {
+  opacity: 1;
+}
+.infooter .likely__button {
+  padding: 1px 4px 1px 2px;
 }
 .ask {
   width: 450px;
@@ -486,7 +497,7 @@ header {
 }
 .ask p {
   width: 400px;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 15px 0px;
 }
 .money {
   min-width: 380px;

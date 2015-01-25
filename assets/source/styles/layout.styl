@@ -28,7 +28,8 @@ header
 	vertical-align top
 	//background-image url(../source/images/logo-all-white.png)
 	//background-size 171px 44px
-	border 3px solid white
+	//border 3px solid white
+	border 0
 	font-family 'Shadow'
 	font-size 32px
 	color white
@@ -51,20 +52,28 @@ header
 	background-size 18px
 	background-position 10px center
 	background-repeat no-repeat
-	border 1px solid rgba(255,255,255,1)
+	//border 1px solid rgba(255,255,255,1)
+	border 0
 	opacity 0.5
 	color white
+	//display none
 	
 	&:focus
 		opacity 0.9
 
 //Автопрефиксер не справляется, пришлось оставить
-.search::-webkit-input-placeholder,
-.search::-moz-placeholder,
-.search:-moz-placeholder,
-.search:-ms-input-placeholder
+.search::-webkit-input-placeholder
+	color:rgba(255, 255, 255, 0.6)
+.search::-moz-placeholder
+	color:rgba(255, 255, 255, 0.6)
+.search :-moz-placeholder
+	color:rgba(255, 255, 255, 0.6)
+.search :-ms-input-placeholder
  color:rgba(255, 255, 255, 0.6)
 	
+.fotorama
+	position relative
+
 .fotorama__arr--prev
 	margin 0 0 0 30px
 	background url(../source/images/prev.svg)
@@ -83,10 +92,27 @@ header
 	//background-size 31px 40px
 	transform scaleY(0.7)
 
+.fotorama__nav-wrap
+	position absolute
+	bottom 10px
+	width 960px
+	padding-left 40px
+	text-align left
+
 .poster
 	width 100%
 	height 300px
 	color white
+	
+	&:before
+		content ' '
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		background rgba(0,0,0,0.5)
+
 
 .poster 
 	.poster-info
@@ -94,6 +120,8 @@ header
 		padding 100px 0px 0px 0px
 		margin 0 auto 0 auto	
 		display block
+		position relative
+		z-index 1
 		
 	& span
 		margin 20px 0px 0px 0px 
@@ -134,12 +162,12 @@ header
 		font-size 18px
 		font-family f_Default
 
-.news
+.news-wrap
 	width 100%
 	min-height 100px
 	padding 20px 0px 10px 0px
 
-.news .scrollyeah
+.news-wrap .news
 	width 960px
 	margin auto auto auto auto
 	
@@ -147,7 +175,7 @@ header
 	opacity 0.2
 
 .entry
-	max-width 320px
+	width 220px
 	min-height 80px
 	margin 0px 20px 0px 0px
 	padding 5px 0px 10px 3px
@@ -158,7 +186,10 @@ header
 	span
 	  font-size 10px
 	  color rgba(0, 0, 0, 0.7)
-		
+	
+	&:last-of-type
+		margin 0 0 0 0
+
 .smallcapitals 
 	text-transform: uppercase
   font-size .88em
@@ -176,6 +207,7 @@ header
 	h3
 		width 920px
 		margin 0 auto 15px auto
+		display none
 		font-size 18px
 
 #instapics
@@ -192,7 +224,6 @@ header
 	width 100%
 	height 100%
 	display inline-block
-	position relative
 	background-size 96px
 	background-position center
 	border 0
@@ -209,6 +240,7 @@ header
 		top 0
 		left 0
 		background rgba(0, 0, 0, 0.5)
+		//background rgba(255, 255, 255, 0.5)
 		transition .2s ease
 		
 	&:hover:after
@@ -217,16 +249,16 @@ header
 
 .footer-wrap
 	width 100%
-	height 150px
+	min-height 150px
 	background rgba(42, 50, 55, 0.03)
 	box-shadow inset 0px 1px 18px 0px rgba(0, 0, 150, 0.06)	
 	color rgba(0, 0, 0, 0.9)
 
 .footer
 	width 1000px
-	height 150px
+	min-height 150px
 	margin 0px auto 0px auto
-	padding 40px 40px 0px 40px
+	padding 40px 20px 0px 20px
 	font-size 16px
 
 .infooter
@@ -235,21 +267,38 @@ header
 	vertical-align top
 	margin 0px 0px 0px 0px
 	float right
+	
+	span
+		margin 0 15px 0 0
+		color rgba(0, 0, 0, 0.6)
+		
+	p
+		margin 10px 0 0 0
+		font-size 14px
+		color rgba(0, 0, 0, 0.6)
+
+	.moloko
+		margin 0 5px 0 0
+	
+	ul
+		display inline-block	
 
 	ul li
 		display inline-block
 		margin 0px 15px 0px 0px
 		
-	.likely
-		margin 15px 0px 0px 0px
+
+.moloko
+		font-family 'Shadow'
+		font-size 1.2 em
+		//color rgba(36, 175, 242,1)
+
+.ask
+	//float right
 	
 	.likely__widget
 		height 26px
 		padding 2px 3px 2px 3px
-		opacity 0.6
-		
-		&:hover
-		  opacity 1
 	
 	.likely__button
 		padding 1px 4px 1px 2px 
@@ -263,97 +312,5 @@ header
 		width 400px
 		margin 0px 0px 10px 0px
 
-.money
-	min-width 380px
-	height 55px
-	padding 10px 10px 0px 0px
-	vertical-align top
-	display inline-block
-	position relative
-	background white
-	border-radius 3px
-
-	input[type=submit]
-		height 35px
-		margin 0px 0px 0px 10px
-		padding 5px 15px 5px 15px
-		vertical-align top
-		background linear-gradient(to bottom, rgba(36, 175, 242, 0.7), rgba(41, 146, 228, 1))
-		border-radius 3px
-		border 0
-		color white
-		cursor pointer
-		
-		&:hover
-			opacity 0.8
-
-.moloko
-		font-family 'Shadow'
-		font-size 1.2 em
-		//color rgba(36, 175, 242,1)
- 
-.sum
-	display inline-block
-	position relative
-	vertical-align top
-	
-	input
-		width 90px
-		margin 5px 0px 0px 0px
-		padding 0px 25px 0px 0px
-		vertical-align top
-		text-align right
-		background transparent
-		border 0
-		
-	& ::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder
-		color:rgba(255, 255, 255, 0.6)
-
-	span
-		position absolute
-		top 6px
-		right 8px
-		font-size 18px
-		color black
-
-.switch-input 
-  display none  
-
-.switch-input:checked + .cards, .switch-input:checked + .yamoney 
-	padding 5px 1px 1px 1px
-	background linear-gradient(to top, rgba(41, 146, 228, 0), rgba(41, 146, 228, 0.6))
-	box-shadow inset 0 0 10px rgba(41, 146, 228, 0.5);
-	border 0
-	
-	svg path
-	  fill black
-
-.switch-input:checked +.yamoney
-	padding 5px 0px 1px 1px
-	  
-.cards, .yamoney
-	width 80px
-	height 35px
-	padding 3px 0px 0px 0px
-	border 1px solid rgba(0, 0, 0, 0.1)
-	display inline-block
-	vertical-align top
-	text-align center
-	
-	& svg
-	  width 70px
-	  height 25px
-	  
-	  & path
-	    fill rgba(0, 0, 0, 0.5)
-
-.cards
-	border-top-left-radius 3px
-	border-bottom-left-radius 3px	    
-	
-.yamoney
-	border-left 0
-	border-top-right-radius 3px
-	border-bottom-right-radius 3px	
 
 @import 'typo'

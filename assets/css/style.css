@@ -88,8 +88,7 @@ header {
 .inst:hover,
 .inst:visited:hover {
   opacity: 1;
-  -webkit-transition: 0.1s;
-          transition: 0.1s;
+  transition: 0.1s;
 }
 .twi,
 .twi:visited {
@@ -125,13 +124,11 @@ header {
   border: 0;
   opacity: 0.5;
   color: #fff;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 .search:focus {
   opacity: 0.9;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 .search::-webkit-input-placeholder {
   color: rgba(255,255,255,0.6);
@@ -331,6 +328,7 @@ header {
 .one.photo {
   background-size: cover;
   position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 .one.photo h1,
 .one.photo span {
@@ -349,8 +347,7 @@ header {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 .one.photo:hover h1,
 .one.photo:hover span {
@@ -362,22 +359,18 @@ header {
 }
 .one.photo:hover:after {
   opacity: 0.5;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 .one.photo.big {
   height: 330px;
 }
 .one.photo.big:after {
-  background: -webkit-linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
   background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 .one.photo.big:hover:after {
   opacity: 0.5;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  transition: 0.2s;
 }
 /* Инстаграм ** временно отключен
 .shots
@@ -498,15 +491,13 @@ a:visited {
   color: #0072ba;
   text-decoration: none;
   border-bottom: 1px solid rgba(0,114,186,0.3);
-  -webkit-transition: 0.5s ease;
-          transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 a:hover,
 a:visited:hover {
   color: #d04000;
   border-color: rgba(208,64,0,0.3);
-  -webkit-transition: 0s ease;
-          transition: 0s ease;
+  transition: 0s ease;
 }
 a.dark,
 a:visited.dark {
@@ -517,8 +508,7 @@ a.dark:hover,
 a:visited.dark:hover {
   color: #d04000;
   border-color: rgba(208,64,0,0.3);
-  -webkit-transition: 0s ease;
-          transition: 0s ease;
+  transition: 0s ease;
 }
 a.lite,
 a:visited.lite {
@@ -533,6 +523,5 @@ a.lite:hover,
 a:visited.lite:hover {
   color: #d04000;
   border-color: rgba(208,64,0,0.3);
-  -webkit-transition: 0s ease;
-          transition: 0s ease;
+  transition: 0s ease;
 }

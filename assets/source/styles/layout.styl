@@ -28,7 +28,6 @@ header
 	vertical-align top
 	//background-image url(../source/images/logo-all-white.png)
 	//background-size 171px 44px
-	//border 3px solid white
 	border 0
 	font-family 'Shadow'
 	font-size 32px
@@ -52,14 +51,14 @@ header
 	background-size 18px
 	background-position 10px center
 	background-repeat no-repeat
-	//border 1px solid rgba(255,255,255,1)
 	border 0
 	opacity 0.5
 	color white
-	//display none
+	transition .2s
 	
 	&:focus
 		opacity 0.9
+		transition .2s
 
 //Автопрефиксер не справляется, пришлось оставить
 .search::-webkit-input-placeholder
@@ -129,11 +128,11 @@ header
 		position relative
 		z-index 1
 		border 0
-		//text-align center
 	
 	&:hover h1
-		color rgba(255, 255, 255, 0.7)
-		border-color rgba(255, 255, 255, 0.3)
+		//color rgba(255, 255, 255, 0.7)
+		text-shadow 0px 0px 10px rgba(191, 226, 255, 0.6)
+		border-color rgba(255, 255, 255, 0.7)
 
 .poster
   .image
@@ -271,7 +270,7 @@ header
 	padding 40px 20px 0px 20px
 	position relative
 	font-size 16px
-	background-image url(../source/images/dead.png)
+	//background-image url(../source/images/dead.png)
 	background-size 400px
 	background-repeat no-repeat
 	background-position 350px 39%

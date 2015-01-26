@@ -128,9 +128,13 @@ header {
   border: 0;
   opacity: 0.5;
   color: #fff;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 .search:focus {
   opacity: 0.9;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
 }
 .search::-webkit-input-placeholder {
   color: rgba(255,255,255,0.6);
@@ -205,8 +209,8 @@ header {
   border: 0;
 }
 .poster:hover h1 {
-  color: rgba(255,255,255,0.7);
-  border-color: rgba(255,255,255,0.3);
+  text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
+  border-color: rgba(255,255,255,0.7);
 }
 .poster .image {
   width: 180px;
@@ -279,6 +283,7 @@ header {
 }
 .grid-wrap {
   width: 1000px;
+  min-height: 100%;
   margin: 20px auto 40px auto;
   padding: 0px 0px 0px 20px;
 }
@@ -377,7 +382,7 @@ header {
   color: #fff;
 }
 .one.photo:hover h1 {
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.7);
   text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
 }
 .one.photo:hover:after {
@@ -395,6 +400,7 @@ header {
           transition: 0.2s;
 }
 .one.photo.big:hover:after {
+  opacity: 0.5;
   -webkit-transition: 0.2s;
           transition: 0.2s;
 }
@@ -464,7 +470,6 @@ header {
   padding: 40px 20px 0px 20px;
   position: relative;
   font-size: 16px;
-  background-image: url("../source/images/dead.png");
   background-size: 400px;
   background-repeat: no-repeat;
   background-position: 350px 39%;

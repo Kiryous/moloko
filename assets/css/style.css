@@ -70,14 +70,12 @@ header {
 .inst:visited {
   width: 44px;
   height: 40px;
-  display: inline-block;
-  border: 0;
-  background-repeat: no-repeat;
-  position: relative;
-  fill: #f00;
-  border-left: 0;
   padding: 0;
   margin: 0;
+  display: inline-block;
+  position: relative;
+  background-repeat: no-repeat;
+  border: 0;
   opacity: 0.7;
 }
 .social:hover,
@@ -89,7 +87,6 @@ header {
 .fb:visited:hover,
 .inst:hover,
 .inst:visited:hover {
-  border-left: 0;
   opacity: 1;
   -webkit-transition: 0.1s;
           transition: 0.1s;
@@ -148,41 +145,38 @@ header {
 .search :-ms-input-placeholder {
   color: rgba(255,255,255,0.6);
 }
+/* Фоторама **отключена
+.fotorama
+	position relative
+
+.fotorama__arr--prev
+	margin 0 0 0 30px
+	background url(../source/images/prev.svg)
+
+.fotorama__arr--next
+	margin 0 30px 0 0
+	background url(../source/images/next.svg)
+	
+.fotorama__arr--prev,.fotorama__arr--next
+	background-repeat no-repeat
+	background-position center
+	width 31px
+	height 58px
+	
+.fotorama__arr--prev:hover, .fotorama__arr--next:hover
+	transform scaleY(0.7)
+
+.fotorama__nav-wrap
+	position absolute
+	bottom 10px
+	width 960px
+	padding-left 40px
+	text-align left
+*/
 .cover {
   position: relative;
   width: 100%;
   height: 320px;
-}
-.fotorama {
-  position: relative;
-}
-.fotorama__arr--prev {
-  margin: 0 0 0 30px;
-  background: url("../source/images/prev.svg");
-}
-.fotorama__arr--next {
-  margin: 0 30px 0 0;
-  background: url("../source/images/next.svg");
-}
-.fotorama__arr--prev,
-.fotorama__arr--next {
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 31px;
-  height: 58px;
-}
-.fotorama__arr--prev:hover,
-.fotorama__arr--next:hover {
-  -webkit-transform: scaleY(0.7);
-      -ms-transform: scaleY(0.7);
-          transform: scaleY(0.7);
-}
-.fotorama__nav-wrap {
-  position: absolute;
-  bottom: 10px;
-  width: 960px;
-  padding-left: 40px;
-  text-align: left;
 }
 .poster {
   width: 100%;
@@ -212,7 +206,7 @@ header {
   text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
   border-color: rgba(255,255,255,0.7);
 }
-.poster .image {
+.poster .poster-info .image {
   width: 180px;
   height: 180px;
   margin: 0px 20px 0px 40px;
@@ -251,14 +245,14 @@ header {
   min-height: 100px;
   padding: 20px 0px 10px 0px;
 }
-.news-wrap .news {
+.news {
   width: 960px;
   margin: auto auto auto auto;
 }
-.scrollyeah__shadow_prev,
-.scrollyeah__shadow_next {
-  opacity: 0.2;
-}
+/* Скролье ** отключен
+.scrollyeah__shadow_prev,.scrollyeah__shadow_next
+	opacity 0.2
+*/
 .entry {
   width: 220px;
   min-height: 80px;
@@ -339,20 +333,6 @@ header {
   background-size: 95px;
   background-repeat: no-repeat;
 }
-.one.illustration.full {
-  height: 330px;
-  padding: 230px 20px 20px 20px;
-  background-size: auto 220px;
-  background-position: center top;
-  text-align: center;
-}
-.one.illustration.full h1,
-.one.illustration.full span {
-  text-align: center;
-}
-.one.illustration.full:hover h1 {
-  z-index: 1;
-}
 .one.photo {
   background-size: cover;
   position: relative;
@@ -404,58 +384,56 @@ header {
   -webkit-transition: 0.2s;
           transition: 0.2s;
 }
-.shots {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  display: none;
-}
-.shots h3 {
-  width: 920px;
-  margin: 0 auto 15px auto;
-  display: none;
-  font-size: 18px;
-}
-#instapics {
-  width: 110%;
-  height: 96px;
-}
-#instapics div {
-  width: 96px;
-  height: 96px;
-  display: inline-block;
-  position: relative;
-}
-#instapics a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-size: 96px;
-  background-position: center;
-  border: 0;
-  -webkit-transition: 0.2s ease;
-          transition: 0.2s ease;
-}
-#instapics a:hover {
-  -webkit-transition: 0.2s ease;
-          transition: 0.2s ease;
-}
-#instapics a:after {
-  content: ' ';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.5);
-  -webkit-transition: 0.2s ease;
-          transition: 0.2s ease;
-}
-#instapics a:hover:after {
-  background: transparent;
-  -webkit-transition: 0.2s ease;
-          transition: 0.2s ease;
-}
+/* Инстаграм ** временно отключен
+.shots
+	width 100%
+	max-width 100%
+	overflow hidden
+	display none
+	
+	h3
+		width 920px
+		margin 0 auto 15px auto
+		display none
+		font-size 18px
+
+#instapics
+	width 110%
+	height 96px
+	
+	div
+	  width 96px
+	  height 96px
+	  display inline-block
+	  position relative
+
+#instapics a
+	width 100%
+	height 100%
+	display inline-block
+	background-size 96px
+	background-position center
+	border 0
+	transition .2s ease
+	
+	&:hover
+		transition .2s ease
+		
+	&:after
+		content ' '
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		background rgba(0, 0, 0, 0.5)
+		//background rgba(255, 255, 255, 0.5)
+		transition .2s ease
+		
+	&:hover:after
+		background transparent
+		transition .2s ease
+ Конец отключенного инстаграма */
 .footer-wrap {
   width: 100%;
   min-height: 150px;
@@ -499,33 +477,26 @@ header {
 .ask .likely .likely__widget+.likely__widget {
   margin: 0 0 0 10px;
 }
-.infooter {
+.copyright {
   display: inline-block;
   vertical-align: top;
   float: right;
 }
-.infooter span {
+.copyright span {
   margin: 0 15px 0 0;
   color: rgba(0,0,0,0.6);
 }
-.infooter p {
+.copyright p {
   margin: 10px 0 0 0;
   font-size: 14px;
   color: rgba(0,0,0,0.6);
 }
-.infooter .moloko {
-  margin: 0 5px 0 0;
-}
-.infooter ul {
+.copyright ul {
   display: inline-block;
 }
-.infooter ul li {
+.copyright ul li {
   display: inline-block;
   margin: 0px 15px 0px 0px;
-}
-.moloko {
-  font-family: 'Shadow';
-  font-size: 1.2em;
 }
 a,
 a:visited {

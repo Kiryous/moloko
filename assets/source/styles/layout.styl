@@ -8,6 +8,7 @@ body
   font-size 18px
   line-height 20px
 
+//Шапка
 .header-wrap
 	width 100%
 	position absolute
@@ -70,11 +71,7 @@ header
 .search :-ms-input-placeholder
   color:rgba(255, 255, 255, 0.6)
 
-.cover
-	position relative
-	width 100%
-	height 320px
-
+/* Фоторама **отключена
 .fotorama
 	position relative
 
@@ -93,7 +90,6 @@ header
 	height 58px
 	
 .fotorama__arr--prev:hover, .fotorama__arr--next:hover
-	//background-size 31px 40px
 	transform scaleY(0.7)
 
 .fotorama__nav-wrap
@@ -102,7 +98,14 @@ header
 	width 960px
 	padding-left 40px
 	text-align left
+*/
 
+//Крутой материал
+.cover
+	position relative
+	width 100%
+	height 320px
+	
 .poster
 	width 100%
 	height 320px
@@ -134,7 +137,6 @@ header
 		  text-shadow 0px 0px 10px rgba(191, 226, 255, 0.6)
 		  border-color rgba(255, 255, 255, 0.7)
 
-.poster
   .image
 	  width 180px
 	  height 180px
@@ -150,9 +152,8 @@ header
 	margin 0 40px 0 0
 	vertical-align middle
 	display inline-block
-
-.caption 
-	h1	
+ 
+	& h1	
 		margin 0px 0px 15px 0px
 		display inline
 		border-bottom 1px solid rgba(255, 255, 255, 0.5)
@@ -161,27 +162,29 @@ header
 		line-height 44px 
 		color white
 	
-	span
+	& span
 		margin 0 0 0 0
 		display block
 		font-size 24px
 		font-family f_Default 
-		//font-weight bold
 		line-height 1.3em
 		letter-spacing 0.05em
 		color white
 
+// Новости
 .news-wrap
 	width 100%
 	min-height 100px
 	padding 20px 0px 10px 0px
-
-.news-wrap .news
+	
+.news
 	width 960px
 	margin auto auto auto auto
 	
+/* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
 	opacity 0.2
+*/
 
 .entry
 	width 220px
@@ -205,8 +208,10 @@ header
   letter-spacing .15em
   margin-right -.15em
 
+//Сетка материалов
 @import 'grid'
 
+/* Инстаграм ** временно отключен
 .shots
 	width 100%
 	max-width 100%
@@ -255,7 +260,9 @@ header
 	&:hover:after
 		background transparent
 		transition .2s ease
+ Конец отключенного инстаграма */
 
+//Подвал
 .footer-wrap
 	width 100%
 	min-height 150px
@@ -278,7 +285,6 @@ header
 .ask
 	width 500px
 	display inline-block
-	//text-align center
 
 	.text
 		display inline-block
@@ -301,7 +307,7 @@ header
 	.likely .likely__widget+.likely__widget
 		margin 0 0 0 10px
 
-.infooter
+.copyright
 	display inline-block
 	vertical-align top
 	float right
@@ -314,9 +320,6 @@ header
 		margin 10px 0 0 0
 		font-size 14px
 		color rgba(0, 0, 0, 0.6)
-
-	.moloko
-		margin 0 5px 0 0
 	
 	ul
 		display inline-block	
@@ -324,11 +327,6 @@ header
 	ul li
 		display inline-block
 		margin 0px 15px 0px 0px
-		
-
-.moloko
-		font-family 'Shadow'
-		font-size 1.2 em
 
 
 @import 'typo'

@@ -4,6 +4,7 @@
 	margin 20px auto 40px auto
 	padding 0px 0px 0px 20px
 
+//Общие стили для карточек
 .one, .one:visited
 	width 300px
 	height 150px
@@ -45,13 +46,14 @@
 	& span
 		color rgba(0, 0, 0, 1)
 
+// Карточка с иллюстрацией в углу
 .one.illustration 
 	padding 20px 90px 20px 20px
 	background-position 100% bottom
 	background-size 95px
 	background-repeat no-repeat
 
-/* Блок с большой иллюстрацией не используется */
+/* Карточка с большой иллюстрацией **отключена
 .one.illustration.full
 	height 330px
 	padding 230px 20px 20px 20px
@@ -64,8 +66,9 @@
 
 	&:hover h1
 		z-index 1
-/* Блок с большой иллюстрацией не используется */
+*/
 
+//Маленькая карточка с фотографией
 .one.photo
 	background-size cover
 	position relative
@@ -101,6 +104,8 @@
 		opacity 0.5
 		transition .2s
 
+
+//Большая карточка с фотографией
 .one.photo.big
 	height 330px
 		

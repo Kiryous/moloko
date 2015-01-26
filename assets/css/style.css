@@ -295,11 +295,6 @@ header {
   color: #000;
   z-index: 1;
 }
-.one *,
-.one:visited * {
-  -webkit-transition: 0.1s;
-          transition: 0.1s;
-}
 .one h1,
 .one:visited h1 {
   display: inline;

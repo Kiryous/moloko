@@ -13,7 +13,7 @@ body
 	position absolute
 	top 0
 	left 0
-	z-index 1
+	z-index 2
 
 header
 	width 1000px
@@ -70,7 +70,12 @@ header
 	color:rgba(255, 255, 255, 0.6)
 .search :-ms-input-placeholder
   color:rgba(255, 255, 255, 0.6)
-	
+
+.cover
+	position relative
+	width 100%
+	height 320px
+
 .fotorama
 	position relative
 
@@ -263,15 +268,40 @@ header
 	min-height 150px
 	margin 0px auto 0px auto
 	padding 40px 20px 0px 20px
+	position relative
 	font-size 16px
 
+.ask
+	width 500px
+	display inline-block
+	//text-align center
+
+	.text
+		display inline-block
+		vertical-align top
+	
+	.likely
+		vertical-align middle
+		margin 10px 0 0 0
+	
+	.likely__widget
+		height 26px
+		padding 2px 3px 2px 3px
+		
+		&:first-of-type
+			margin 0 0 0 0
+	
+	.likely__button
+		padding 1px 4px 1px 2px 
+		
+	.likely .likely__widget+.likely__widget
+		margin 0 0 0 10px
+
 .infooter
-	max-width 460px
 	display inline-block
 	vertical-align top
-	margin 0px 0px 0px 0px
 	float right
-	
+
 	span
 		margin 0 15px 0 0
 		color rgba(0, 0, 0, 0.6)
@@ -295,23 +325,6 @@ header
 .moloko
 		font-family 'Shadow'
 		font-size 1.2 em
-		//color rgba(36, 175, 242,1)
-
-.ask
-	.likely__widget
-		height 26px
-		padding 2px 3px 2px 3px
-	
-	.likely__button
-		padding 1px 4px 1px 2px 
-
-.ask
-	width 450px
-	display inline-block
-
-	p
-		width 400px
-		margin 0px 0px 10px 0px
 
 
 @import 'typo'

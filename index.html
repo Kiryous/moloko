@@ -4,8 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8">
   <title>Молоко</title>
-  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css" rel="stylesheet">
-  <link  href="assets/css/scrollyeah.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/likely.css" />
   <!-- Шрифты -->
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
@@ -15,13 +13,15 @@
 </head>
 
 <body>
+
   <div class="header-wrap">
   <header>
   	<a class="logo" href="#">Молоко</a><a class="twi" href="#"> </a><a class="vk" href="#"> </a><a class="fb" href="#"> </a><a class="inst" href="#"> </a>
   	<input class="search" type="text" placeholder="Поиск статей" />
   </header>
   </div>
-  <div class="fotorama" data-width="100%" data-height="320px" data-nav="false">
+
+  <div class="cover">
     <div class="poster" style="background-color:rgba(41,146,228,1); background-image: url(http://yandex.ru/images/today?size=1920x1200)">
     <a class="poster-info" href="#">
       <div class="image" style="background-image:url(assets/source/images/head.png)">
@@ -30,18 +30,9 @@
      	<h1>Горячие слёзы юного издателя</h1>  <span>Рисованные иллюстрации как способ удержать читателя</span>
       </div>
     </a>
+    </div>
   </div>
-  <!--div class="poster" style="background-color:rgba(256,0,0,0.7)">
-    <a class="poster-info" href="#">
-      <div class="image" style="background-image:url(http://moloko.kirys.ru/old/img/huiznaet.png);background-position:bottom;transform: rotate(180deg);">
-      </div>
-      <div class="caption">
-      <h1>Дайвинг в красном море</h1><br/>
-      <span>Попрежнему с вывернутыми карманами</span>
-      </div>
-    </a>
-  </div-->
-  </div>
+
   <div class="news-wrap">
     <div class="news" data-disableIfFit="true" data-centerIfFit="true">
      <div class="entry">
@@ -62,6 +53,7 @@
      </div>
     </div>
   </div> 
+
   <div class="grid-wrap">
     <div class="js-masonry" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
       <a class="one illustration" href="#" style="background-image:url(assets/source/images/dead.png);">
@@ -97,22 +89,18 @@
 
     </div>
   </div>
-  <div class="shots">
-    <h3><a href="#" class="dark">Инстаграм</a> редакции</h3>
-    <div class="scrollyeah">
-      <div id="instapics"></div>
-    </div>
-  </div>
+
   <div class="footer-wrap">
     <div class="footer">
 
      <div class="ask">
-         <p>Расскажите о нас друзьям и <a class="dark" href="#">дайте денег</a> на Молоко</p>
+      <span class="text">Расскажите о нас друзьям</span> <span class="text">и <a class="dark" href="#">дайте денег</a> на Молоко</span><br/>
          <div class="likely">
-           <div class="twitter" data-via="ilyabirman">Твитнуть</div><div class="vkontakte">Поделиться</div><div class="facebook">Поделиться</div>
+           <div class="twitter" data-via="molokodaily">Твитнуть</div><div class="vkontakte">Поделиться</div><div class="facebook">Поделиться</div>
         </div>
       </div>
       <div class="infooter">
+        <span>© 2015 Молоко</span>
         <ul>
           <li><a class="dark" href="#">О проекте</a></li>
         </ul>
@@ -122,23 +110,7 @@
   </div>
   
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js"></script>
   <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
-  <script src="http://kirillchernakov.ru/instafeed.min.js"></script>
-  <script type="text/javascript">
-        var feed = new Instafeed({
-        get: 'user',
-        userId: 1295282419,
-        accessToken: '31037067.467ede5.f394f2c9ef044e53b12816edc99f19a4',
-        target: 'instapics',
-        limit: 25,
-        clientId: '3343846802654ab6b9e7bfdbaf0e0071',
-        template: '<div><a href="{{link}}" style="background-image:url({{image}})"> </a></div>',
-        sortBy:'random',
-    });
-    feed.run();
-  </script>
-  <script src="assets/js/scrollyeah.min.js"></script>
   <script src="assets/js/likely.js"></script>
   <script src="assets/js/all.js"></script>
 </body>

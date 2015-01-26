@@ -16,31 +16,28 @@
 	color rgba(0, 0, 0, 1)
 	z-index 1
 	
-	& * 
+	& *
 		transition .1s
-
-.one h1
-	display inline
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3)
-	font-family f_headline
-	font-size 24px
-	line-height 32px
-	color rgba(0, 0, 0, 1)
-
-.one span
-	margin 10px 0px 0px 0px
-	display inline-block
-	font-family f_Default
-	font-size 16px
-	color rgba(0, 0, 0, 1)
+		
+	& h1
+		display inline
+		border-bottom 1px solid rgba(0, 0, 0, 0.3)
+		font-family f_headline
+		font-size 24px
+		line-height 32px
+		color rgba(0, 0, 0, 1)
+	
+	& span
+		margin 10px 0px 0px 0px
+		display inline-block
+		font-family f_Default
+		font-size 16px
+		color rgba(0, 0, 0, 1)
 
 .one:hover
-	//box-shadow 0px 1px 18px 0px rgba(208, 64, 0, 0.10)
 	box-shadow 0px 1px 18px 0px rgba(0, 0, 0, 0.08)
 	
 	& h1
-		//color c_Moloko
-		//border-color rgba(41, 146, 228, 0.5)
 		color rgba(208, 64, 0, 1)
 		border-color rgba(218, 64, 0, .3)
 	
@@ -48,29 +45,13 @@
 		color rgba(0, 0, 0, 1)
 
 .one.illustration 
-	padding 20px 100px 20px 20px
+	padding 20px 90px 20px 20px
 	background-position 100% bottom
 	background-size 95px
 	background-repeat no-repeat
-	
-	& span
-		width 200px
 
-.basketball
-	background-image url(http://i.picasion.com/sp/79/SHS/1.gif)
-	background-position 100% 86px
-
-.basketball:hover
-	background-image:url(https://d13yacurqjgara.cloudfront.net/users/99875/screenshots/1791962/chris-paul-dribbble.gif)
-	
-.science
-	background-image url(http://i.picasion.com/sp/79/SI6/2.gif)
-	background-position 100% bottom
-
-.science:hover
-	background-image:url(http://cdn.makeagif.com/media/1-17-2015/mL7RYq.gif)
-
-.full
+/* Блок с большой иллюстрацией не используется */
+.one.illustration.full
 	height 330px
 	padding 230px 20px 20px 20px
 	background-size auto 220px
@@ -82,18 +63,11 @@
 
 	&:hover h1
 		z-index 1
-		//color rgba(23, 109, 178, 1)
-		//border-color rgba(41, 146, 228, 0.3)
+/* Блок с большой иллюстрацией не используется */
 
-.plain
-	@extend .one
-
-.photo
+.one.photo
 	background-size cover
 	position relative
-	
-	& *
-		transition .1s 
 
 	& h1, & span
 		position relative
@@ -113,7 +87,7 @@
 		background rgba(0,0,0,0.5)
 		transition .2s
 
-.photo:hover
+.one.photo:hover
 	& h1, & span
 		color white
 		
@@ -122,21 +96,17 @@
 		text-shadow: 0px 0px 10px rgba(191, 226, 255, 0.6);
 		
 	&:after
-		background linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(255, 255, 0, 0))
+		opacity 0.5
+		transition .2s
 
-.big
+.one.photo.big
 	height 330px
-	
-	& *
-		transition .1s 
 		
 	&:after
 		background linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%)
 		transition .2s
 		
-.big:hover
-	
-	&:after
-		background linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 100%)	
-		transition .2s	
+	&:hover:after
+		//opacity 0.5
+		transition .2s
 

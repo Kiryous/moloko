@@ -208,7 +208,7 @@ header {
   z-index: 1;
   border: 0;
 }
-.poster:hover h1 {
+.poster .poster-info:hover h1 {
   text-shadow: 0px 0px 10px rgba(191,226,255,0.6);
   border-color: rgba(255,255,255,0.7);
 }

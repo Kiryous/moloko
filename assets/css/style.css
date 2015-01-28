@@ -179,7 +179,9 @@ header {
   width: 100%;
   height: 320px;
   color: #fff;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 .poster:after {
   content: ' ';

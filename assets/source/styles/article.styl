@@ -15,19 +15,46 @@
 	&:hover h1
 		text-shadow none
 		border 0
+
+.author
+	margin 0 15px 0 0
+	display inline-block
+	font-weight bold
+	font-family f_Default
+	
+	& .pic
+		width 35px
+		height 35px
+		margin 0 10px 0 0
+		display inline-block
+		vertical-align middle
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		border-radius 50%
+		overflow hidden
 		
 .infobar
+	width 960px
 	font-size 16px
 	position absolute
-	bottom 10px
+	bottom 15px
 	
-	.author
-		font-weight bold
-		margin 0 15px 0 0
-		
+	.date, .views
+		opacity 0.8
+	
+	.date, .views
+		font-size 14px
+
 	.views
 		margin 0 15px 0 0
-		padding 0 0 0 32px
+		padding 0 0 0 35px
+		background-image url(../source/images/eye.svg)
+		background-position left center
+		background-repeat no-repeat
+	
+	.likely
+		float right
 
 .article-wrap
 	width 1000px
@@ -37,7 +64,7 @@
 
 article
 	width 650px
-	font-family Georgia
+	font-family f_text
 	font-size 18px
 	line-height 25px
 	
@@ -45,9 +72,10 @@ article
 		margin 20px 0 20px 0
 		
 	& h2
-		margin 50px 0 0 0
+		margin 40px 0 0 0
 		font-family f_headline
 		text-align center
+		line-height 1.4em
 	
 	& .image
 		width 750px
@@ -74,6 +102,29 @@ article
 			font-size 36px
 			//color rgba(0, 0, 0, 0.7)
 			text-align center
+			
+	& .expert
+		@extend .author
+		margin 40px 0 20px 0
+		
+		& .pic
+			vertical-align middle
+			width 70px
+			height 70px
+			
+		& .info
+			margin 0 10px 0 0
+			display inline-block
+			vertical-align middle
+			
+		& .who
+			font-size 16px
+			font-weight normal
+		
+		& p
+			margin 20px 0 20px 40px
+			font-weight normal
+			font-family f_text
 
 .relevant-wrap
 	width 100%
@@ -110,5 +161,5 @@ article
 	width 100%
 	background rgba(232,239,243,0.4)
 	
-	& .comments
+	.comments
 		@extend .relevant

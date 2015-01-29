@@ -506,18 +506,49 @@ header {
   text-shadow: none;
   border: 0;
 }
+.author,
+article .expert {
+  margin: 0 15px 0 0;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.author .pic,
+article .expert .pic {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .infobar {
+  width: 960px;
   font-size: 16px;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
 }
-.infobar .author {
-  font-weight: bold;
-  margin: 0 15px 0 0;
+.infobar .date,
+.infobar .views {
+  opacity: 0.8;
+}
+.infobar .date,
+.infobar .views {
+  font-size: 14px;
 }
 .infobar .views {
   margin: 0 15px 0 0;
-  padding: 0 0 0 32px;
+  padding: 0 0 0 35px;
+  background-image: url("../source/images/eye.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.infobar .likely {
+  float: right;
 }
 .article-wrap {
   width: 1000px;
@@ -535,9 +566,10 @@ article p {
   margin: 20px 0 20px 0;
 }
 article h2 {
-  margin: 50px 0 0 0;
+  margin: 40px 0 0 0;
   font-family: 'PT Sans Caption';
   text-align: center;
+  line-height: 1.4em;
 }
 article .image {
   width: 750px;
@@ -563,6 +595,28 @@ article aside {
 article aside .number {
   font-size: 36px;
   text-align: center;
+}
+article .expert {
+  margin: 40px 0 20px 0;
+}
+article .expert .pic {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+}
+article .expert .info {
+  margin: 0 10px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+article .expert .who {
+  font-size: 16px;
+  font-weight: normal;
+}
+article .expert p {
+  margin: 20px 0 20px 40px;
+  font-weight: normal;
+  font-family: Georgia;
 }
 .relevant-wrap {
   width: 100%;

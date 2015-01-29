@@ -22,9 +22,9 @@ header
 	padding 20px 20px 0px 20px
 
 .logo,.logo:visited
-	width 171px
-	height 44px
-	padding 10px 10px 10px 11px
+	height 40px 
+	margin 0 10px 0 0
+	padding 10px 0 0 0 
 	display inline-block
 	vertical-align top
 	//background-image url(../source/images/logo-all-white.png)
@@ -161,7 +161,7 @@ header
 		border-bottom 1px solid rgba(255, 255, 255, 0.5)
 		font-family f_headline
 		font-size 28px
-		line-height 44px 
+		line-height 36px 
 		color white
 	
 	& span
@@ -267,14 +267,14 @@ header
 //Подвал
 .footer-wrap
 	width 100%
-	min-height 150px
+	min-height 120px
 	background rgba(42, 50, 55, 0.03)
 	box-shadow inset 0px 1px 18px 0px rgba(0, 0, 150, 0.06)	
 	color rgba(0, 0, 0, 0.9)
 
 .footer
 	width 1000px
-	min-height 150px
+	min-height 120px
 	margin 0px auto 0px auto
 	padding 40px 20px 0px 20px
 	position relative
@@ -285,16 +285,17 @@ header
 	background-position 350px 39%
 
 .ask
-	width 500px
+	//width 500px
 	display inline-block
+	float right
 
 	.text
 		display inline-block
 		vertical-align top
 	
 	.likely
-		vertical-align middle
-		margin 10px 0 0 0
+		vertical-align top
+		margin 0 0 0 10px
 	
 	.likely__widget
 		height 26px
@@ -312,7 +313,6 @@ header
 .copyright
 	display inline-block
 	vertical-align top
-	float right
 
 	span
 		margin 0 15px 0 0
@@ -330,5 +330,6 @@ header
 		display inline-block
 		margin 0px 15px 0px 0px
 
+@import 'article'
 
 @import 'typo'

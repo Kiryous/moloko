@@ -43,9 +43,9 @@ header {
 }
 .logo,
 .logo:visited {
-  width: 171px;
-  height: 44px;
-  padding: 10px 10px 10px 11px;
+  height: 40px;
+  margin: 0 10px 0 0;
+  padding: 10px 0 0 0;
   display: inline-block;
   vertical-align: top;
   border: 0;
@@ -227,7 +227,7 @@ header {
   border-bottom: 1px solid rgba(255,255,255,0.5);
   font-family: 'PT Sans Caption';
   font-size: 28px;
-  line-height: 44px;
+  line-height: 36px;
   color: #fff;
 }
 .caption span {
@@ -289,6 +289,7 @@ header {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  background-color: #fff;
   box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
   border-bottom: 0;
   color: #000;
@@ -426,14 +427,14 @@ header {
  Конец отключенного инстаграма */
 .footer-wrap {
   width: 100%;
-  min-height: 150px;
+  min-height: 120px;
   background: rgba(42,50,55,0.03);
   box-shadow: inset 0px 1px 18px 0px rgba(0,0,150,0.06);
   color: rgba(0,0,0,0.9);
 }
 .footer {
   width: 1000px;
-  min-height: 150px;
+  min-height: 120px;
   margin: 0px auto 0px auto;
   padding: 40px 20px 0px 20px;
   position: relative;
@@ -443,16 +444,16 @@ header {
   background-position: 350px 39%;
 }
 .ask {
-  width: 500px;
   display: inline-block;
+  float: right;
 }
 .ask .text {
   display: inline-block;
   vertical-align: top;
 }
 .ask .likely {
-  vertical-align: middle;
-  margin: 10px 0 0 0;
+  vertical-align: top;
+  margin: 0 0 0 10px;
 }
 .ask .likely__widget {
   height: 26px;
@@ -470,7 +471,6 @@ header {
 .copyright {
   display: inline-block;
   vertical-align: top;
-  float: right;
 }
 .copyright span {
   margin: 0 15px 0 0;
@@ -487,6 +487,123 @@ header {
 .copyright ul li {
   display: inline-block;
   margin: 0px 15px 0px 0px;
+}
+.cover.article {
+  height: 350px;
+}
+.poster.article {
+  height: 350px;
+}
+.poster-info.article {
+  width: 1000px;
+  padding: 100px 20px 0 20px;
+  height: 350px;
+}
+.poster-info.article h1 {
+  border: 0;
+}
+.poster-info.article:hover h1 {
+  text-shadow: none;
+  border: 0;
+}
+.infobar {
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+}
+.infobar .author {
+  font-weight: bold;
+  margin: 0 15px 0 0;
+}
+.infobar .views {
+  margin: 0 15px 0 0;
+  padding: 0 0 0 32px;
+}
+.article-wrap {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+}
+article {
+  width: 650px;
+  font-family: Georgia;
+  font-size: 18px;
+  line-height: 25px;
+}
+article p {
+  margin: 20px 0 20px 0;
+}
+article h2 {
+  margin: 50px 0 0 0;
+  font-family: 'PT Sans Caption';
+  text-align: center;
+}
+article .image {
+  width: 750px;
+  margin: 40px -50px 40px;
+  overflow: hidden;
+}
+article .image img {
+  max-width: 800px;
+}
+article .image span {
+  margin: 5px 0 0 50px;
+  font-size: 16px;
+  color: rgba(0,0,0,0.7);
+}
+article aside {
+  position: absolute;
+  right: 20px;
+  width: 200px;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: rgba(0,0,0,0.5);
+}
+article aside .number {
+  font-size: 36px;
+  text-align: center;
+}
+.relevant-wrap {
+  width: 100%;
+  background: rgba(204,226,240,0.7);
+}
+.relevant,
+.comments-wrap .comments {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+.relevant .tags,
+.comments-wrap .comments .tags {
+  margin: 20px 0 20px 0;
+}
+.relevant .tags span,
+.comments-wrap .comments .tags span {
+  margin: 0 15px 0 0;
+  display: inline-block;
+  font-family: 'PT Sans Caption';
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(41,146,228,0.3);
+}
+.relevant .tags ul,
+.comments-wrap .comments .tags ul {
+  display: inline-block;
+}
+.relevant .tags ul li,
+.comments-wrap .comments .tags ul li {
+  margin: 0 10px 0 0;
+  display: inline-block;
+  opacity: 0.65;
+}
+.relevant .one,
+.comments-wrap .comments .one {
+  margin: 15px 15px 15px 0px;
+}
+.comments-wrap {
+  width: 100%;
+  background: rgba(232,239,243,0.4);
 }
 a,
 a:visited {

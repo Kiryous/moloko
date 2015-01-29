@@ -1,0 +1,114 @@
+.cover.article
+	height 350px
+
+.poster.article
+	height 350px
+
+.poster-info.article
+	width 1000px
+	padding 100px 20px 0 20px
+	height 350px
+	
+	& h1
+		border 0
+
+	&:hover h1
+		text-shadow none
+		border 0
+		
+.infobar
+	font-size 16px
+	position absolute
+	bottom 10px
+	
+	.author
+		font-weight bold
+		margin 0 15px 0 0
+		
+	.views
+		margin 0 15px 0 0
+		padding 0 0 0 32px
+
+.article-wrap
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 20px 40px 20px 
+	position relative
+
+article
+	width 650px
+	font-family Georgia
+	font-size 18px
+	line-height 25px
+	
+	& p
+		margin 20px 0 20px 0
+		
+	& h2
+		margin 50px 0 0 0
+		font-family f_headline
+		text-align center
+	
+	& .image
+		width 750px
+		margin 40px -50px 40px 
+		overflow hidden
+		
+		& img
+			max-width 800px
+			
+		& span
+			margin 5px 0 0 50px
+			font-size 16px
+			color rgba(0, 0, 0, 0.7)	
+			
+	& aside
+		position absolute
+		right 20px
+		width 200px
+		font-size 16px
+		line-height 1.4em
+		color gray
+		
+		& .number
+			font-size 36px
+			//color rgba(0, 0, 0, 0.7)
+			text-align center
+
+.relevant-wrap
+	width 100%
+	background rgba(204, 226, 240, 0.7)
+	
+.relevant
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 20px 20px 20px
+		
+	& .tags
+		margin 20px 0 20px 0
+		
+		& span
+			margin 0 15px 0 0
+			display inline-block
+			font-family f_headline
+			font-size 18px
+			font-weight bold
+			color rgba(41, 146, 228, 0.3)
+			
+		& ul
+			display inline-block
+			
+			& li
+				margin 0 10px 0 0
+				display inline-block
+				opacity 0.65
+	
+	& .one
+		margin 15px 15px 15px 0px
+
+.comments-wrap
+	width 100%
+	background rgba(232,239,243,0.4)
+	
+	& .comments
+		@extend .relevant

@@ -6,9 +6,10 @@
 
 .poster-info.article
 	width 1000px
-	padding 100px 20px 0 20px
+	padding 150px 20px 0 20px
 	height 350px
-	
+
+
 	& h1
 		border 0
 
@@ -54,7 +55,21 @@
 		background-repeat no-repeat
 	
 	.likely
-		float right
+		// float right
+
+.blackheader
+	color black
+
+// .stickyeah
+// 	transition .2s
+
+// .likely-sticky
+// 	position absolute
+// 	right 20px
+	
+// 	.likely__widget
+// 		width 21px
+// 		overflow hidden
 
 .article-wrap
 	width 1000px
@@ -67,11 +82,13 @@ article
 	font-family f_text
 	font-size 18px
 	line-height 25px
+	overflow hidden
 	
 	& p
 		margin 20px 0 20px 0
 		
 	& h2
+		width 85%
 		margin 40px 0 0 0
 		font-family f_headline
 		text-align center
@@ -96,22 +113,50 @@ article
 		width 200px
 		font-size 16px
 		line-height 1.4em
-		color gray
+		opacity 0.5
+		// color gray
+		transition .1s
+			
+		&:hover
+			opacity 1
+			transition .1s
 		
 		& .number
 			font-size 36px
 			//color rgba(0, 0, 0, 0.7)
 			text-align center
+		
+		& img
+			max-width 200px
 			
 	& .expert
 		@extend .author
 		margin 40px 0 20px 0
+		position relative
 		
+		// &:before
+		// 	content '”'
+		// 	color molokoColor
+		// 	position absolute
+		// 	top 120px
+		// 	left 10px
+		// 	font-size 72px
+			
+		& p:first-of-type:before
+			content '«'
+			color molokoColor
+			font-size 24px
+		
+		& p:last-of-type:after
+			content '»'
+			color molokoColor
+			font-size 24px
+
 		& .pic
 			vertical-align middle
 			width 70px
 			height 70px
-			
+
 		& .info
 			margin 0 10px 0 0
 			display inline-block

@@ -496,7 +496,7 @@ header {
 }
 .poster-info.article {
   width: 1000px;
-  padding: 100px 20px 0 20px;
+  padding: 150px 20px 0 20px;
   height: 350px;
 }
 .poster-info.article h1 {
@@ -547,8 +547,8 @@ article .expert .pic {
   background-position: left center;
   background-repeat: no-repeat;
 }
-.infobar .likely {
-  float: right;
+.blackheader {
+  color: #000;
 }
 .article-wrap {
   width: 1000px;
@@ -561,11 +561,13 @@ article {
   font-family: Georgia;
   font-size: 18px;
   line-height: 25px;
+  overflow: hidden;
 }
 article p {
   margin: 20px 0 20px 0;
 }
 article h2 {
+  width: 85%;
   margin: 40px 0 0 0;
   font-family: 'PT Sans Caption';
   text-align: center;
@@ -590,14 +592,33 @@ article aside {
   width: 200px;
   font-size: 16px;
   line-height: 1.4em;
-  color: rgba(0,0,0,0.5);
+  opacity: 0.5;
+  transition: 0.1s;
+}
+article aside:hover {
+  opacity: 1;
+  transition: 0.1s;
 }
 article aside .number {
   font-size: 36px;
   text-align: center;
 }
+article aside img {
+  max-width: 200px;
+}
 article .expert {
   margin: 40px 0 20px 0;
+  position: relative;
+}
+article .expert p:first-of-type:before {
+  content: '«';
+  color: #2992e4;
+  font-size: 24px;
+}
+article .expert p:last-of-type:after {
+  content: '»';
+  color: #2992e4;
+  font-size: 24px;
 }
 article .expert .pic {
   vertical-align: middle;

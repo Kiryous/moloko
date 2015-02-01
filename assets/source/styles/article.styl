@@ -6,28 +6,70 @@
 
 .poster-info.article
 	width 1000px
-	padding 100px 20px 0 20px
+	padding 150px 20px 0 20px
 	height 350px
-	
+
+
 	& h1
 		border 0
 
 	&:hover h1
 		text-shadow none
 		border 0
+
+.author
+	margin 0 15px 0 0
+	display inline-block
+	font-weight bold
+	font-family f_Default
+	
+	& .pic
+		width 35px
+		height 35px
+		margin 0 10px 0 0
+		display inline-block
+		vertical-align middle
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		border-radius 50%
+		overflow hidden
 		
 .infobar
+	width 960px
 	font-size 16px
 	position absolute
-	bottom 10px
+	bottom 15px
 	
-	.author
-		font-weight bold
-		margin 0 15px 0 0
-		
+	.date, .views
+		opacity 0.8
+	
+	.date, .views
+		font-size 14px
+
 	.views
 		margin 0 15px 0 0
-		padding 0 0 0 32px
+		padding 0 0 0 35px
+		background-image url(../source/images/eye.svg)
+		background-position left center
+		background-repeat no-repeat
+	
+	.likely
+		// float right
+
+.blackheader
+	color black
+
+// .stickyeah
+// 	transition .2s
+
+// .likely-sticky
+// 	position absolute
+// 	right 20px
+	
+// 	.likely__widget
+// 		width 21px
+// 		overflow hidden
 
 .article-wrap
 	width 1000px
@@ -37,17 +79,20 @@
 
 article
 	width 650px
-	font-family Georgia
+	font-family f_text
 	font-size 18px
 	line-height 25px
+	overflow hidden
 	
 	& p
 		margin 20px 0 20px 0
 		
 	& h2
-		margin 50px 0 0 0
+		width 85%
+		margin 40px 0 0 0
 		font-family f_headline
 		text-align center
+		line-height 1.4em
 	
 	& .image
 		width 750px
@@ -68,12 +113,63 @@ article
 		width 200px
 		font-size 16px
 		line-height 1.4em
-		color gray
+		opacity 0.5
+		// color gray
+		transition .1s
+			
+		&:hover
+			opacity 1
+			transition .1s
 		
 		& .number
 			font-size 36px
 			//color rgba(0, 0, 0, 0.7)
 			text-align center
+		
+		& img
+			max-width 200px
+			
+	& .expert
+		@extend .author
+		margin 40px 0 20px 0
+		position relative
+		
+		// &:before
+		// 	content '”'
+		// 	color molokoColor
+		// 	position absolute
+		// 	top 120px
+		// 	left 10px
+		// 	font-size 72px
+			
+		& p:first-of-type:before
+			content '«'
+			color molokoColor
+			font-size 24px
+		
+		& p:last-of-type:after
+			content '»'
+			color molokoColor
+			font-size 24px
+
+		& .pic
+			vertical-align middle
+			width 70px
+			height 70px
+
+		& .info
+			margin 0 10px 0 0
+			display inline-block
+			vertical-align middle
+			
+		& .who
+			font-size 16px
+			font-weight normal
+		
+		& p
+			margin 20px 0 20px 40px
+			font-weight normal
+			font-family f_text
 
 .relevant-wrap
 	width 100%
@@ -110,5 +206,5 @@ article
 	width 100%
 	background rgba(232,239,243,0.4)
 	
-	& .comments
+	.comments
 		@extend .relevant

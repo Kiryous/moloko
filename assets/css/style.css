@@ -29,17 +29,34 @@ body {
   font-size: 18px;
   line-height: 20px;
 }
+.container,
+header,
+.news,
+.footer,
+.article-wrap {
+  width: 1000px;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px 0px 20px;
+}
+@media screen and (max-width: 700px) {
+  .container,
+  header,
+  .news,
+  .footer,
+  .article-wrap,
+header,
+.news,
+.footer,
+.article-wrap {
+    width: 100%;
+  }
+}
 .header-wrap {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-}
-header {
-  width: 1000px;
-  margin: 0 auto 0 auto;
-  padding: 20px 20px 0px 20px;
 }
 .logo,
 .logo:visited {
@@ -177,7 +194,7 @@ header {
 }
 .poster {
   width: 100%;
-  height: 320px;
+  height: 100%;
   color: #fff;
   background-size: cover;
   background-position: center;
@@ -194,7 +211,7 @@ header {
 }
 .poster .poster-info {
   width: 840px;
-  padding: 100px 0px 0px 0px;
+  padding: 100px 0 0 0;
   margin: 0 auto 0 auto;
   display: block;
   position: relative;
@@ -221,32 +238,32 @@ header {
   vertical-align: middle;
   display: inline-block;
 }
+@media screen and (max-width: 700px) {
+  .caption {
+    width: 100%;
+  }
+}
 .caption h1 {
   margin: 0px 0px 15px 0px;
   display: inline;
   border-bottom: 1px solid rgba(255,255,255,0.5);
   font-family: 'PT Sans Caption';
   font-size: 28px;
-  line-height: 36px;
+  line-height: 1.5em;
   color: #fff;
 }
 .caption span {
   margin: 0 0 0 0;
   display: block;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.3em;
+  line-height: 1.2em;
   letter-spacing: 0.05em;
   color: #fff;
 }
 .news-wrap {
   width: 100%;
   min-height: 100px;
-  padding: 20px 0px 10px 0px;
-}
-.news {
-  width: 960px;
-  margin: auto auto auto auto;
 }
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
@@ -274,7 +291,8 @@ header {
   letter-spacing: 0.15em;
   margin-right: -0.15em;
 }
-.grid-wrap {
+.js-masonry {
+  max-width: 1000px;
   width: 1000px;
   min-height: 100%;
   margin: 20px auto 40px auto;
@@ -288,6 +306,7 @@ header {
   padding: 20px 30px 20px 20px;
   position: relative;
   display: inline-block;
+  vertical-align: top;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
@@ -432,10 +451,12 @@ header {
   box-shadow: inset 0px 1px 18px 0px rgba(0,0,150,0.06);
   color: rgba(0,0,0,0.9);
 }
+@media screen and (max-width: 700px) {
+  .footer-wrap {
+    height: 150px;
+  }
+}
 .footer {
-  width: 1000px;
-  min-height: 120px;
-  margin: 0px auto 0px auto;
   padding: 40px 20px 0px 20px;
   position: relative;
   font-size: 16px;
@@ -446,6 +467,11 @@ header {
 .ask {
   display: inline-block;
   float: right;
+}
+@media screen and (max-width: 700px) {
+  .ask {
+    margin: 20px 0 0 0;
+  }
 }
 .ask .text {
   display: inline-block;
@@ -499,6 +525,11 @@ header {
   padding: 150px 20px 0 20px;
   height: 350px;
 }
+@media screen and (max-width: 700px) {
+  .poster-info.article {
+    width: 100%;
+  }
+}
 .poster-info.article h1 {
   border: 0;
 }
@@ -510,7 +541,6 @@ header {
 article .expert {
   margin: 0 15px 0 0;
   display: inline-block;
-  font-weight: bold;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 .author .pic,
@@ -527,7 +557,6 @@ article .expert .pic {
   overflow: hidden;
 }
 .infobar {
-  width: 960px;
   font-size: 16px;
   position: absolute;
   bottom: 15px;
@@ -547,39 +576,51 @@ article .expert .pic {
   background-position: left center;
   background-repeat: no-repeat;
 }
-.blackheader {
-  color: #000;
-}
 .article-wrap {
-  width: 1000px;
-  margin: 0 auto 0 auto;
-  padding: 20px 20px 40px 20px;
   position: relative;
 }
 article {
   width: 650px;
+  padding: 0 0 20px 0;
   font-family: Georgia;
   font-size: 18px;
   line-height: 25px;
-  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  article {
+    width: 100%;
+  }
 }
 article p {
   margin: 20px 0 20px 0;
 }
 article h2 {
   width: 85%;
-  margin: 40px 0 0 0;
+  margin: 50px auto 0 auto;
   font-family: 'PT Sans Caption';
+  font-size: 24px;
+  font-weight: normal;
   text-align: center;
   line-height: 1.4em;
 }
 article .image {
   width: 750px;
-  margin: 40px -50px 40px;
+  margin: 40px -50px 40px -50px;
   overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  article .image {
+    width: 100%;
+    margin: 40px -20px 40px -20px;
+  }
 }
 article .image img {
   max-width: 800px;
+}
+@media screen and (max-width: 700px) {
+  article .image {
+    width: 120%;
+  }
 }
 article .image span {
   margin: 5px 0 0 50px;
@@ -588,37 +629,51 @@ article .image span {
 }
 article aside {
   position: absolute;
-  right: 20px;
+  right: 30px;
   width: 200px;
   font-size: 16px;
   line-height: 1.4em;
-  opacity: 0.5;
-  transition: 0.1s;
+  color: rgba(0,0,0,0.5);
 }
-article aside:hover {
-  opacity: 1;
-  transition: 0.1s;
+@media screen and (max-width: 700px) {
+  article aside {
+    width: 100%;
+    margin: 0 0 0 30px;
+    padding: 20px 0 10px 0;
+    position: relative;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
 }
 article aside .number {
   font-size: 36px;
   text-align: center;
+  font-family: 'PT Sans Caption';
 }
 article aside img {
   max-width: 200px;
 }
 article .expert {
+  padding: 0 0 0 40px;
   margin: 40px 0 20px 0;
   position: relative;
+/*&:before
+			content '”'
+			color molokoColor
+			position absolute
+			top 120px
+			left 10px
+			font-size 72px*/
 }
 article .expert p:first-of-type:before {
   content: '«';
+  margin: 0 0 0 -0.6em;
   color: #2992e4;
-  font-size: 24px;
 }
 article .expert p:last-of-type:after {
   content: '»';
   color: #2992e4;
-  font-size: 24px;
 }
 article .expert .pic {
   vertical-align: middle;
@@ -626,16 +681,18 @@ article .expert .pic {
   height: 70px;
 }
 article .expert .info {
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
   display: inline-block;
   vertical-align: middle;
+}
+article .expert .name {
+  font-size: 20px;
 }
 article .expert .who {
   font-size: 16px;
   font-weight: normal;
 }
 article .expert p {
-  margin: 20px 0 20px 40px;
   font-weight: normal;
   font-family: Georgia;
 }
@@ -648,6 +705,14 @@ article .expert p {
   width: 1000px;
   margin: 0 auto 0 auto;
   padding: 20px 20px 20px 20px;
+}
+@media screen and (max-width: 700px) {
+  .relevant,
+  .comments-wrap .comments,
+.comments-wrap .comments {
+    width: 100%;
+    text-align: center;
+  }
 }
 .relevant .tags,
 .comments-wrap .comments .tags {

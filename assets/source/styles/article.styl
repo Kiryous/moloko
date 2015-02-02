@@ -8,7 +8,9 @@
 	width 1000px
 	padding 150px 20px 0 20px
 	height 350px
-
+	
+	@media mobile
+		width 100%
 
 	& h1
 		border 0
@@ -20,7 +22,6 @@
 .author
 	margin 0 15px 0 0
 	display inline-block
-	font-weight bold
 	font-family f_Default
 	
 	& .pic
@@ -36,7 +37,6 @@
 		overflow hidden
 		
 .infobar
-	width 960px
 	font-size 16px
 	position absolute
 	bottom 15px
@@ -53,54 +53,47 @@
 		background-image url(../source/images/eye.svg)
 		background-position left center
 		background-repeat no-repeat
-	
-	.likely
-		// float right
-
-.blackheader
-	color black
-
-// .stickyeah
-// 	transition .2s
-
-// .likely-sticky
-// 	position absolute
-// 	right 20px
-	
-// 	.likely__widget
-// 		width 21px
-// 		overflow hidden
 
 .article-wrap
-	width 1000px
-	margin 0 auto 0 auto
-	padding 20px 20px 40px 20px 
+	@extend .container 
 	position relative
 
 article
 	width 650px
+	padding 0 0 20px 0
 	font-family f_text
 	font-size 18px
 	line-height 25px
-	overflow hidden
+	
+	@media mobile
+		width 100%
 	
 	& p
 		margin 20px 0 20px 0
 		
 	& h2
 		width 85%
-		margin 40px 0 0 0
+		margin 50px auto 0 auto
 		font-family f_headline
+		font-size 24px
+		font-weight normal
 		text-align center
 		line-height 1.4em
 	
 	& .image
 		width 750px
-		margin 40px -50px 40px 
+		margin 40px -50px 40px -50px
 		overflow hidden
 		
+		@media mobile
+			width 100%
+			margin 40px -20px 40px -20px		
+			
 		& img
 			max-width 800px
+		
+		@media mobile
+			width 120%
 			
 		& span
 			margin 5px 0 0 50px
@@ -109,65 +102,70 @@ article
 			
 	& aside
 		position absolute
-		right 20px
+		right 30px
 		width 200px
 		font-size 16px
 		line-height 1.4em
-		opacity 0.5
-		// color gray
-		transition .1s
-			
-		&:hover
-			opacity 1
-			transition .1s
+		color gray
+		
+		@media mobile
+			width 100%
+			margin 0 0 0 30px
+			padding 20px 0 10px 0
+			position relative
+			text-align center
+			border-top 1px solid rgba(0, 0, 0, 0.1)
+			border-bottom 1px solid rgba(0, 0, 0, 0.1)
 		
 		& .number
 			font-size 36px
-			//color rgba(0, 0, 0, 0.7)
 			text-align center
+			font-family f_headline
 		
 		& img
 			max-width 200px
 			
 	& .expert
 		@extend .author
+		padding 0 0 0 40px
 		margin 40px 0 20px 0
 		position relative
 		
-		// &:before
-		// 	content '”'
-		// 	color molokoColor
-		// 	position absolute
-		// 	top 120px
-		// 	left 10px
-		// 	font-size 72px
+		/*&:before
+			content '”'
+			color molokoColor
+			position absolute
+			top 120px
+			left 10px
+			font-size 72px*/
 			
 		& p:first-of-type:before
 			content '«'
+			margin 0 0 0 -0.6em
 			color molokoColor
-			font-size 24px
 		
 		& p:last-of-type:after
 			content '»'
 			color molokoColor
-			font-size 24px
-
+			
 		& .pic
 			vertical-align middle
 			width 70px
 			height 70px
 
 		& .info
-			margin 0 10px 0 0
+			margin 0 15px 0 0
 			display inline-block
 			vertical-align middle
+		
+		& .name
+			font-size 20px
 			
 		& .who
 			font-size 16px
 			font-weight normal
 		
 		& p
-			margin 20px 0 20px 40px
 			font-weight normal
 			font-family f_text
 
@@ -179,6 +177,10 @@ article
 	width 1000px
 	margin 0 auto 0 auto
 	padding 20px 20px 20px 20px
+	
+	@media mobile
+		width 100%
+		text-align center
 		
 	& .tags
 		margin 20px 0 20px 0

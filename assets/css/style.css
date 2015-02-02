@@ -595,12 +595,11 @@ article p {
   margin: 20px 0 20px 0;
 }
 article h2 {
-  width: 85%;
-  margin: 50px auto 25px auto;
+  width: 95%;
+  margin: 50px 0 25px 0;
   font-family: 'PT Sans Caption';
   font-size: 24px;
   font-weight: normal;
-  text-align: center;
   line-height: 1.4em;
 }
 article .image {

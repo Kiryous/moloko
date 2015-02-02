@@ -596,7 +596,7 @@ article p {
 }
 article h2 {
   width: 85%;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 25px auto;
   font-family: 'PT Sans Caption';
   font-size: 24px;
   font-weight: normal;
@@ -628,9 +628,11 @@ article .image span {
   color: rgba(0,0,0,0.7);
 }
 article aside {
+  width: 200px;
   position: absolute;
   right: 30px;
-  width: 200px;
+/*float right
+		margin 0 -250px 0 0*/
   font-size: 16px;
   line-height: 1.4em;
   color: rgba(0,0,0,0.5);
@@ -658,22 +660,18 @@ article .expert {
   padding: 0 0 0 40px;
   margin: 40px 0 20px 0;
   position: relative;
-/*&:before
-			content '”'
-			color molokoColor
-			position absolute
-			top 120px
-			left 10px
-			font-size 72px*/
+/*& p:first-of-type:before
+			content '–'
+			margin-left -0.6em
+			font-size 48px*/
 }
-article .expert p:first-of-type:before {
-  content: '«';
-  margin: 0 0 0 -0.6em;
-  color: #2992e4;
-}
-article .expert p:last-of-type:after {
-  content: '»';
-  color: #2992e4;
+article .expert:before {
+  content: '”';
+  position: absolute;
+  top: 110px;
+  left: -5px;
+  font-size: 72px;
+  font-family: Georgia;
 }
 article .expert .pic {
   vertical-align: middle;

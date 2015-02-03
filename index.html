@@ -6,33 +6,32 @@
   <title>Молоко</title>
   <link rel="stylesheet" href="assets/css/likely.css" />
   <!-- Шрифты -->
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/css/shadow.css" />
   <!-- Собственные стили -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-
-  <div class="header-wrap">
+  <div class="header-wrap emerge">
   <header>
   	<a class="logo" href="#">Молоко</a><a class="twi" href="#"> </a><a class="vk" href="#"> </a><a class="fb" href="#"> </a><a class="inst" href="#"> </a>
   	<input class="search" type="text" placeholder="Поиск статей" />
   </header>
   </div>
-
   <div class="cover">
-    <div class="poster" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
+    <div class="poster emerge" data-spin="true" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
     <a class="poster-info" href="#">
       <div class="image" style="background-image:url(assets/source/images/head.png)">
       </div>
       <div class="caption">
-     	<h1>Горячие слёзы юного издателя</h1>  <span>Рисованные иллюстрации как способ удержать читателя</span>
+     	    <h1>Горячие слёзы юного издателя</h1>  
+        <span>Рисованные иллюстрации как способ удержать читателя</span>
       </div>
     </a>
     </div>
   </div>
-
+ 
   <div class="news-wrap">
     <div class="news" data-disableIfFit="true" data-centerIfFit="true">
      <div class="entry">
@@ -55,63 +54,87 @@
   </div> 
 
   <div class="grid-wrap">
-    <div class="js-masonry" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
-      <a class="one illustration" href="#" style="background-image:url(assets/source/images/dead.png);">
-          <h1>Злой дед</h1><br/>
-          <span>Декаданские советы от деда с бутылкой молока</span>
+    <div class="js-masonry emerge" data-continue="true" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
+
+      <a class="one photo big down emerge" style="background-image:url(http://esquire.ru/files/cache/images/aa/4f/10/09/3f103426.fit667x655.002.jpg)" href="#">
+        <div class="contents">
+          <h1>Заголовок снизу</h1><br/>
+          <span>Новую российскую технологию опробовали на производстве</span>
+        </div>
       </a>
 
-      <a class="one photo big" style="background-image:url(http://wvs.topleftpixel.com/photos/2013/06/sugar-beach_umbrellas_plane_ship_kid_summer_01.jpg)" href="#">
+      <a class="one illustration" href="#" style="background-image:url(assets/source/images/dead.png);">
+        <div class="contents">
+          <h1>Злой дед</h1><br/>
+          <span>Декаданские советы от деда с бутылкой молока</span>
+        </div>
+      </a>
+
+      <a class="one photo big down emerge" style="background-image:url(http://wvs.topleftpixel.com/photos/2013/06/sugar-beach_umbrellas_plane_ship_kid_summer_01.jpg)" href="#">
+        <div class="contents">
           <h1>Депутат вернул море</h1><br/>
           <span>Жители Васильевского острова могут отправиться на пляж</span>
+        </div>
       </a>
 
       <a class="one illustration" style="background-image:url(assets/source/images/girls.png);" href="#">
+        <div class="contents">
           <h1>Эхо войны</h1><br/>
           <span>Медсетры ежедневно спасают двести девяносто девять ребят</span>
+        </div>
       </a>
 
 
-      <a class="one photo" style="background-image:url(https://pp.vk.me/c625626/v625626067/14cd7/1KSym4oLAOM.jpg);" href="#" >
+      <a class="one photo emerge" style="background-image:url(https://pp.vk.me/c625626/v625626067/14cd7/1KSym4oLAOM.jpg);" href="#" >
+        <div class="contents">
           <h1>Электричество в наших руках</h1><br/>
           <span>Ученые вновь взялись за идеи Теслы</span>
+        </div>
       </a>
 
-      <a class="one photo" style="background-image:url(http://wvs.topleftpixel.com/photos/2013/05/bubble-sherwood_reflection_01.jpg)" href="#">
+      <a class="one photo emerge" style="background-image:url(http://wvs.topleftpixel.com/photos/2013/05/bubble-sherwood_reflection_01.jpg)" href="#">
+        <div class="contents">
           <h1>Мыльный герой</h1><br/>
           <span>Интервью с чуваком, который всегда на выходе из метро</span>
+        </div>
       </a>
 
       <a class="one illustration" style="background-image:url(assets/source/images/eatme.jpg);" href="#">
-          <h1>Девушки лезут в пасть</h1><br/>
+        <div class="contents">
+          <h1>Девушки лезут в пасть</h1><br/>
           <span>Ситауция в Ростове</span>
+        </div>
       </a>
 
     </div>
+  </div>
+
+  <div class="fetch">
+    <a href="#">Загрузить ещё материалов</a>
   </div>
 
   <div class="footer-wrap">
     <div class="footer">
 
-     <div class="ask">
-      <span class="text">Расскажите о нас друзьям и <a class="dark" href="#">дайте денег на Молоко</a></span><br/>
-         <div class="likely">
-           <div class="twitter" data-via="molokodaily">Твитнуть</div><div class="vkontakte">Поделиться</div><div class="facebook">Поделиться</div>
-        </div>
-      </div>
       <div class="copyright">
         <span>© 2015 Молоко</span>
         <ul>
           <li><a class="dark" href="#">О проекте</a></li>
+          <li><a class="dark" href="#">Дайте денег</a></li>
         </ul>
-    </div>
+      </div>
+
+      <div class="ask">
+      <span class="text">Расскажите о нас:</span>
+         <div class="likely">
+           <div class="twitter" data-via="molokodaily">Твитнуть</div><div class="vkontakte">Поделиться</div><div class="facebook">Поделиться</div>
+        </div>
+      </div>
 
     </div>
   </div>
   
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
-  <script src="assets/js/likely.js"></script>
   <script src="assets/js/all.js"></script>
 </body>
 </html>

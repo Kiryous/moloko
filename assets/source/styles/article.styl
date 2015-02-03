@@ -1,0 +1,214 @@
+.cover.article
+	height 350px
+
+.poster.article
+	height 350px
+
+.poster-info.article
+	width 1000px
+	padding 150px 20px 0 20px
+	height 350px
+
+	// @media mobile
+	// 	width 100%
+
+	& h1
+		border 0
+
+	&:hover h1
+		text-shadow none
+		border 0
+
+.rights
+	position absolute
+	bottom 22px
+	right 40px
+	color rgba(255, 255, 255, 0.3)
+	font-size 12px
+
+.author
+	margin 0 15px 0 0
+	display inline-block
+	font-family f_Default
+
+	& .pic
+		width 35px
+		height 35px
+		margin 0 10px 0 0
+		display inline-block
+		vertical-align middle
+		background-size cover
+		background-position center
+		background-repeat no-repeat
+		border-radius 50%
+		overflow hidden
+
+.infobar
+	font-size 16px
+	position absolute
+	bottom 15px
+
+	.date, .views
+		opacity 0.8
+
+	.date, .views
+		font-size 14px
+
+	.views
+		margin 0 15px 0 0
+		padding 0 0 0 35px
+		background-image url(../source/images/eye.svg)
+		background-position left center
+		background-repeat no-repeat
+
+.article-wrap
+	@extend .container
+	position relative
+
+article
+	width 650px
+	padding 0 0 70px 0
+	font-family f_text
+	font-size 18px
+	line-height 25px
+
+	// @media mobile
+	// 	width 100%
+
+	& p
+		margin 20px 0 20px 0
+
+	& h2
+		width 95%
+		margin 50px 0 25px 0
+		font-family f_headline
+		font-size 24px
+		font-weight normal
+		line-height 1.4em
+
+	& .image
+		width 750px
+		margin 40px -50px 40px -50px
+		overflow hidden
+
+		// @media mobile
+		// 	width 100%
+		// 	margin 40px -20px 40px -20px
+
+		& img
+			max-width 800px
+
+		// @media mobile
+		// 	width 120%
+
+		& span
+			margin 5px 0 0 50px
+			font-size 16px
+			color rgba(0, 0, 0, 0.7)
+
+	& aside
+		width 200px
+		position absolute
+		right 30px
+		font-size 16px
+		line-height 1.4em
+		color gray
+
+		// @media mobile
+		// 	width 100%
+		// 	margin 0 0 0 30px
+		// 	padding 20px 0 10px 0
+		// 	position relative
+		// 	text-align center
+		// 	border-top 1px solid rgba(0, 0, 0, 0.1)
+		// 	border-bottom 1px solid rgba(0, 0, 0, 0.1)
+
+		& .number
+			font-size 36px
+			text-align center
+			font-family f_headline
+
+		& img
+			max-width 200px
+
+	& .expert
+		@extend .author
+		padding 0 0 0 40px
+		margin 40px 0 20px 0
+		position relative
+
+		// & p:first-of-type:before
+		// 	content '–'
+		// 	margin-left -0.6em
+		// 	font-size 48px
+
+		&:before
+			content '”'
+			position absolute
+			top 110px
+			left -5px
+			font-size 72px
+			font-family f_text
+
+		& .pic
+			vertical-align middle
+			width 70px
+			height 70px
+
+		& .info
+			margin 0 15px 0 0
+			display inline-block
+			vertical-align middle
+
+		& .name
+			font-size 20px
+
+		& .who
+			font-size 16px
+			font-weight normal
+
+		& p
+			font-weight normal
+			font-family f_text
+
+.relevant-wrap
+	width 100%
+	background rgba(204, 226, 240, 0.7)
+
+.relevant
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 20px 20px 20px
+
+	// @media mobile
+	// 	width 100%
+	// 	text-align center
+
+	& .tags
+		margin 20px 0 20px 0
+
+		& span
+			margin 0 15px 0 0
+			display inline-block
+			font-family f_headline
+			font-size 18px
+			font-weight bold
+			color rgba(41, 146, 228, 0.3)
+
+		& ul
+			display inline-block
+
+			& li
+				margin 0 10px 0 0
+				display inline-block
+				opacity 0.65
+
+	& .one
+		margin 15px 15px 15px 0px
+
+.comments-wrap
+	width 100%
+	background rgba(232,239,243,0.4)
+
+	.comments
+		@extend .relevant

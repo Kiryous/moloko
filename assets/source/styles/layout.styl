@@ -7,8 +7,17 @@ body
   background rgba(255, 255, 255, 1)
   font-size 18px
   line-height 20px
+  
 
-//Шапка
+.container
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 20px 0px 20px
+	
+	/*@media mobile
+		width 100%*/
+			
+// Шапка
 .header-wrap
 	width 100%
 	position absolute
@@ -17,14 +26,13 @@ body
 	z-index 2
 
 header
-	width 1000px
-	margin 0 auto 0 auto
-	padding 20px 20px 0px 20px
+	@extend .container
+	
 
 .logo,.logo:visited
-	width 171px
-	height 44px
-	padding 10px 10px 10px 11px
+	height 40px 
+	margin 0 10px 0 0
+	padding 10px 0 0 0 
 	display inline-block
 	vertical-align top
 	//background-image url(../source/images/logo-all-white.png)
@@ -71,44 +79,45 @@ header
 .search :-ms-input-placeholder
   color:rgba(255, 255, 255, 0.6)
 
-/* Фоторама **отключена
-.fotorama
-	position relative
+//  Фоторама **отключена
+// .fotorama
+// 	position relative
 
-.fotorama__arr--prev
-	margin 0 0 0 30px
-	background url(../source/images/prev.svg)
+// .fotorama__arr--prev
+// 	margin 0 0 0 30px
+// 	background url(../source/images/prev.svg)
 
-.fotorama__arr--next
-	margin 0 30px 0 0
-	background url(../source/images/next.svg)
+// .fotorama__arr--next
+// 	margin 0 30px 0 0
+// 	background url(../source/images/next.svg)
 	
-.fotorama__arr--prev,.fotorama__arr--next
-	background-repeat no-repeat
-	background-position center
-	width 31px
-	height 58px
+// .fotorama__arr--prev,.fotorama__arr--next
+// 	background-repeat no-repeat
+// 	background-position center
+// 	width 31px
+// 	height 58px
 	
-.fotorama__arr--prev:hover, .fotorama__arr--next:hover
-	transform scaleY(0.7)
+// .fotorama__arr--prev:hover, .fotorama__arr--next:hover
+// 	transform scaleY(0.7)
 
-.fotorama__nav-wrap
-	position absolute
-	bottom 10px
-	width 960px
-	padding-left 40px
-	text-align left
-*/
+// .fotorama__nav-wrap
+// 	position absolute
+// 	bottom 10px
+// 	width 960px
+// 	padding-left 40px
+// 	text-align left
+
 
 //Крутой материал
 .cover
 	position relative
 	width 100%
 	height 320px
+	background rgba(54, 53, 53, 1)
 	
 .poster
 	width 100%
-	height 320px
+	height 100%
 	color white
 	background-size cover
 	background-position center
@@ -122,12 +131,12 @@ header
 		top 0
 		left 0
 		background rgba(0,0,0,0.5)
-
+		transition .2s
 
 .poster 
 	.poster-info
 		width 840px
-		padding 100px 0px 0px 0px
+		padding 100px 0 0 0
 		margin 0 auto 0 auto	
 		display block
 		position relative
@@ -154,6 +163,9 @@ header
 	margin 0 40px 0 0
 	vertical-align middle
 	display inline-block
+	
+	/*@media mobile
+		width 100%*/
  
 	& h1	
 		margin 0px 0px 15px 0px
@@ -161,15 +173,15 @@ header
 		border-bottom 1px solid rgba(255, 255, 255, 0.5)
 		font-family f_headline
 		font-size 28px
-		line-height 44px 
+		line-height 1.5em
 		color white
 	
 	& span
 		margin 0 0 0 0
 		display block
-		font-size 24px
+		font-size 22px
 		font-family f_Default 
-		line-height 1.3em
+		line-height 1.2em
 		letter-spacing 0.05em
 		color white
 
@@ -177,11 +189,9 @@ header
 .news-wrap
 	width 100%
 	min-height 100px
-	padding 20px 0px 10px 0px
 	
 .news
-	width 960px
-	margin auto auto auto auto
+	@extend .container
 	
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
@@ -212,6 +222,19 @@ header
 
 //Сетка материалов
 @import 'grid'
+
+//Кнопка подгрузки материалов
+.fetch 
+	a
+		width 960px
+		display block
+		margin 0 auto 40px auto
+		padding 20px 20px 20px 20px
+		text-align center
+		border 1px solid rgba(0, 114, 186, 0.3)	
+	
+	a:hover
+		border-color rgba(208,64,0,0.3)
 
 /* Инстаграм ** временно отключен
 .shots
@@ -267,34 +290,37 @@ header
 //Подвал
 .footer-wrap
 	width 100%
-	min-height 150px
+	min-height 120px
 	background rgba(42, 50, 55, 0.03)
 	box-shadow inset 0px 1px 18px 0px rgba(0, 0, 150, 0.06)	
 	color rgba(0, 0, 0, 0.9)
+	
+	/*@media mobile
+		height 150px*/
 
 .footer
-	width 1000px
-	min-height 150px
-	margin 0px auto 0px auto
+	@extend .container
 	padding 40px 20px 0px 20px
 	position relative
 	font-size 16px
-	//background-image url(../source/images/dead.png)
 	background-size 400px
 	background-repeat no-repeat
 	background-position 350px 39%
 
 .ask
-	width 500px
 	display inline-block
+	float right
+	
+	/*@media mobile
+		margin 20px 0 0 0*/
 
 	.text
 		display inline-block
 		vertical-align top
 	
 	.likely
-		vertical-align middle
-		margin 10px 0 0 0
+		vertical-align top
+		margin 0 0 0 10px
 	
 	.likely__widget
 		height 26px
@@ -312,7 +338,6 @@ header
 .copyright
 	display inline-block
 	vertical-align top
-	float right
 
 	span
 		margin 0 15px 0 0
@@ -330,5 +355,6 @@ header
 		display inline-block
 		margin 0px 15px 0px 0px
 
+@import 'article'
 
 @import 'typo'

@@ -14,9 +14,9 @@ body
 	margin 0 auto 0 auto
 	padding 20px 20px 0px 20px
 	
-	@media mobile
-		width 100%
-
+	/*@media mobile
+		width 100%*/
+			
 // Шапка
 .header-wrap
 	width 100%
@@ -79,34 +79,34 @@ header
 .search :-ms-input-placeholder
   color:rgba(255, 255, 255, 0.6)
 
-/* Фоторама **отключена
-.fotorama
-	position relative
+//  Фоторама **отключена
+// .fotorama
+// 	position relative
 
-.fotorama__arr--prev
-	margin 0 0 0 30px
-	background url(../source/images/prev.svg)
+// .fotorama__arr--prev
+// 	margin 0 0 0 30px
+// 	background url(../source/images/prev.svg)
 
-.fotorama__arr--next
-	margin 0 30px 0 0
-	background url(../source/images/next.svg)
+// .fotorama__arr--next
+// 	margin 0 30px 0 0
+// 	background url(../source/images/next.svg)
 	
-.fotorama__arr--prev,.fotorama__arr--next
-	background-repeat no-repeat
-	background-position center
-	width 31px
-	height 58px
+// .fotorama__arr--prev,.fotorama__arr--next
+// 	background-repeat no-repeat
+// 	background-position center
+// 	width 31px
+// 	height 58px
 	
-.fotorama__arr--prev:hover, .fotorama__arr--next:hover
-	transform scaleY(0.7)
+// .fotorama__arr--prev:hover, .fotorama__arr--next:hover
+// 	transform scaleY(0.7)
 
-.fotorama__nav-wrap
-	position absolute
-	bottom 10px
-	width 960px
-	padding-left 40px
-	text-align left
-*/
+// .fotorama__nav-wrap
+// 	position absolute
+// 	bottom 10px
+// 	width 960px
+// 	padding-left 40px
+// 	text-align left
+
 
 //Крутой материал
 .cover
@@ -130,7 +130,7 @@ header
 		top 0
 		left 0
 		background rgba(0,0,0,0.5)
-
+		transition .2s
 
 .poster 
 	.poster-info
@@ -163,8 +163,8 @@ header
 	vertical-align middle
 	display inline-block
 	
-	@media mobile
-		width 100%
+	/*@media mobile
+		width 100%*/
  
 	& h1	
 		margin 0px 0px 15px 0px
@@ -221,6 +221,19 @@ header
 
 //Сетка материалов
 @import 'grid'
+
+//Кнопка подгрузки материалов
+.fetch 
+	a
+		width 960px
+		display block
+		margin 0 auto 40px auto
+		padding 20px 20px 20px 20px
+		text-align center
+		border 1px solid rgba(0, 114, 186, 0.3)	
+	
+	a:hover
+		border-color rgba(208,64,0,0.3)
 
 /* Инстаграм ** временно отключен
 .shots
@@ -281,26 +294,24 @@ header
 	box-shadow inset 0px 1px 18px 0px rgba(0, 0, 150, 0.06)	
 	color rgba(0, 0, 0, 0.9)
 	
-	@media mobile
-		height 150px
+	/*@media mobile
+		height 150px*/
 
 .footer
 	@extend .container
 	padding 40px 20px 0px 20px
 	position relative
 	font-size 16px
-	//background-image url(../source/images/dead.png)
 	background-size 400px
 	background-repeat no-repeat
 	background-position 350px 39%
 
 .ask
-	//width 500px
 	display inline-block
 	float right
 	
-	@media mobile
-		margin 20px 0 0 0
+	/*@media mobile
+		margin 20px 0 0 0*/
 
 	.text
 		display inline-block

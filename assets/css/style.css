@@ -37,19 +37,8 @@ header,
   width: 1000px;
   margin: 0 auto 0 auto;
   padding: 20px 20px 0px 20px;
-}
-@media screen and (max-width: 700px) {
-  .container,
-  header,
-  .news,
-  .footer,
-  .article-wrap,
-header,
-.news,
-.footer,
-.article-wrap {
-    width: 100%;
-  }
+/*@media mobile
+		width 100%*/
 }
 .header-wrap {
   width: 100%;
@@ -159,34 +148,6 @@ header,
 .search :-ms-input-placeholder {
   color: rgba(255,255,255,0.6);
 }
-/* Фоторама **отключена
-.fotorama
-	position relative
-
-.fotorama__arr--prev
-	margin 0 0 0 30px
-	background url(../source/images/prev.svg)
-
-.fotorama__arr--next
-	margin 0 30px 0 0
-	background url(../source/images/next.svg)
-	
-.fotorama__arr--prev,.fotorama__arr--next
-	background-repeat no-repeat
-	background-position center
-	width 31px
-	height 58px
-	
-.fotorama__arr--prev:hover, .fotorama__arr--next:hover
-	transform scaleY(0.7)
-
-.fotorama__nav-wrap
-	position absolute
-	bottom 10px
-	width 960px
-	padding-left 40px
-	text-align left
-*/
 .cover {
   position: relative;
   width: 100%;
@@ -208,6 +169,7 @@ header,
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
+  transition: 0.2s;
 }
 .poster .poster-info {
   width: 840px;
@@ -237,11 +199,8 @@ header,
   margin: 0 40px 0 0;
   vertical-align: middle;
   display: inline-block;
-}
-@media screen and (max-width: 700px) {
-  .caption {
-    width: 100%;
-  }
+/*@media mobile
+		width 100%*/
 }
 .caption h1 {
   margin: 0px 0px 15px 0px;
@@ -302,14 +261,14 @@ header,
 .one:visited {
   width: 300px;
   height: 150px;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 0 15px 0;
   padding: 20px 30px 20px 20px;
   position: relative;
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 18px 0 rgba(0,0,0,0.06);
   border-bottom: 0;
   color: #000;
   z-index: 1;
@@ -319,20 +278,20 @@ header,
   display: inline;
   border-bottom: 1px solid rgba(0,0,0,0.3);
   font-family: 'PT Sans Caption';
-  font-size: 24px;
+  font-size: 22px;
   line-height: 32px;
   color: #000;
 }
 .one span,
 .one:visited span {
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0 0 0;
   display: inline-block;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   color: #000;
 }
 .one:hover {
-  box-shadow: 0px 1px 18px 0px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 18px 0 rgba(0,0,0,0.08);
 }
 .one:hover h1 {
   color: #d04000;
@@ -342,7 +301,7 @@ header,
   color: #000;
 }
 .one.illustration {
-  padding: 20px 90px 20px 20px;
+  padding: 20px 95px 20px 20px;
   background-position: 100% bottom;
   background-size: 95px;
   background-repeat: no-repeat;
@@ -386,6 +345,9 @@ header,
 .one.photo.big {
   height: 330px;
 }
+.one.photo.big .contents {
+  text-align: center;
+}
 .one.photo.big:after {
   background: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
   transition: 0.2s;
@@ -393,6 +355,26 @@ header,
 .one.photo.big:hover:after {
   opacity: 0.5;
   transition: 0.2s;
+}
+.one.photo.big.down .contents {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+.one.photo.big.down:after {
+  background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.8) 100%);
+  transition: 0.2s;
+}
+.fetch a {
+  width: 960px;
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  border: 1px solid rgba(0,114,186,0.3);
+}
+.fetch a:hover {
+  border-color: rgba(208,64,0,0.3);
 }
 /* Инстаграм ** временно отключен
 .shots
@@ -450,11 +432,8 @@ header,
   background: rgba(42,50,55,0.03);
   box-shadow: inset 0px 1px 18px 0px rgba(0,0,150,0.06);
   color: rgba(0,0,0,0.9);
-}
-@media screen and (max-width: 700px) {
-  .footer-wrap {
-    height: 150px;
-  }
+/*@media mobile
+		height 150px*/
 }
 .footer {
   padding: 40px 20px 0px 20px;
@@ -467,11 +446,8 @@ header,
 .ask {
   display: inline-block;
   float: right;
-}
-@media screen and (max-width: 700px) {
-  .ask {
-    margin: 20px 0 0 0;
-  }
+/*@media mobile
+		margin 20px 0 0 0*/
 }
 .ask .text {
   display: inline-block;
@@ -524,11 +500,6 @@ header,
   width: 1000px;
   padding: 150px 20px 0 20px;
   height: 350px;
-}
-@media screen and (max-width: 700px) {
-  .poster-info.article {
-    width: 100%;
-  }
 }
 .poster-info.article h1 {
   border: 0;
@@ -593,11 +564,6 @@ article {
   font-size: 18px;
   line-height: 25px;
 }
-@media screen and (max-width: 700px) {
-  article {
-    width: 100%;
-  }
-}
 article p {
   margin: 20px 0 20px 0;
 }
@@ -614,19 +580,8 @@ article .image {
   margin: 40px -50px 40px -50px;
   overflow: hidden;
 }
-@media screen and (max-width: 700px) {
-  article .image {
-    width: 100%;
-    margin: 40px -20px 40px -20px;
-  }
-}
 article .image img {
   max-width: 800px;
-}
-@media screen and (max-width: 700px) {
-  article .image {
-    width: 120%;
-  }
 }
 article .image span {
   margin: 5px 0 0 50px;
@@ -637,22 +592,9 @@ article aside {
   width: 200px;
   position: absolute;
   right: 30px;
-/*float right
-		margin 0 -250px 0 0*/
   font-size: 16px;
   line-height: 1.4em;
   color: rgba(0,0,0,0.5);
-}
-@media screen and (max-width: 700px) {
-  article aside {
-    width: 100%;
-    margin: 0 0 0 30px;
-    padding: 20px 0 10px 0;
-    position: relative;
-    text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-  }
 }
 article aside .number {
   font-size: 36px;
@@ -666,10 +608,6 @@ article .expert {
   padding: 0 0 0 40px;
   margin: 40px 0 20px 0;
   position: relative;
-/*& p:first-of-type:before
-			content '–'
-			margin-left -0.6em
-			font-size 48px*/
 }
 article .expert:before {
   content: '”';
@@ -709,14 +647,6 @@ article .expert p {
   width: 1000px;
   margin: 0 auto 0 auto;
   padding: 20px 20px 20px 20px;
-}
-@media screen and (max-width: 700px) {
-  .relevant,
-  .comments-wrap .comments,
-.comments-wrap .comments {
-    width: 100%;
-    text-align: center;
-  }
 }
 .relevant .tags,
 .comments-wrap .comments .tags {

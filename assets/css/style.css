@@ -503,19 +503,27 @@ header,
   padding: 150px 20px 0 20px;
   height: 350px;
 }
+.poster-info.article .caption {
+  margin: 0 60px 0 0;
+  width: 960px;
+}
 .poster-info.article h1 {
+  font-size: 36px;
   border: 0;
 }
 .poster-info.article:hover h1 {
   text-shadow: none;
   border: 0;
 }
-.rights {
+.poster-info.article .rights {
   position: absolute;
-  bottom: 22px;
-  right: 40px;
-  color: rgba(255,255,255,0.3);
+  bottom: 55px;
+  right: 20px;
+}
+.rights {
+  opacity: 0.2;
   font-size: 12px;
+  vertical-align: middle;
 }
 .author,
 article .expert {
@@ -537,6 +545,7 @@ article .expert .pic {
   overflow: hidden;
 }
 .infobar {
+  width: 960px;
   font-size: 16px;
   position: absolute;
   bottom: 15px;
@@ -556,6 +565,10 @@ article .expert .pic {
   background-position: left center;
   background-repeat: no-repeat;
 }
+.infobar .likely {
+  margin: 5px 0 0 0;
+  float: right;
+}
 .article-wrap {
   position: relative;
 }
@@ -567,11 +580,11 @@ article {
   line-height: 25px;
 }
 article p {
-  margin: 20px 0 20px 0;
+  margin: 10px 0 30px 0;
 }
 article h2 {
   width: 95%;
-  margin: 50px 0 25px 0;
+  margin: 50px 0 10px 0;
   font-family: 'PT Sans Caption';
   font-size: 24px;
   font-weight: normal;
@@ -585,13 +598,18 @@ article .image {
 article .image img {
   max-width: 800px;
 }
-article .image span {
+article .image p {
   margin: 5px 0 0 50px;
   font-size: 16px;
   color: rgba(0,0,0,0.7);
 }
+article .image .rights {
+  margin: 0 0 0 10px;
+  opacity: 0.4;
+}
 article aside {
   width: 200px;
+  margin: 5px 0 0 0;
   position: absolute;
   right: 30px;
   font-size: 16px;
@@ -599,25 +617,25 @@ article aside {
   color: rgba(0,0,0,0.5);
 }
 article aside .number {
-  font-size: 36px;
+  margin: 0 0 20px 0;
+  font-size: 48px;
   text-align: center;
   font-family: 'PT Sans Caption';
 }
+article aside p {
+  margin: 10px 0 0 10px;
+}
 article aside img {
   max-width: 200px;
+  padding: 2px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+article aside a.img img:hover {
+  border-color: rgba(208,64,0,0.3);
 }
 article .expert {
   padding: 0 0 0 40px;
   margin: 40px 0 20px 0;
-  position: relative;
-}
-article .expert:before {
-  content: '”';
-  position: absolute;
-  top: 110px;
-  left: -5px;
-  font-size: 72px;
-  font-family: Georgia;
 }
 article .expert .pic {
   vertical-align: middle;
@@ -636,9 +654,21 @@ article .expert .who {
   font-size: 16px;
   font-weight: normal;
 }
+article .expert .text {
+  padding: 20px 0 0 0;
+  position: relative;
+}
+article .expert .text:before {
+  content: '«';
+  position: absolute;
+  top: 20px;
+  left: -45px;
+  font-size: 72px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 article .expert p {
   font-weight: normal;
-  font-family: Georgia;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 .relevant-wrap {
   width: 100%;

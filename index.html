@@ -20,7 +20,7 @@
   </header>
   </div>
   <div class="cover">
-    <div class="poster emerge" data-spin="true" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
+    <div class="poster emerge" id="pageCover" data-spin="true" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
     <a class="poster-info" href="#">
       <div class="image" style="background-image:url(assets/source/images/head.png)">
       </div>
@@ -31,8 +31,8 @@
     </a>
     </div>
   </div>
- 
-  <div class="news-wrap">
+
+  <div class="news-wrap emerge" data-await="pageCover">
     <div class="news" data-disableIfFit="true" data-centerIfFit="true">
      <div class="entry">
        <span class="smallcapitals">минуту назад</span><br/>
@@ -51,7 +51,7 @@
        <a href="#">МТС потратили 100 млн рублей на аналог Скайпа</a>
      </div>
     </div>
-  </div> 
+  </div>
 
   <div class="grid-wrap">
     <div class="js-masonry emerge" data-continue="true" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
@@ -133,7 +133,7 @@
 
     </div>
   </div>
-  
+
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="assets/js/all.js"></script>
 </body>

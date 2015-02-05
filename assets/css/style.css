@@ -708,10 +708,10 @@ article .expert .text {
 article .expert .text:before {
   content: '«';
   position: absolute;
-  top: 20px;
+  top: 23px;
   left: -45px;
   font-size: 72px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'PT Sans Caption';
 }
 article .expert p {
   font-weight: normal;

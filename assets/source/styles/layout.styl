@@ -68,17 +68,35 @@ header
 	&:focus
 		opacity 0.9
 		transition .2s
-
+		
 //Автопрефиксер не справляется, пришлось оставить
-.search::-webkit-input-placeholder
+$searchPlaceHolder
 	color:rgba(255, 255, 255, 0.6)
-.search::-moz-placeholder
-	color:rgba(255, 255, 255, 0.6)
-.search :-moz-placeholder
-	color:rgba(255, 255, 255, 0.6)
-.search :-ms-input-placeholder
-  color:rgba(255, 255, 255, 0.6)
 
+.search::-webkit-input-placeholder
+	$searchPlaceHolder
+.search::-moz-placeholder
+	$searchPlaceHolder
+.search :-moz-placeholder
+	$searchPlaceHolder
+.search :-ms-input-placeholder
+  $searchPlaceHolder
+
+//Тёмная шапка
+.header-wrap.light
+	border-bottom 1px solid rgba(0, 0, 0, 0.1)
+	padding 0 0 10px 0
+	
+	.logo,.logo:visited
+		color molokoColor
+	
+	.search
+		color black
+		background-image url(../source/images/search-dark.svg)
+		
+	$searchPlaceHolder
+		color black
+		
 //  Фоторама **отключена
 // .fotorama
 // 	position relative
@@ -134,6 +152,8 @@ header
 		transition .2s
 
 .poster 
+	position relative
+	
 	.poster-info
 		width 840px
 		padding 100px 0 0 0
@@ -160,7 +180,7 @@ header
 
 .caption
 	width 500px
-	margin 0 40px 0 0
+	padding 0 40px 0 0
 	vertical-align middle
 	display inline-block
 	
@@ -356,5 +376,17 @@ header
 		margin 0px 15px 0px 0px
 
 @import 'article'
+
+@import 'news'
+
+.front-page
+	padding 40px 0 0 0
+	
+	.poster
+		width 960px
+		margin 0 auto 0 auto
+		
+		.poster-info
+			padding 40px 0 40px 0
 
 @import 'typo'

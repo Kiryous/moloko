@@ -73,7 +73,16 @@ header,
 .fb,
 .fb:visited,
 .inst,
-.inst:visited {
+.inst:visited,
+.header-wrap.light.social,
+.header-wrap.light .twi,
+.header-wrap.light .twi:visited,
+.header-wrap.light .vk,
+.header-wrap.light .vk:visited,
+.header-wrap.light .fb,
+.header-wrap.light .fb:visited,
+.header-wrap.light .inst,
+.header-wrap.light .inst:visited {
   width: 40px;
   height: 40px;
   padding: 0;
@@ -92,7 +101,15 @@ header,
 .fb:hover,
 .fb:visited:hover,
 .inst:hover,
-.inst:visited:hover {
+.inst:visited:hover,
+.header-wrap.light .twi:hover,
+.header-wrap.light .twi:visited:hover,
+.header-wrap.light .vk:hover,
+.header-wrap.light .vk:visited:hover,
+.header-wrap.light .fb:hover,
+.header-wrap.light .fb:visited:hover,
+.header-wrap.light .inst:hover,
+.header-wrap.light .inst:visited:hover {
   opacity: 1;
   transition: 0.1s;
 }
@@ -116,6 +133,33 @@ header,
   background-image: url("../source/images/inst.svg");
   background-position: center;
 }
+.header-wrap.light.social,
+.header-wrap.light .twi,
+.header-wrap.light .twi:visited,
+.header-wrap.light .vk,
+.header-wrap.light .vk:visited,
+.header-wrap.light .fb,
+.header-wrap.light .fb:visited,
+.header-wrap.light .inst,
+.header-wrap.light .inst:visited {
+  opacity: 0.6;
+}
+.header-wrap.light .twi,
+.header-wrap.light .twi:visited {
+  background-image: url("../source/images/twi-dark.svg");
+}
+.header-wrap.light .vk,
+.header-wrap.light .vk:visited {
+  background-image: url("../source/images/vk-dark.svg");
+}
+.header-wrap.light .fb,
+.header-wrap.light .fb:visited {
+  background-image: url("../source/images/fb-dark.svg");
+}
+.header-wrap.light .inst,
+.header-wrap.light .inst:visited {
+  background-image: url("../source/images/inst-dark.svg");
+}
 .search {
   width: 200px;
   height: 44px;
@@ -136,17 +180,17 @@ header,
   opacity: 0.9;
   transition: 0.2s;
 }
-.search::-webkit-input-placeholder {
-  color: rgba(255,255,255,0.6);
+.header-wrap.light {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 0 0 10px 0;
 }
-.search::-moz-placeholder {
-  color: rgba(255,255,255,0.6);
+.header-wrap.light .logo,
+.header-wrap.light .logo:visited {
+  color: #2992e4;
 }
-.search :-moz-placeholder {
-  color: rgba(255,255,255,0.6);
-}
-.search :-ms-input-placeholder {
-  color: rgba(255,255,255,0.6);
+.header-wrap.light .search {
+  color: #000;
+  background-image: url("../source/images/search-dark.svg");
 }
 .cover {
   position: relative;
@@ -171,6 +215,9 @@ header,
   left: 0;
   background: rgba(0,0,0,0.5);
   transition: 0.2s;
+}
+.poster {
+  position: relative;
 }
 .poster .poster-info {
   width: 840px;
@@ -197,7 +244,7 @@ header,
 }
 .caption {
   width: 500px;
-  margin: 0 40px 0 0;
+  padding: 0 40px 0 0;
   vertical-align: middle;
   display: inline-block;
 /*@media mobile
@@ -504,7 +551,7 @@ header,
   height: 350px;
 }
 .poster-info.article .caption {
-  margin: 0 60px 0 0;
+  padding: 0 60px 0 0;
   width: 960px;
 }
 .poster-info.article h1 {
@@ -617,13 +664,13 @@ article aside {
   color: rgba(0,0,0,0.5);
 }
 article aside .number {
-  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
   font-size: 48px;
   text-align: center;
   font-family: 'PT Sans Caption';
 }
 article aside p {
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0px;
 }
 article aside img {
   max-width: 200px;
@@ -710,6 +757,51 @@ article .expert p {
 .comments-wrap {
   width: 100%;
   background: rgba(232,239,243,0.4);
+}
+.cover.light-header {
+  height: auto;
+  min-height: 250px;
+  background: #fff;
+}
+.poster.light-header {
+  height: auto;
+  min-height: 200px;
+}
+.poster.light-header:after {
+  display: none;
+}
+.poster-info.light-header {
+  width: 1000px;
+  height: auto;
+  min-height: 200px;
+  padding: 100px 20px 0 20px;
+  color: #000;
+}
+.poster-info.light-header .caption h1 {
+  color: #000;
+}
+.poster-info.light-header .caption span {
+  color: #000;
+}
+.poster-info.light-header .infobar {
+  position: relative;
+  margin: 40px 0 0 0;
+}
+.poster-info.light-header .infobar .views {
+  background-image: url("../source/images/eye-dark.svg");
+}
+.poster-info.light-header .infobar .likely {
+  float: none;
+}
+.front-page {
+  padding: 40px 0 0 0;
+}
+.front-page .poster {
+  width: 960px;
+  margin: 0 auto 0 auto;
+}
+.front-page .poster .poster-info {
+  padding: 40px 0 40px 0;
 }
 a,
 a:visited {

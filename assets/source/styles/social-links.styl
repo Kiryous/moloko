@@ -51,3 +51,38 @@
 	&:hover
 		@extend .social:hover
 		//background-color rgba(160, 103, 79, 1)
+
+.header-wrap.light.social
+	@extend .social
+	opacity 0.6
+		
+
+.header-wrap.light
+	.twi, .twi:visited
+		@extend .header-wrap.light.social
+		background-image url(../source/images/twi-dark.svg)
+		
+		&:hover
+			@extend .social:hover
+	
+	.vk, .vk:visited
+		@extend .header-wrap.light.social
+		background-image url(../source/images/vk-dark.svg)
+		
+		&:hover
+			@extend .social:hover
+		
+	.fb, .fb:visited
+		@extend .header-wrap.light.social
+		background-image url(../source/images/fb-dark.svg)
+		
+		&:hover
+			@extend .social:hover
+	
+	.inst, .inst:visited
+		@extend .header-wrap.light.social
+		background-image url(../source/images/inst-dark.svg)
+		
+		&:hover
+			@extend .social:hover
+	

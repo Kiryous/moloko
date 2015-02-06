@@ -646,6 +646,7 @@ article .image {
 }
 article .image img {
   max-width: 800px;
+  margin: 0 0 5px 0;
 }
 article .image p {
   margin: 0 0 0 50px;
@@ -653,6 +654,7 @@ article .image p {
   color: rgba(0,0,0,0.7);
 }
 article .image .rights {
+  display: block;
   opacity: 0.4;
 }
 article aside {

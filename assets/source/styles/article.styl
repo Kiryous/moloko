@@ -90,6 +90,7 @@ article
 
 	& p
 		margin 10px 0 30px 0
+		position relative
 
 	& h2
 		width 95%
@@ -115,12 +116,11 @@ article
 		// 	width 120%
 
 		& p
-			margin 5px 0 0 50px
+			margin 0 0 0 50px
 			font-size 16px
 			color rgba(0, 0, 0, 0.7)
 			
 		& .rights
-			margin 0 0 0 10px
 			opacity 0.4
 
 	& aside
@@ -149,6 +149,7 @@ article
 		
 		& p
 			margin 10px 0 0 0px
+			position relative
 
 		& img
 			max-width 200px
@@ -165,8 +166,9 @@ article
 
 	& .expert
 		@extend .author
-		padding 0 0 0 40px
-		margin 40px 0 20px 0
+		padding 30px 40px 10px 60px
+		// margin 40px 0 20px 0
+		background rgba(0, 0, 0, 0.05)
 
 		// & p:first-of-type:before
 		// 	content '–'
@@ -198,9 +200,9 @@ article
 				content '«'
 				position absolute
 				top 23px
-				left -45px
-				font-size 72px
-				font-family 'PT Sans Caption'
+				left -40px
+				font-size 50px
+				font-family 'Verdana', 'Tahoma'
 
 		& p
 			font-weight normal

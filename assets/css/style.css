@@ -183,6 +183,7 @@ header,
 .header-wrap.light {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding: 0 0 10px 0;
+  position: relative;
 }
 .header-wrap.light .logo,
 .header-wrap.light .logo:visited {
@@ -628,6 +629,7 @@ article {
 }
 article p {
   margin: 10px 0 30px 0;
+  position: relative;
 }
 article h2 {
   width: 95%;
@@ -646,12 +648,11 @@ article .image img {
   max-width: 800px;
 }
 article .image p {
-  margin: 5px 0 0 50px;
+  margin: 0 0 0 50px;
   font-size: 16px;
   color: rgba(0,0,0,0.7);
 }
 article .image .rights {
-  margin: 0 0 0 10px;
   opacity: 0.4;
 }
 article aside {
@@ -671,6 +672,7 @@ article aside .number {
 }
 article aside p {
   margin: 10px 0 0 0px;
+  position: relative;
 }
 article aside img {
   max-width: 200px;
@@ -681,8 +683,8 @@ article aside a.img img:hover {
   border-color: rgba(208,64,0,0.3);
 }
 article .expert {
-  padding: 0 0 0 40px;
-  margin: 40px 0 20px 0;
+  padding: 30px 40px 10px 60px;
+  background: rgba(0,0,0,0.05);
 }
 article .expert .pic {
   vertical-align: middle;
@@ -709,9 +711,9 @@ article .expert .text:before {
   content: '«';
   position: absolute;
   top: 23px;
-  left: -45px;
-  font-size: 72px;
-  font-family: 'PT Sans Caption';
+  left: -40px;
+  font-size: 50px;
+  font-family: 'Verdana', 'Tahoma';
 }
 article .expert p {
   font-weight: normal;
@@ -760,12 +762,12 @@ article .expert p {
 }
 .cover.light-header {
   height: auto;
-  min-height: 250px;
+  min-height: 150px;
   background: #fff;
 }
 .poster.light-header {
   height: auto;
-  min-height: 200px;
+  min-height: 100px;
 }
 .poster.light-header:after {
   display: none;
@@ -773,8 +775,8 @@ article .expert p {
 .poster-info.light-header {
   width: 1000px;
   height: auto;
-  min-height: 200px;
-  padding: 100px 20px 0 20px;
+  min-height: 100px;
+  padding: 20px 20px 0 20px;
   color: #000;
 }
 .poster-info.light-header .caption h1 {
@@ -799,6 +801,10 @@ article .expert p {
 .front-page .poster {
   width: 960px;
   margin: 0 auto 0 auto;
+}
+.front-page .poster:hover:after {
+  background: rgba(0,0,0,0.2);
+  transition: 0.2s;
 }
 .front-page .poster .poster-info {
   padding: 40px 0 40px 0;

@@ -727,7 +727,7 @@ article aside a.img img:hover {
 }
 article .expert {
   padding: 30px 40px 10px 60px;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0,0,0,0.03);
 }
 article .expert .pic {
   vertical-align: middle;
@@ -741,6 +741,7 @@ article .expert .info {
 }
 article .expert .name {
   font-size: 20px;
+  font-family: 'PT Sans Caption';
 }
 article .expert .who {
   font-size: 16px;
@@ -749,6 +750,8 @@ article .expert .who {
 article .expert .text {
   padding: 20px 0 0 0;
   position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
 }
 article .expert .text:before {
   content: '«';
@@ -757,10 +760,6 @@ article .expert .text:before {
   left: -40px;
   font-size: 50px;
   font-family: 'Verdana', 'Tahoma';
-}
-article .expert p {
-  font-weight: normal;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 .relevant-wrap {
   width: 100%;

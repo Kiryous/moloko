@@ -170,7 +170,7 @@ article
 		@extend .author
 		padding 30px 40px 10px 60px
 		// margin 40px 0 20px 0
-		background rgba(0, 0, 0, 0.05)
+		background rgba(0, 0, 0, 0.03)
 
 		// & p:first-of-type:before
 		// 	content '–'
@@ -189,6 +189,7 @@ article
 
 		& .name
 			font-size 20px
+			font-family f_headline
 
 		& .who
 			font-size 16px
@@ -197,6 +198,8 @@ article
 		& .text
 			padding 20px 0 0 0
 			position relative
+			font-family f_Default
+			font-size 17px
 			
 			&:before
 				content '«'
@@ -205,10 +208,6 @@ article
 				left -40px
 				font-size 50px
 				font-family 'Verdana', 'Tahoma'
-
-		& p
-			font-weight normal
-			font-family f_Default
 
 .relevant-wrap
 	width 100%

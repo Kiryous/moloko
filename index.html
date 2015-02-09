@@ -8,6 +8,7 @@
   <!-- Шрифты -->
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/css/shadow.css" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
   <!-- Собственные стили -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -20,7 +21,7 @@
   </header>
   </div>
   <div class="cover">
-    <div class="poster emerge" id="pageCover" data-spin="true" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
+    <div class="poster emerge" data-spin="true" style="background-image: url(http://yandex.ru/images/today?size=1920x1200)">
     <a class="poster-info" href="#">
       <div class="image" style="background-image:url(assets/source/images/head.png)">
       </div>
@@ -32,7 +33,7 @@
     </div>
   </div>
 
-  <div class="news-wrap emerge" data-await="pageCover">
+  <div class="news-wrap">
     <div class="news" data-disableIfFit="true" data-centerIfFit="true">
      <div class="entry">
        <span class="smallcapitals">минуту назад</span><br/>
@@ -52,9 +53,7 @@
      </div>
     </div>
   </div>
-
-  <div class="grid-wrap">
-    <div class="js-masonry emerge" data-continue="true" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
+    <div class="js-masonry grid-wrap emerge" data-continue="true" data-masonry-options='{ "itemSelector": ".one", "columnWidth": 320, "gutter": 10 }'>
 
       <a class="one photo big down emerge" style="background-image:url(http://esquire.ru/files/cache/images/aa/4f/10/09/3f103426.fit667x655.002.jpg)" href="#">
         <div class="contents">
@@ -63,7 +62,7 @@
         </div>
       </a>
 
-      <a class="one illustration" href="#" style="background-image:url(assets/source/images/dead.png);">
+      <a class="one illustration emerge" href="#" style="background-image:url(assets/source/images/dead.png);">
         <div class="contents">
           <h1>Злой дед</h1><br/>
           <span>Декаданские советы от деда с бутылкой молока</span>
@@ -77,7 +76,7 @@
         </div>
       </a>
 
-      <a class="one illustration" style="background-image:url(assets/source/images/girls.png);" href="#">
+      <a class="one illustration emerge" style="background-image:url(assets/source/images/girls.png);" href="#">
         <div class="contents">
           <h1>Эхо войны</h1><br/>
           <span>Медсетры ежедневно спасают двести девяносто девять ребят</span>
@@ -99,15 +98,28 @@
         </div>
       </a>
 
-      <a class="one illustration" style="background-image:url(assets/source/images/eatme.jpg);" href="#">
+      <a class="one illustration big down no-gradient emerge" style="background-image:url(assets/source/images/window.png);" href="#">
         <div class="contents">
-          <h1>Девушки лезут в пасть</h1><br/>
-          <span>Ситауция в Ростове</span>
+          <h1>Рельсы на площади</h1><br/>
+          <span>Режиссер-фантаст Никита Михалков о новой утопии</span>
+        </div>
+      </a>
+
+      <a class="one illustration emerge" style="background-image:url(assets/source/images/eatme.jpg);" href="#">
+        <div class="contents">
+          <h1>Лезут в пасть</h1><br/>
+          <span>Корреспондент «Молока» ищет объяснение феномену</span>
+        </div>
+      </a>
+
+      <a class="one illustration big emerge" style="background-image:url(http://cs7004.vk.me/c610230/u20475659/docs/cf68c324425e/IMG_7447.jpg);" href="#">
+        <div class="contents">
+          <h1>Игрушки на снегу</h1><br/>
+          <span>Рецепт хранения советской радости зимой</span>
         </div>
       </a>
 
     </div>
-  </div>
 
   <div class="fetch">
     <a href="#">Загрузить ещё материалов</a>

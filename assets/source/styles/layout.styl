@@ -68,17 +68,36 @@ header
 	&:focus
 		opacity 0.9
 		transition .2s
-
+		
 //Автопрефиксер не справляется, пришлось оставить
-.search::-webkit-input-placeholder
+$searchPlaceHolder
 	color:rgba(255, 255, 255, 0.6)
-.search::-moz-placeholder
-	color:rgba(255, 255, 255, 0.6)
-.search :-moz-placeholder
-	color:rgba(255, 255, 255, 0.6)
-.search :-ms-input-placeholder
-  color:rgba(255, 255, 255, 0.6)
 
+.search::-webkit-input-placeholder
+	$searchPlaceHolder
+.search::-moz-placeholder
+	$searchPlaceHolder
+.search :-moz-placeholder
+	$searchPlaceHolder
+.search :-ms-input-placeholder
+  $searchPlaceHolder
+
+//Тёмная шапка
+.header-wrap.light
+	border-bottom 1px solid rgba(0, 0, 0, 0.1)
+	padding 0 0 10px 0
+	position relative
+	
+	.logo,.logo:visited
+		color molokoColor
+	
+	.search
+		color black
+		background-image url(../source/images/search-dark.svg)
+		
+	$searchPlaceHolder
+		color black
+		
 //  Фоторама **отключена
 // .fotorama
 // 	position relative
@@ -134,9 +153,11 @@ header
 		transition .2s
 
 .poster 
+	position relative
+	
 	.poster-info
-		width 840px
-		padding 100px 0 0 0
+		width 1000px
+		padding 100px 20px 0 20px
 		margin 0 auto 0 auto	
 		display block
 		position relative
@@ -159,8 +180,8 @@ header
 	  vertical-align middle
 
 .caption
-	width 500px
-	margin 0 40px 0 0
+	width 700px
+	padding 0 40px 0 0
 	vertical-align middle
 	display inline-block
 	
@@ -168,21 +189,20 @@ header
 		width 100%*/
  
 	& h1	
-		margin 0px 0px 15px 0px
+		margin 0 0 15px 0
 		display inline
 		border-bottom 1px solid rgba(255, 255, 255, 0.5)
 		font-family f_headline
-		font-size 28px
-		line-height 1.5em
+		font-size 36px
+		line-height 1.2em
 		color white
 	
 	& span
-		margin 0 0 0 0
+		margin 5px 0 0 0
 		display block
 		font-size 22px
 		font-family f_Default 
 		line-height 1.2em
-		letter-spacing 0.05em
 		color white
 
 // Новости
@@ -356,5 +376,21 @@ header
 		margin 0px 15px 0px 0px
 
 @import 'article'
+
+@import 'light-header'
+
+.front-page
+	padding 40px 0 0 0
+	
+	.poster
+		width 960px
+		margin 0 auto 0 auto
+		
+		&:hover:after
+			background rgba(0,0,0,0.2)
+			transition .2s
+		
+		.poster-info
+			padding 40px 0 40px 0
 
 @import 'typo'

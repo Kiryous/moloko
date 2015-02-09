@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="10.8px" height="18px" viewBox="0 0 9 15" version="1.1">
+    <title>fb</title>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="networklinks" sketch:type="MSLayerGroup" transform="translate(-106.000000, -15.000000)" fill="#000000">
+            <g id="fb" sketch:type="MSShapeGroup">
+                <path d="M111.3 23 L113.7 23 L114 20.4 L111.3 20.4 L111.3 18.7 C111.3 18 111.5 17.4 112.7 17.4 L114.1 17.4 L114.1 15.1 C113.9 15.1 113 15 112 15 C109.9 15 108.4 16.2 108.4 18.5 L108.4 20.4 L106 20.4 L106 23 L108.4 23 L108.4 29.7 L111.3 29.7 L111.3 23 Z" id="f"/>
+            </g>
+        </g>
+    </g>
+</svg>

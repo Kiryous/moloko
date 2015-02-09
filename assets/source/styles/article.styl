@@ -11,20 +11,28 @@
 
 	// @media mobile
 	// 	width 100%
+		
+	& .caption
+		padding 0 60px 0 0
+		width 960px
 
 	& h1
+		font-size 36px
 		border 0
 
 	&:hover h1
 		text-shadow none
 		border 0
+		
+	& .rights
+		position absolute
+		bottom 55px
+		right 20px
 
 .rights
-	position absolute
-	bottom 22px
-	right 40px
-	color rgba(255, 255, 255, 0.3)
+	opacity 0.2
 	font-size 12px
+	vertical-align middle
 
 .author
 	margin 0 15px 0 0
@@ -44,6 +52,7 @@
 		overflow hidden
 
 .infobar
+	width 960px
 	font-size 16px
 	position absolute
 	bottom 15px
@@ -60,6 +69,10 @@
 		background-image url(../source/images/eye.svg)
 		background-position left center
 		background-repeat no-repeat
+	
+	.likely
+		margin 5px 0 0 0
+		float:right;
 
 .article-wrap
 	@extend .container
@@ -76,11 +89,12 @@ article
 	// 	width 100%
 
 	& p
-		margin 20px 0 20px 0
+		margin 10px 0 30px 0
+		position relative
 
 	& h2
 		width 95%
-		margin 50px 0 25px 0
+		margin 50px 0 10px 0
 		font-family f_headline
 		font-size 24px
 		font-weight normal
@@ -97,17 +111,23 @@ article
 
 		& img
 			max-width 800px
+			margin 0 0 5px 0
 
 		// @media mobile
 		// 	width 120%
 
-		& span
-			margin 5px 0 0 50px
+		& p
+			margin 0 0 0 50px
 			font-size 16px
 			color rgba(0, 0, 0, 0.7)
+			
+		& .rights
+			display block
+			opacity 0.4
 
 	& aside
 		width 200px
+		margin 5px 0 0 0
 		position absolute
 		right 30px
 		font-size 16px
@@ -124,31 +144,38 @@ article
 		// 	border-bottom 1px solid rgba(0, 0, 0, 0.1)
 
 		& .number
-			font-size 36px
+			padding 0 0 10px 0
+			font-size 48px
 			text-align center
 			font-family f_headline
+		
+		& p
+			margin 10px 0 0 0px
+			position relative
 
 		& img
 			max-width 200px
+			padding 2px
+			border 1px solid rgba(0, 0, 0, .2)
+		
+		& a.img
+			// display block
+			// border-bottom 0
+			
+			& img:hover
+				border-color rgba(208, 64, 0, .3)
+			
 
 	& .expert
 		@extend .author
-		padding 0 0 0 40px
-		margin 40px 0 20px 0
-		position relative
+		padding 30px 40px 10px 60px
+		// margin 40px 0 20px 0
+		background rgba(0, 0, 0, 0.03)
 
 		// & p:first-of-type:before
 		// 	content '–'
 		// 	margin-left -0.6em
 		// 	font-size 48px
-
-		&:before
-			content '”'
-			position absolute
-			top 110px
-			left -5px
-			font-size 72px
-			font-family f_text
 
 		& .pic
 			vertical-align middle
@@ -162,14 +189,25 @@ article
 
 		& .name
 			font-size 20px
+			font-family f_headline
 
 		& .who
 			font-size 16px
 			font-weight normal
-
-		& p
-			font-weight normal
-			font-family f_text
+			
+		& .text
+			padding 20px 0 0 0
+			position relative
+			font-family f_Default
+			font-size 17px
+			
+			&:before
+				content '«'
+				position absolute
+				top 23px
+				left -40px
+				font-size 50px
+				font-family 'Verdana', 'Tahoma'
 
 .relevant-wrap
 	width 100%

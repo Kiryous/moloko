@@ -1,5 +1,7 @@
 $(document).ready(function() {
   $(".fetch a").click(function() {
-    $(".grid-wrap .one").css("opacity", "1");
+    setTimeout(function(){
+      $(".grid-wrap .one").addClass("visible");
+    }, 3000);
   });
 });

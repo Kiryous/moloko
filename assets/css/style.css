@@ -628,8 +628,8 @@ header,
   bottom: 55px;
   right: 20px;
 }
-i,
-.rights {
+.rights,
+article .fotorama .fotorama__caption__wrap span {
   opacity: 0.2;
   font-size: 12px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -860,8 +860,16 @@ article .fotorama {
   margin: 40px -50px 40px -50px;
 }
 article .fotorama .fotorama__caption__wrap {
-  background: rgba(0,0,0,0.7);
+  width: 100%;
+  padding: 5px 5px 20px 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7));
   color: rgba(255,255,255,0.9);
+  font-family: Georgia;
+  font-size: 16px;
+}
+article .fotorama .fotorama__caption__wrap span {
+  display: block;
+  opacity: 0.3;
 }
 article .fotorama .fotorama__nav__shaft {
   float: left;
@@ -911,7 +919,7 @@ article .fotorama .fotorama__nav__shaft {
   height: auto;
   min-height: 150px;
   background: #fff;
-  margin: 20px 0 0 0;
+  margin: 40px 0 -20px 0;
 }
 .poster.light-header {
   height: auto;
@@ -935,7 +943,7 @@ article .fotorama .fotorama__nav__shaft {
 }
 .poster-info.light-header .infobar {
   position: relative;
-  margin: 40px 0 0 0;
+  margin: 30px 0 0 0;
 }
 .poster-info.light-header .infobar .views {
   background-image: url("../source/images/eye-dark.svg");

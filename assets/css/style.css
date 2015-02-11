@@ -193,6 +193,24 @@ header,
   color: #000;
   background-image: url("../source/images/search-dark.svg");
 }
+.fotorama {
+  position: relative;
+}
+.fotorama__arr--prev {
+  margin: -30px 0 0 30px;
+  background: url("../source/images/prev.svg");
+}
+.fotorama__arr--next {
+  margin: -30px 30px 0 0;
+  background: url("../source/images/next.svg");
+}
+.fotorama__arr--prev,
+.fotorama__arr--next {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 31px;
+  height: 58px;
+}
 .cover {
   position: relative;
   width: 100%;
@@ -612,6 +630,7 @@ header,
 .rights {
   opacity: 0.2;
   font-size: 12px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   vertical-align: middle;
 }
 .author,
@@ -725,8 +744,76 @@ article aside img {
 article aside a.img img:hover {
   border-color: rgba(208,64,0,0.3);
 }
+article blockquote {
+  width: 750px;
+  min-height: 170px;
+  margin: 40px 0px 40px -50px;
+  padding: 20px 20px 25px 80px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+}
+article blockquote:before {
+  content: '«';
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  font-size: 50px;
+  font-family: 'Verdana';
+  z-index: 1;
+}
+article blockquote:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.6);
+  transition: 0.2s;
+}
+article blockquote .text {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-family: 'Playfair Display';
+  line-height: 1.2em;
+}
+article blockquote .likely {
+  position: relative;
+  z-index: 1;
+}
+article blockquote .likely .likely__icon {
+  padding: 5px;
+}
+article blockquote .likely .likely__widget {
+  background: none;
+}
+article blockquote .likely .likely__widget svg {
+  width: 20px;
+  height: 20px;
+}
+article blockquote .likely .likely__widget svg path {
+  fill: rgba(0,0,0,0.6);
+  transition: 0.1s;
+}
+article blockquote .likely .likely__widget+.likely__widget {
+  margin: 0 0 0 10px;
+}
+article blockquote .likely .likely__widget_twitter:hover svg path {
+  fill: #00b7ec;
+}
+article blockquote .likely .likely__widget_vkontakte:hover svg path {
+  fill: #526e8f;
+}
+article blockquote .likely .likely__widget_facebook:hover svg path {
+  fill: #425497;
+}
 article .expert {
-  padding: 30px 40px 10px 60px;
+  width: 750px;
+  padding: 30px 40px 10px 80px;
+  margin: 40px 0 20px -50px;
   background: rgba(0,0,0,0.03);
 }
 article .expert .pic {
@@ -756,10 +843,21 @@ article .expert .text {
 article .expert .text:before {
   content: '«';
   position: absolute;
-  top: 23px;
-  left: -40px;
+  top: 28px;
+  left: -45px;
   font-size: 50px;
   font-family: 'Verdana', 'Tahoma';
+}
+article .fotorama {
+  margin: 40px -50px 40px -50px;
+}
+article .fotorama .fotorama__nav-wrap {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+article .fotorama .fotorama__nav__shaft {
+  float: left;
 }
 .relevant-wrap {
   width: 100%;

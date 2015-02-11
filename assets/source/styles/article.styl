@@ -242,9 +242,9 @@ article
 	& .expert
 		@extend .author
 		width 750px
-		padding 40px 40px 10px 80px
+		padding 40px 40px 20px 80px
 		margin 20px 0 20px -50px
-		background rgba(0, 0, 0, 0.03)
+		background rgba(0, 0, 0, 0.04)
 
 		// & p:first-of-type:before
 		// 	content '–'
@@ -285,11 +285,15 @@ article
 	
 	& .fotorama
 		margin 40px -50px 40px -50px 
-
-		.fotorama__nav-wrap
-			position absolute
-			bottom 10px
-			left 10px
+		
+		& .fotorama__caption__wrap
+			background rgba(0 , 0, 0, 0.7)
+			color rgba(255, 255, 255, 0.9)
+			
+		// .fotorama__nav-wrap
+		// 	position absolute
+		// 	bottom 10px
+		// 	left 10px
 			
 		.fotorama__nav__shaft
 			float left

@@ -821,9 +821,9 @@ article blockquote .likely .likely__widget_facebook:hover svg path {
 }
 article .expert {
   width: 750px;
-  padding: 30px 40px 10px 80px;
-  margin: 40px 0 20px -50px;
-  background: rgba(0,0,0,0.03);
+  padding: 40px 40px 20px 80px;
+  margin: 20px 0 20px -50px;
+  background: rgba(0,0,0,0.04);
 }
 article .expert .pic {
   vertical-align: middle;
@@ -860,10 +860,9 @@ article .expert .text:before {
 article .fotorama {
   margin: 40px -50px 40px -50px;
 }
-article .fotorama .fotorama__nav-wrap {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+article .fotorama .fotorama__caption__wrap {
+  background: rgba(0,0,0,0.7);
+  color: rgba(255,255,255,0.9);
 }
 article .fotorama .fotorama__nav__shaft {
   float: left;

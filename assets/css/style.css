@@ -788,7 +788,13 @@ article blockquote .likely {
   z-index: 1;
 }
 article blockquote .likely .likely__icon {
+  width: 20px;
+  height: 20px;
   padding: 5px;
+}
+article blockquote .likely .likely__counter {
+  opacity: 0.6;
+  padding: 2px 6px 2px 0px;
 }
 article blockquote .likely .likely__widget {
   background: none;

@@ -90,6 +90,9 @@ $searchPlaceHolder
 	
 	.logo,.logo:visited
 		color molokoColor
+		
+		&:hover
+			text-decoration: underline;
 	
 	.search
 		color black
@@ -204,6 +207,19 @@ $searchPlaceHolder
 	
 .news
 	@extend .container
+
+.news-wrap.border
+	padding 0 0 40px 0
+	border-top 1px solid rgba(0, 0, 0, 0.1)
+
+.news.col
+	width 220px
+	padding 0
+	position absolute
+	right 10px
+	z-index 1
+	background white
+	
 	
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next

@@ -192,6 +192,10 @@ header,
 .header-wrap.light .logo:visited {
   color: #2992e4;
 }
+.header-wrap.light .logo:hover,
+.header-wrap.light .logo:visited:hover {
+  text-decoration: underline;
+}
 .header-wrap.light .search {
   color: #000;
   background-image: url("../source/images/search-dark.svg");
@@ -290,6 +294,18 @@ header,
 .news-wrap {
   width: 100%;
   min-height: 100px;
+}
+.news-wrap.border {
+  padding: 0 0 40px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.news.col {
+  width: 220px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  background: #fff;
 }
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
@@ -919,7 +935,7 @@ article .fotorama .fotorama__nav__shaft {
   height: auto;
   min-height: 150px;
   background: #fff;
-  margin: 30px 0 -10px 0;
+  margin: 20px 0 -10px 0;
 }
 .poster.light-header {
   height: auto;
@@ -934,6 +950,9 @@ article .fotorama .fotorama__nav__shaft {
   min-height: 100px;
   padding: 20px 20px 0 20px;
   color: #000;
+}
+.poster-info.light-header .caption {
+  width: 650px;
 }
 .poster-info.light-header .caption h1 {
   color: #000;

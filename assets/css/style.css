@@ -184,9 +184,9 @@ header,
   transition: 0.2s;
 }
 .header-wrap.light {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
   position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .header-wrap.light .logo,
 .header-wrap.light .logo:visited {
@@ -628,6 +628,7 @@ header,
   bottom: 55px;
   right: 20px;
 }
+i,
 .rights {
   opacity: 0.2;
   font-size: 12px;
@@ -728,7 +729,7 @@ article aside {
   color: rgba(0,0,0,0.5);
 }
 article aside .number {
-  padding: 0 0 10px 0;
+  padding: 0 10px 10px 0;
   font-size: 48px;
   text-align: center;
   font-family: 'PT Sans Caption';
@@ -910,6 +911,7 @@ article .fotorama .fotorama__nav__shaft {
   height: auto;
   min-height: 150px;
   background: #fff;
+  margin: 20px 0 0 0;
 }
 .poster.light-header {
   height: auto;

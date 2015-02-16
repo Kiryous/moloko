@@ -84,12 +84,15 @@ $searchPlaceHolder
 
 //Тёмная шапка
 .header-wrap.light
-	border-bottom 1px solid rgba(0, 0, 0, 0.1)
-	padding 0 0 10px 0
+	padding 0 0 20px 0
 	position relative
+	border-bottom 1px solid rgba(0, 0, 0, 0.1)
 	
 	.logo,.logo:visited
 		color molokoColor
+		
+		&:hover
+			text-decoration: underline;
 	
 	.search
 		color black
@@ -98,33 +101,27 @@ $searchPlaceHolder
 	$searchPlaceHolder
 		color black
 		
-//  Фоторама **отключена
-// .fotorama
-// 	position relative
+ //Фоторама 
+.fotorama
+	position relative
 
-// .fotorama__arr--prev
-// 	margin 0 0 0 30px
-// 	background url(../source/images/prev.svg)
+.fotorama__arr--prev
+	margin -30px 0 0 30px
+	background url(../source/images/prev.svg)
 
-// .fotorama__arr--next
-// 	margin 0 30px 0 0
-// 	background url(../source/images/next.svg)
+.fotorama__arr--next
+	margin -30px 30px 0 0
+	background url(../source/images/next.svg)
 	
-// .fotorama__arr--prev,.fotorama__arr--next
-// 	background-repeat no-repeat
-// 	background-position center
-// 	width 31px
-// 	height 58px
+.fotorama__arr--prev,.fotorama__arr--next
+	background-repeat no-repeat
+	background-position center
+	width 31px
+	height 58px
 	
 // .fotorama__arr--prev:hover, .fotorama__arr--next:hover
 // 	transform scaleY(0.7)
 
-// .fotorama__nav-wrap
-// 	position absolute
-// 	bottom 10px
-// 	width 960px
-// 	padding-left 40px
-// 	text-align left
 
 
 //Крутой материал
@@ -138,6 +135,7 @@ $searchPlaceHolder
 	width 100%
 	height 100%
 	color white
+	position relative
 	background-size cover
 	background-position center
 	background-repeat no-repeat
@@ -151,11 +149,8 @@ $searchPlaceHolder
 		left 0
 		background rgba(0,0,0,0.5)
 		transition .2s
-
-.poster 
-	position relative
 	
-	.poster-info
+	& .poster-info
 		width 1000px
 		padding 100px 20px 0 20px
 		margin 0 auto 0 auto	
@@ -169,15 +164,15 @@ $searchPlaceHolder
 		  text-shadow 0px 0px 10px rgba(191, 226, 255, 0.6)
 		  border-color rgba(255, 255, 255, 0.7)
 
-  .image
-	  width 180px
-	  height 180px
-	  margin 0px 20px 0px 40px
-	  display inline-block
-	  background-size contain
-	  background-position top
-	  background-repeat no-repeat
-	  vertical-align middle
+  	& .image
+		  width 180px
+		  height 180px
+		  margin 0px 20px 0px 40px
+		  display inline-block
+		  background-size contain
+		  background-position top
+		  background-repeat no-repeat
+		  vertical-align middle
 
 .caption
 	width 700px
@@ -212,6 +207,19 @@ $searchPlaceHolder
 	
 .news
 	@extend .container
+
+.news-wrap.border
+	padding 0 0 40px 0
+	border-top 1px solid rgba(0, 0, 0, 0.1)
+
+.news.col
+	width 220px
+	padding 0
+	position absolute
+	right 10px
+	z-index 1
+	background white
+	
 	
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
@@ -336,10 +344,10 @@ $searchPlaceHolder
 
 	.text
 		display inline-block
-		vertical-align top
+		vertical-align middle
 	
 	.likely
-		vertical-align top
+		vertical-align middle
 		margin 0 0 0 10px
 	
 	.likely__widget
@@ -357,7 +365,7 @@ $searchPlaceHolder
 
 .copyright
 	display inline-block
-	vertical-align top
+	vertical-align middle
 
 	span
 		margin 0 15px 0 0

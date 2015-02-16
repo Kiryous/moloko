@@ -184,17 +184,39 @@ header,
   transition: 0.2s;
 }
 .header-wrap.light {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
   position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .header-wrap.light .logo,
 .header-wrap.light .logo:visited {
   color: #2992e4;
 }
+.header-wrap.light .logo:hover,
+.header-wrap.light .logo:visited:hover {
+  text-decoration: underline;
+}
 .header-wrap.light .search {
   color: #000;
   background-image: url("../source/images/search-dark.svg");
+}
+.fotorama {
+  position: relative;
+}
+.fotorama__arr--prev {
+  margin: -30px 0 0 30px;
+  background: url("../source/images/prev.svg");
+}
+.fotorama__arr--next {
+  margin: -30px 30px 0 0;
+  background: url("../source/images/next.svg");
+}
+.fotorama__arr--prev,
+.fotorama__arr--next {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 31px;
+  height: 58px;
 }
 .cover {
   position: relative;
@@ -206,6 +228,7 @@ header,
   width: 100%;
   height: 100%;
   color: #fff;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -219,9 +242,6 @@ header,
   left: 0;
   background: rgba(0,0,0,0.5);
   transition: 0.2s;
-}
-.poster {
-  position: relative;
 }
 .poster .poster-info {
   width: 1000px;
@@ -274,6 +294,18 @@ header,
 .news-wrap {
   width: 100%;
   min-height: 100px;
+}
+.news-wrap.border {
+  padding: 0 0 40px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.news.col {
+  width: 220px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  background: #fff;
 }
 /* Скролье ** отключен
 .scrollyeah__shadow_prev,.scrollyeah__shadow_next
@@ -545,10 +577,10 @@ header,
 }
 .ask .text {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .ask .likely {
-  vertical-align: top;
+  vertical-align: middle;
   margin: 0 0 0 10px;
 }
 .ask .likely__widget {
@@ -566,7 +598,7 @@ header,
 }
 .copyright {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .copyright span {
   margin: 0 15px 0 0;
@@ -612,9 +644,11 @@ header,
   bottom: 55px;
   right: 20px;
 }
-.rights {
+.rights,
+article .fotorama .fotorama__caption__wrap span {
   opacity: 0.2;
   font-size: 12px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   vertical-align: middle;
 }
 .author,
@@ -711,7 +745,7 @@ article aside {
   color: rgba(0,0,0,0.5);
 }
 article aside .number {
-  padding: 0 0 10px 0;
+  padding: 0 10px 10px 0;
   font-size: 48px;
   text-align: center;
   font-family: 'PT Sans Caption';
@@ -728,9 +762,83 @@ article aside img {
 article aside a.img img:hover {
   border-color: rgba(208,64,0,0.3);
 }
+article blockquote {
+  width: 750px;
+  min-height: 170px;
+  margin: 40px 0px 40px -50px;
+  padding: 20px 20px 25px 80px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+}
+article blockquote:before {
+  content: '«';
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  font-size: 50px;
+  font-family: 'Verdana';
+  z-index: 1;
+}
+article blockquote:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.6);
+  transition: 0.2s;
+}
+article blockquote .text {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-family: 'Playfair Display';
+  line-height: 1.2em;
+}
+article blockquote .likely {
+  position: relative;
+  z-index: 1;
+}
+article blockquote .likely .likely__icon {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+article blockquote .likely .likely__counter {
+  opacity: 0.6;
+  padding: 2px 6px 2px 0px;
+}
+article blockquote .likely .likely__widget {
+  background: none;
+}
+article blockquote .likely .likely__widget svg {
+  width: 20px;
+  height: 20px;
+}
+article blockquote .likely .likely__widget svg path {
+  fill: rgba(0,0,0,0.6);
+  transition: 0.1s;
+}
+article blockquote .likely .likely__widget+.likely__widget {
+  margin: 0 0 0 10px;
+}
+article blockquote .likely .likely__widget_twitter:hover svg path {
+  fill: #00b7ec;
+}
+article blockquote .likely .likely__widget_vkontakte:hover svg path {
+  fill: #526e8f;
+}
+article blockquote .likely .likely__widget_facebook:hover svg path {
+  fill: #425497;
+}
 article .expert {
-  padding: 30px 40px 10px 60px;
-  background: rgba(0,0,0,0.03);
+  width: 750px;
+  padding: 40px 40px 20px 80px;
+  margin: 20px 0 20px -50px;
+  background: rgba(0,0,0,0.04);
 }
 article .expert .pic {
   vertical-align: middle;
@@ -759,10 +867,28 @@ article .expert .text {
 article .expert .text:before {
   content: '«';
   position: absolute;
-  top: 23px;
-  left: -40px;
+  top: 28px;
+  left: -45px;
   font-size: 50px;
   font-family: 'Verdana', 'Tahoma';
+}
+article .fotorama {
+  margin: 40px -50px 40px -50px;
+}
+article .fotorama .fotorama__caption__wrap {
+  width: 100%;
+  padding: 5px 5px 20px 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7));
+  color: rgba(255,255,255,0.9);
+  font-family: Georgia;
+  font-size: 16px;
+}
+article .fotorama .fotorama__caption__wrap span {
+  display: block;
+  opacity: 0.3;
+}
+article .fotorama .fotorama__nav__shaft {
+  float: left;
 }
 .relevant-wrap {
   width: 100%;
@@ -809,6 +935,7 @@ article .expert .text:before {
   height: auto;
   min-height: 150px;
   background: #fff;
+  margin: 20px 0 -10px 0;
 }
 .poster.light-header {
   height: auto;
@@ -824,6 +951,9 @@ article .expert .text:before {
   padding: 20px 20px 0 20px;
   color: #000;
 }
+.poster-info.light-header .caption {
+  width: 650px;
+}
 .poster-info.light-header .caption h1 {
   color: #000;
 }
@@ -832,7 +962,7 @@ article .expert .text:before {
 }
 .poster-info.light-header .infobar {
   position: relative;
-  margin: 40px 0 0 0;
+  margin: 30px 0 0 0;
 }
 .poster-info.light-header .infobar .views {
   background-image: url("../source/images/eye-dark.svg");

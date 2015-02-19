@@ -62,10 +62,13 @@ header,
   font-size: 32px;
   color: #fff;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .logo:hover,
 .logo:visited:hover {
-  border-color: #fff;
   color: #fff;
 }
 .social,
@@ -165,23 +168,42 @@ header,
 }
 .search {
   width: 200px;
-  height: 44px;
-  padding: 8px 12px 8px 42px;
   position: relative;
   float: right;
+}
+.search input[type=text] {
+  width: 160px;
+  height: 44px;
+  padding: 8px 12px 8px 0;
+  display: inline-block;
+  vertical-align: middle;
   background: transparent;
-  background-image: url("../source/images/search.svg");
-  background-size: 18px;
-  background-position: 10px center;
-  background-repeat: no-repeat;
   border: 0;
   opacity: 0.5;
   color: #fff;
   transition: 0.2s;
 }
-.search:focus {
+.search input[type=text]:focus,
+.search input[type=text]:focus + input {
   opacity: 0.9;
   transition: 0.2s;
+}
+.search input[type=submit] {
+  width: 40px;
+  height: 44px;
+  padding: 8px 12px 8px 12px;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  background: transparent;
+  background-image: url("../source/images/search.svg");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  opacity: 0.5;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .header-wrap.light {
   padding: 0 0 20px 0;
@@ -192,13 +214,11 @@ header,
 .header-wrap.light .logo:visited {
   color: #2992e4;
 }
-.header-wrap.light .logo:hover,
-.header-wrap.light .logo:visited:hover {
-  text-decoration: underline;
-}
-.header-wrap.light .search {
-  color: #000;
+.header-wrap.light .search input[type=submit] {
   background-image: url("../source/images/search-dark.svg");
+}
+.header-wrap.light .search input[type=text] {
+  color: #000;
 }
 .fotorama {
   position: relative;
@@ -245,7 +265,7 @@ header,
 }
 .poster .poster-info {
   width: 1000px;
-  padding: 100px 20px 0 20px;
+  padding: 80px 20px 0 20px;
   margin: 0 auto 0 auto;
   display: block;
   position: relative;
@@ -257,25 +277,23 @@ header,
   border-color: rgba(255,255,255,0.7);
 }
 .poster .poster-info .image {
-  width: 180px;
-  height: 180px;
-  margin: 0px 20px 0px 40px;
-  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
   vertical-align: middle;
 }
 .caption {
-  width: 700px;
-  padding: 0 40px 0 0;
+  width: 100%;
+  text-align: center;
   vertical-align: middle;
   display: inline-block;
 /*@media mobile
 		width 100%*/
 }
 .caption h1 {
-  margin: 0 0 15px 0;
   display: inline;
   border-bottom: 1px solid rgba(255,255,255,0.5);
   font-family: 'PT Sans Caption';
@@ -284,9 +302,9 @@ header,
   color: #fff;
 }
 .caption span {
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   display: block;
-  font-size: 22px;
+  font-size: 28px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.2em;
   color: #fff;
@@ -617,23 +635,38 @@ header,
   margin: 0px 15px 0px 0px;
 }
 .cover.article {
-  height: 350px;
+  height: 380px;
+}
+.cover.article:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../source/images/milkbottom-2.svg");
+  background-repeat-y: no-repeat;
+  background-position: bottom;
 }
 .poster.article {
-  height: 350px;
+  height: 380px;
 }
 .poster-info.article {
   width: 1000px;
   padding: 150px 20px 0 20px;
-  height: 350px;
+  height: 380px;
 }
 .poster-info.article .caption {
   padding: 0 60px 0 0;
   width: 960px;
+  text-align: left;
 }
-.poster-info.article h1 {
+.poster-info.article .caption h1 {
   font-size: 36px;
   border: 0;
+}
+.poster-info.article .caption span {
+  font-size: 24px;
 }
 .poster-info.article:hover h1 {
   text-shadow: none;
@@ -641,7 +674,7 @@ header,
 }
 .poster-info.article .rights {
   position: absolute;
-  bottom: 55px;
+  bottom: 85px;
   right: 20px;
 }
 .rights,
@@ -674,7 +707,7 @@ article .expert .pic {
   width: 960px;
   font-size: 16px;
   position: absolute;
-  bottom: 15px;
+  bottom: 45px;
 }
 .infobar .date,
 .infobar .views {
@@ -748,7 +781,6 @@ article aside .number {
   padding: 0 10px 10px 0;
   font-size: 48px;
   text-align: center;
-  font-family: 'PT Sans Caption';
 }
 article aside p {
   margin: 10px 0 0 0px;
@@ -756,11 +788,10 @@ article aside p {
 }
 article aside img {
   max-width: 200px;
+}
+article aside img.bordered {
   padding: 2px;
   border: 1px solid rgba(0,0,0,0.2);
-}
-article aside a.img img:hover {
-  border-color: rgba(208,64,0,0.3);
 }
 article blockquote {
   width: 750px;

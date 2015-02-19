@@ -1,13 +1,25 @@
 .cover.article
-	height 350px
+	height 380px
+	
+	&:after
+		content ' '
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		background url(../source/images/milkbottom-2.svg)
+		background-repeat-y no-repeat
+		background-position bottom
+
 
 .poster.article
-	height 350px
+	height 380px
 
 .poster-info.article
 	width 1000px
 	padding 150px 20px 0 20px
-	height 350px
+	height 380px
 
 	// @media mobile
 	// 	width 100%
@@ -15,10 +27,14 @@
 	& .caption
 		padding 0 60px 0 0
 		width 960px
-
-	& h1
-		font-size 36px
-		border 0
+		text-align left
+		
+		& h1
+			font-size 36px
+			border 0
+	
+		& span
+			font-size 24px
 
 	&:hover h1
 		text-shadow none
@@ -26,7 +42,7 @@
 		
 	& .rights
 		position absolute
-		bottom 55px
+		bottom 85px
 		right 20px
 
 .rights
@@ -56,7 +72,7 @@
 	width 960px
 	font-size 16px
 	position absolute
-	bottom 15px
+	bottom 45px
 
 	.date, .views
 		opacity 0.8
@@ -75,7 +91,7 @@
 		margin 5px 0 0 0
 		float:right;
 
-.article-wrap
+.article-wrap		
 	@extend .container
 	position relative
 
@@ -148,7 +164,6 @@ article
 			padding 0 10px 10px 0
 			font-size 48px
 			text-align center
-			font-family f_headline
 		
 		& p
 			margin 10px 0 0 0px
@@ -156,15 +171,10 @@ article
 
 		& img
 			max-width 200px
-			padding 2px
-			border 1px solid rgba(0, 0, 0, .2)
-		
-		& a.img
-			// display block
-			// border-bottom 0
 			
-			& img:hover
-				border-color rgba(208, 64, 0, .3)
+			&.bordered
+				padding 2px
+				border 1px solid rgba(0, 0, 0, .2)
 		
 	& blockquote
 		width 750px

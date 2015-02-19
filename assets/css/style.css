@@ -265,7 +265,7 @@ header,
 }
 .poster .poster-info {
   width: 1000px;
-  padding: 80px 20px 0 20px;
+  padding: 70px 20px 0 20px;
   margin: 0 auto 0 auto;
   display: block;
   position: relative;
@@ -640,12 +640,11 @@ header,
 .cover.article:after {
   content: ' ';
   width: 100%;
-  height: 100%;
+  height: 62px;
   position: absolute;
-  top: 0;
+  bottom: -10px;
   left: 0;
-  background: url("../source/images/milkbottom-2.svg");
-  background-repeat-y: no-repeat;
+  background: url("../source/images/milkbank.svg");
   background-position: bottom;
 }
 .poster.article {

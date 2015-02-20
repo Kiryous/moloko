@@ -42,36 +42,74 @@ header
 	font-size 32px
 	color white
 	z-index 1
+	user-select none
 	
 	&:hover
-		border-color white
 		color white
 
 @import 'social-links'
 
+// .search
+// 	width 200px
+// 	height 44px
+// 	padding 8px 12px 8px 42px
+// 	position relative
+// 	float right
+// 	background transparent
+// 	background-image url(../source/images/search.svg)
+// 	background-size 18px
+// 	background-position 10px center
+// 	background-repeat no-repeat
+// 	border 0
+// 	opacity 0.5
+// 	color white
+// 	transition .2s
+	
+// 	&:focus
+// 		opacity 0.9
+// 		transition .2s
 .search
 	width 200px
-	height 44px
-	padding 8px 12px 8px 42px
 	position relative
 	float right
-	background transparent
-	background-image url(../source/images/search.svg)
-	background-size 18px
-	background-position 10px center
-	background-repeat no-repeat
-	border 0
-	opacity 0.5
-	color white
-	transition .2s
 	
-	&:focus
-		opacity 0.9
+	& input[type=text]
+		width 160px
+		height 44px
+		padding 8px 12px 8px 0
+		display inline-block
+		vertical-align middle
+		background transparent
+		border 0
+		opacity 0.5
+		color white
 		transition .2s
+
+		&:focus, &:focus + input
+			opacity 0.9
+			transition .2s
+	
+	& input[type=submit]
+		width 40px
+		height 44px
+		padding 8px 12px 8px 12px
+		display inline-block
+		vertical-align middle
+		float left
+		background transparent
+		background-image url(../source/images/search.svg)
+		background-size 18px
+		background-position center
+		background-repeat no-repeat
+		border 0
+		opacity 0.5
+		transition .2s
+		cursor pointer
+	
 		
 //Автопрефиксер не справляется, пришлось оставить
 $searchPlaceHolder
-	color:rgba(255, 255, 255, 0.6)
+	color:rgba(255, 255, 255, 1)
 
 .search::-webkit-input-placeholder
 	$searchPlaceHolder
@@ -90,13 +128,13 @@ $searchPlaceHolder
 	
 	.logo,.logo:visited
 		color molokoColor
+					
+	.search 
+		& input[type=submit]
+			background-image url(../source/images/search-dark.svg)
 		
-		&:hover
-			text-decoration: underline;
-	
-	.search
-		color black
-		background-image url(../source/images/search-dark.svg)
+		& input[type=text]
+			color black
 		
 	$searchPlaceHolder
 		color black
@@ -152,7 +190,7 @@ $searchPlaceHolder
 	
 	& .poster-info
 		width 1000px
-		padding 100px 20px 0 20px
+		padding 70px 20px 0 20px
 		margin 0 auto 0 auto	
 		display block
 		position relative
@@ -165,18 +203,23 @@ $searchPlaceHolder
 		  border-color rgba(255, 255, 255, 0.7)
 
   	& .image
-		  width 180px
-		  height 180px
-		  margin 0px 20px 0px 40px
-		  display inline-block
+		  // width 180px
+		  // height 180px
+		  width 80px
+		  height 80px
+		  // margin 0px 20px 0px 40px
+		  margin 0 auto 20px auto
+		  // display inline-block
 		  background-size contain
 		  background-position top
 		  background-repeat no-repeat
 		  vertical-align middle
 
 .caption
-	width 700px
-	padding 0 40px 0 0
+	// width 700px
+	width 100%
+	text-align center
+	// padding 0 40px 0 0
 	vertical-align middle
 	display inline-block
 	
@@ -184,7 +227,6 @@ $searchPlaceHolder
 		width 100%*/
  
 	& h1	
-		margin 0 0 15px 0
 		display inline
 		border-bottom 1px solid rgba(255, 255, 255, 0.5)
 		font-family f_headline
@@ -193,9 +235,10 @@ $searchPlaceHolder
 		color white
 	
 	& span
-		margin 5px 0 0 0
+		margin 10px 0 0 0
 		display block
-		font-size 22px
+		// font-size 22px
+		font-size 28px
 		font-family f_Default 
 		line-height 1.2em
 		color white
@@ -385,7 +428,7 @@ $searchPlaceHolder
 
 @import 'article'
 
-@import 'light-header'
+@import 'light-cover'
 
 .front-page
 	padding 40px 0 0 0

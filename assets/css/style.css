@@ -205,6 +205,33 @@ header,
   transition: 0.2s;
   cursor: pointer;
 }
+.search.big {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  position: relative;
+  float: left;
+}
+.search.big input[type=text] {
+  width: 870px;
+  height: 90px;
+  padding: 8px 12px 8px 0;
+  color: #000;
+  font-size: 48px;
+}
+.search.big input[type=text]:focus,
+.search.big input[type=text]:focus + input {
+  opacity: 0.9;
+  transition: 0.2s;
+}
+.search.big input[type=submit] {
+  width: 90px;
+  height: 90px;
+  padding: 8px 12px 8px 12px;
+  background-image: url("../source/images/search-dark.svg");
+  background-size: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .header-wrap.light {
   padding: 0 0 20px 0;
   position: relative;
@@ -635,25 +662,15 @@ header,
   margin: 0px 15px 0px 0px;
 }
 .cover.article {
-  height: 380px;
-}
-.cover.article:after {
-  content: ' ';
-  width: 100%;
-  height: 62px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  background: url("../source/images/milkbank.svg");
-  background-position: bottom;
+  height: 350px;
 }
 .poster.article {
-  height: 380px;
+  height: 350px;
 }
 .poster-info.article {
   width: 1000px;
   padding: 150px 20px 0 20px;
-  height: 380px;
+  height: 350px;
 }
 .poster-info.article .caption {
   padding: 0 60px 0 0;
@@ -673,15 +690,32 @@ header,
 }
 .poster-info.article .rights {
   position: absolute;
-  bottom: 85px;
+  bottom: 60px;
   right: 20px;
 }
 .rights,
 article .fotorama .fotorama__caption__wrap span {
-  opacity: 0.2;
+  opacity: 0.3;
   font-size: 12px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   vertical-align: middle;
+}
+.rights a,
+article .fotorama .fotorama__caption__wrap span a {
+  color: #000;
+  border: 0;
+}
+.rights a:hover,
+article .fotorama .fotorama__caption__wrap span a:hover {
+  color: rgba(0,0,0,0.8);
+}
+.fotorama .rights a,
+.poster-info.article .rights a {
+  color: #fff;
+}
+.fotorama .rights a:hover,
+.poster-info.article .rights a:hover {
+  color: rgba(255,255,255,0.8);
 }
 .author,
 article .expert {
@@ -706,7 +740,7 @@ article .expert .pic {
   width: 960px;
   font-size: 16px;
   position: absolute;
-  bottom: 45px;
+  bottom: 20px;
 }
 .infobar .date,
 .infobar .views {

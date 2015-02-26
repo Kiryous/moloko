@@ -1,24 +1,25 @@
 .cover.article
-	height 380px
+	height 350px
 	
-	&:after
-		content ' '
-		width 100%
-		height 62px
-		position absolute
-		bottom -10px
-		left 0
-		background url(../source/images/milkbank.svg)
-		background-position bottom
+	// Молочный край — ОТКЛЮЧЕН
+	// &:after
+	// 	content ' '
+	// 	width 100%
+	// 	height 62px
+	// 	position absolute
+	// 	bottom -10px
+	// 	left 0
+	// 	background url(../source/images/milkbank.svg)
+	// 	background-position bottom
 
 
 .poster.article
-	height 380px
+	height 350px
 
 .poster-info.article
 	width 1000px
 	padding 150px 20px 0 20px
-	height 380px
+	height 350px
 
 	// @media mobile
 	// 	width 100%
@@ -29,11 +30,11 @@
 		text-align left
 		
 		& h1
-			font-size 36px
+			font-size 42px
 			border 0
 	
 		& span
-			font-size 24px
+			font-size 22px
 
 	&:hover h1
 		text-shadow none
@@ -41,14 +42,31 @@
 		
 	& .rights
 		position absolute
-		bottom 85px
+		bottom 60px
 		right 20px
 
+//Копирайт фотографа
 .rights
-	opacity 0.2
+	opacity 0.3
 	font-size 12px
 	font-family f_Default
 	vertical-align middle
+	
+	& a
+		color black
+		border 0
+				
+		&:hover
+			color rgba(0, 0, 0, 0.8)
+
+//Копирайт фотографа на обложке и фотораме
+.fotorama, .poster-info.article
+	.rights
+		& a
+			color white
+			
+			&:hover
+				color rgba(255, 255, 255, 0.8)
 
 .author
 	margin 0 15px 0 0
@@ -71,7 +89,7 @@
 	width 960px
 	font-size 16px
 	position absolute
-	bottom 45px
+	bottom 20px
 
 	.date, .views
 		opacity 0.8

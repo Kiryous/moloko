@@ -105,7 +105,33 @@ header
 		opacity 0.5
 		transition .2s
 		cursor pointer
+
+.search.big
+	width 100%
+	margin 10px 0 20px 0
+	position relative
+	float left
 	
+	& input[type=text]
+		width 870px
+		height 90px
+		padding 8px 12px 8px 0
+		color black
+		font-size 48px
+		
+		&:focus, &:focus + input
+			opacity 0.9
+			transition .2s
+	
+	& input[type=submit]
+		width 90px
+		height 90px
+		padding 8px 12px 8px 12px
+		background-image url(../source/images/search-dark.svg)
+		background-size 36px
+		background-position center
+		background-repeat no-repeat
+		
 		
 //Автопрефиксер не справляется, пришлось оставить
 $searchPlaceHolder
@@ -238,7 +264,7 @@ $searchPlaceHolder
 		margin 10px 0 0 0
 		display block
 		// font-size 22px
-		font-size 28px
+		font-size 24px
 		font-family f_Default 
 		line-height 1.2em
 		color white

@@ -1039,7 +1039,7 @@ article .fotorama .fotorama__nav__shaft {
 }
 .about h2 {
   width: 95%;
-  margin: 50px 0 10px 0;
+  margin: 50px 0 20px 0;
   font-family: 'PT Sans Caption';
   font-size: 24px;
   font-weight: normal;
@@ -1047,6 +1047,7 @@ article .fotorama .fotorama__nav__shaft {
 }
 .team {
   padding: 0 0 0 0;
+  margin: 60px 0 0 0;
 }
 .team-member {
   width: 294px;
@@ -1066,7 +1067,7 @@ article .fotorama .fotorama__nav__shaft {
   overflow: hidden;
 }
 .team-member .info {
-  max-width: 200px;
+  max-width: 205px;
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
@@ -1080,19 +1081,26 @@ article .fotorama .fotorama__nav__shaft {
 }
 .team-member .role {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 .team .twi,
 .team .vk,
 .team .fb,
 .team .inst {
-  width: 21px;
+  width: 18px;
   height: 16px;
-  margin: 0 7px 0 0;
+  margin: 0 7px 2px 0;
   vertical-align: middle;
   background-size: 16px 16px;
-  background-position: left center;
-  border-right: 1px solid rgba(0,0,0,0.3);
+  background-position: center;
+}
+.team .twi {
+  width: 22px;
+}
+.team .fb {
+  width: 10px;
+  height: 12px;
+  background-size: 12px 12px;
 }
 .donate {
   text-align: center;

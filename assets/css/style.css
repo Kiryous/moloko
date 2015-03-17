@@ -36,7 +36,8 @@ body {
 header,
 .news,
 .footer,
-.article-wrap {
+.article-wrap,
+.team {
   width: 1000px;
   margin: 0 auto 0 auto;
   padding: 20px 20px 0px 20px;
@@ -82,13 +83,21 @@ header,
 .inst:visited,
 .header-wrap.light.social,
 .header-wrap.light .twi,
+.team .twi,
 .header-wrap.light .twi:visited,
+.team .twi:visited,
 .header-wrap.light .vk,
+.team .vk,
 .header-wrap.light .vk:visited,
+.team .vk:visited,
 .header-wrap.light .fb,
+.team .fb,
 .header-wrap.light .fb:visited,
+.team .fb:visited,
 .header-wrap.light .inst,
-.header-wrap.light .inst:visited {
+.team .inst,
+.header-wrap.light .inst:visited,
+.team .inst:visited {
   width: 40px;
   height: 40px;
   padding: 0;
@@ -109,13 +118,21 @@ header,
 .inst:hover,
 .inst:visited:hover,
 .header-wrap.light .twi:hover,
+.team .twi:hover,
 .header-wrap.light .twi:visited:hover,
+.team .twi:visited:hover,
 .header-wrap.light .vk:hover,
+.team .vk:hover,
 .header-wrap.light .vk:visited:hover,
+.team .vk:visited:hover,
 .header-wrap.light .fb:hover,
+.team .fb:hover,
 .header-wrap.light .fb:visited:hover,
+.team .fb:visited:hover,
 .header-wrap.light .inst:hover,
-.header-wrap.light .inst:visited:hover {
+.team .inst:hover,
+.header-wrap.light .inst:visited:hover,
+.team .inst:visited:hover {
   opacity: 1;
   transition: 0.1s;
 }
@@ -141,29 +158,45 @@ header,
 }
 .header-wrap.light.social,
 .header-wrap.light .twi,
+.team .twi,
 .header-wrap.light .twi:visited,
+.team .twi:visited,
 .header-wrap.light .vk,
+.team .vk,
 .header-wrap.light .vk:visited,
+.team .vk:visited,
 .header-wrap.light .fb,
+.team .fb,
 .header-wrap.light .fb:visited,
+.team .fb:visited,
 .header-wrap.light .inst,
-.header-wrap.light .inst:visited {
+.team .inst,
+.header-wrap.light .inst:visited,
+.team .inst:visited {
   opacity: 0.6;
 }
 .header-wrap.light .twi,
-.header-wrap.light .twi:visited {
+.team .twi,
+.header-wrap.light .twi:visited,
+.team .twi:visited {
   background-image: url("../source/images/twi-dark.svg");
 }
 .header-wrap.light .vk,
-.header-wrap.light .vk:visited {
+.team .vk,
+.header-wrap.light .vk:visited,
+.team .vk:visited {
   background-image: url("../source/images/vk-dark.svg");
 }
 .header-wrap.light .fb,
-.header-wrap.light .fb:visited {
+.team .fb,
+.header-wrap.light .fb:visited,
+.team .fb:visited {
   background-image: url("../source/images/fb-dark.svg");
 }
 .header-wrap.light .inst,
-.header-wrap.light .inst:visited {
+.team .inst,
+.header-wrap.light .inst:visited,
+.team .inst:visited {
   background-image: url("../source/images/inst-dark.svg");
 }
 .search {
@@ -995,6 +1028,82 @@ article .fotorama .fotorama__nav__shaft {
 .comments-wrap {
   width: 100%;
   background: rgba(232,239,243,0.4);
+}
+.about p {
+  margin: 10px 0 30px 0;
+  position: relative;
+}
+.about h2 {
+  width: 95%;
+  margin: 50px 0 10px 0;
+  font-family: 'PT Sans Caption';
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+.team {
+  padding: 0 0 0 0;
+}
+.team-member {
+  width: 294px;
+  display: inline-block;
+  margin: 0 35px 35px 0;
+}
+.team-member .photo {
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-member .info {
+  max-width: 198px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.team-member p {
+  margin: 0px 0 0px 0;
+}
+.team-member .name {
+  font-family: 'PT Sans Caption';
+  font-weight: bold;
+}
+.team-member .role {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0 0 10px 0;
+}
+.team .twi,
+.team .vk,
+.team .fb,
+.team .inst {
+  width: 16px;
+  height: 16px;
+  margin: 0 7px 0 0;
+  vertical-align: middle;
+  background-size: 16px 16px;
+}
+.donate {
+  text-align: center;
+  width: 100%;
+  height: 800px;
+  background-image: url("../source/images/team/grandfa.png");
+  background-size: 300px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.donate iframe {
+  vertical-align: middle;
+  margin: 0 25px 0 0;
+}
+.donate img {
+  display: inline-block;
+  vertical-align: middle;
 }
 .cover.light-header {
   height: auto;

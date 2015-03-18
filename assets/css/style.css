@@ -1035,6 +1035,7 @@ article .fotorama .fotorama__nav__shaft {
 }
 .about .desc {
   width: 85%;
+  text-align: center;
   margin: 0 auto 0 auto;
 }
 .about h2 {

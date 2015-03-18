@@ -1038,6 +1038,7 @@ article .fotorama .fotorama__nav__shaft {
   width: 800px;
   text-align: left;
   line-height: 1.1em;
+  padding-top: 40px;
 }
 .about h2 {
   width: 95%;
@@ -1049,7 +1050,7 @@ article .fotorama .fotorama__nav__shaft {
 }
 .team {
   padding: 0 0 0 0;
-  margin: 60px 0 0 0;
+  margin: 40px 0 0 0;
 }
 .team-member {
   width: 294px;

@@ -796,6 +796,7 @@ article .expert .pic {
 }
 .article-wrap {
   position: relative;
+  min-height: 500px;
 }
 article {
   width: 650px;

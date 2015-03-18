@@ -2,12 +2,12 @@
   p
     margin 10px 0 30px 0
     position relative
-  
-  .desc
-    width 85%
-    text-align center
-    margin 0 auto 0 auto
-  
+
+  h1.desc
+    width 800px
+    text-align left
+    line-height 1.1em
+
   h2
     width 95%
     margin 50px 0 20px 0
@@ -25,7 +25,7 @@
   width 294px
   display inline-block
   margin 0 35px 35px 0
-  
+
   .photo
     width 75px
     height 75px
@@ -37,25 +37,25 @@
     background-repeat no-repeat
     border-radius 50%
     overflow hidden
-  
+
   .info
     max-width 205px
     display inline-block
     vertical-align middle
     font-size 14px
-  
+
   p
     margin 0 0 0 0
-  
+
   .name
     font-family 'PT Sans Caption'
     font-weight bold
     // margin 0 0 3px 0
-  
+
   .role
     font-family f_Helvetica
     margin 0 0 5px 0
-  
+
 .team
   .twi, .vk, .fb, .inst
     width 18px
@@ -65,10 +65,10 @@
     background-size 16px 16px
     background-position center
     // border-right 1px solid rgba(0, 0, 0, 0.3)
-  
+
   .twi
     width 22px
-    
+
   .fb
     width 10px
     height 12px
@@ -82,12 +82,16 @@
   background-size 300px
   background-position center bottom
   background-repeat no-repeat
-  
+
+  & > .desc
+    margin 10px auto 30px auto
+    width 60%
+    line-height 1.5em
+
   iframe
     vertical-align middle
     margin 0 25px 0 0
-  
+
   img
     display inline-block
     vertical-align middle
-  

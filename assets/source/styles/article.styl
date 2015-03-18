@@ -1,6 +1,6 @@
 .cover.article
 	height 350px
-	
+
 	// Молочный край — ОТКЛЮЧЕН
 	// &:after
 	// 	content ' '
@@ -23,23 +23,23 @@
 
 	// @media mobile
 	// 	width 100%
-		
+
 	& .caption
 		padding 0 60px 0 0
 		width 960px
 		text-align left
-		
+
 		& h1
-			font-size 42px
+			font-size 45px
 			border 0
-	
+
 		& span
 			font-size 22px
 
 	&:hover h1
 		text-shadow none
 		border 0
-		
+
 	& .rights
 		position absolute
 		bottom 60px
@@ -51,11 +51,11 @@
 	font-size 12px
 	font-family f_Default
 	vertical-align middle
-	
+
 	& a
 		color black
 		border 0
-				
+
 		&:hover
 			color rgba(0, 0, 0, 0.8)
 
@@ -64,7 +64,7 @@
 	.rights
 		& a
 			color white
-			
+
 			&:hover
 				color rgba(255, 255, 255, 0.8)
 
@@ -103,12 +103,12 @@
 		background-image url(../source/images/eye.svg)
 		background-position left center
 		background-repeat no-repeat
-	
+
 	.likely
 		margin 5px 0 0 0
 		float:right;
 
-.article-wrap		
+.article-wrap
 	@extend .container
 	position relative
 
@@ -154,7 +154,7 @@ article
 			margin 0 0 0 50px
 			font-size 16px
 			color rgba(0, 0, 0, 0.7)
-			
+
 		& .rights
 			display block
 			opacity 0.4
@@ -181,18 +181,18 @@ article
 			padding 0 10px 10px 0
 			font-size 48px
 			text-align center
-		
+
 		& p
 			margin 10px 0 0 0px
 			position relative
 
 		& img
 			max-width 200px
-			
+
 			&.bordered
 				padding 2px
 				border 1px solid rgba(0, 0, 0, .2)
-		
+
 	& blockquote
 		width 750px
 		min-height 170px
@@ -203,7 +203,7 @@ article
 		overflow hidden
 		background-size cover !important
 		// background-position center !important
-		
+
 		&:before
 			content '«'
 			position absolute
@@ -222,47 +222,47 @@ article
 			left 0
 			background rgba(255, 255, 255 ,0.6)
 			transition .2s
-		
+
 		& .text
 			position relative
 			z-index 1
 			font-size 24px
 			font-family 'Playfair Display'
 			line-height 1.2em
-		
+
 		& .likely
 			position relative
 			z-index 1
-			
+
 			& .likely__icon
 				width 20px
 				height 20px
 				padding 5px
-			
+
 			& .likely__counter
 				opacity 0.6
 				padding 2px 6px 2px 0px
-			
+
 			& .likely__widget
 				background none
-				
+
 				& svg
 					width 20px
 					height 20px
-				
+
 				& svg path
 					fill: rgba(0, 0, 0, 0.6)
 					transition .1s
-			
+
 			& .likely__widget+.likely__widget
 				margin 0 0 0 10px
-					
+
 			& .likely__widget_twitter:hover svg path
 					fill:rgb(0, 183, 236)
-			
+
 			& .likely__widget_vkontakte:hover svg path
 					fill:rgb(82, 110, 143)
-			
+
 			& .likely__widget_facebook:hover svg path
 					fill:rgb(66, 84, 151)
 
@@ -296,13 +296,13 @@ article
 		& .who
 			font-size 16px
 			font-weight normal
-			
+
 		& .text
 			padding 20px 0 0 0
 			position relative
 			font-family f_Default
 			font-size 17px
-			
+
 			&:before
 				content '«'
 				position absolute
@@ -310,10 +310,10 @@ article
 				left -45px
 				font-size 50px
 				font-family 'Verdana', 'Tahoma'
-	
+
 	& .fotorama
-		margin 40px -50px 40px -50px 
-		
+		margin 40px -50px 40px -50px
+
 		& .fotorama__caption__wrap
 			width 100%
 			padding 5px 5px 20px 50px
@@ -321,17 +321,17 @@ article
 			color rgba(255, 255, 255, 0.9)
 			font-family Georgia
 			font-size 16px
-			
+
 			& span
 				@extend .rights
 				display block
 				opacity 0.3
-			
+
 		// .fotorama__nav-wrap
 		// 	position absolute
 		// 	bottom 10px
 		// 	left 10px
-			
+
 		.fotorama__nav__shaft
 			float left
 
